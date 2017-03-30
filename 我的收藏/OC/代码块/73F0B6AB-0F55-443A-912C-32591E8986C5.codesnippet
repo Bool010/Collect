@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>@SIAlertView</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>SIAlertView *alert = [[SIAlertView alloc] initWithTitle: @"&lt;#title#&gt;"
+                                                                     andMessage: @"&lt;#message#&gt;"];
+                        alert.transitionStyle = SIAlertViewTransitionStyleBounce;
+                        alert.backgroundStyle = SIAlertViewBackgroundStyleSolid;
+                        
+                        [alert addButtonWithTitle: @"&lt;#cancelTitle#&gt;"
+                                             type: SIAlertViewButtonTypeCancel
+                                          handler: ^(SIAlertView *alertView) {
+                                              &lt;#statements#&gt;
+                                          }];
+                        
+                        [alert addButtonWithTitle: @"&lt;#defaultTitle#&gt;"
+                                             type: SIAlertViewButtonTypeDefault
+                                          handler: ^(SIAlertView *alertView) {
+                                              &lt;#statements#&gt;
+                                          }];
+                        [alert show];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>73F0B6AB-0F55-443A-912C-32591E8986C5</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>@SIAlertView</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
