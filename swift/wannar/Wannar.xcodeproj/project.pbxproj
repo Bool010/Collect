@@ -1,0 +1,1156 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A2E09CEEB0575B3C2227D515 /* Pods_WannarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4309ED9DDD7816EB6B01FA9A /* Pods_WannarTests.framework */; };
+		A81C415A80E62EC44C5210BA /* Pods_WannarUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2702355115F2C875FD4BB /* Pods_WannarUITests.framework */; };
+		E923F6081DE41C900027A4B5 /* Pods_Wannar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B27ADA439F653070BF462478 /* Pods_Wannar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E923F6091DE41C900027A4B5 /* Pods_WannarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4309ED9DDD7816EB6B01FA9A /* Pods_WannarTests.framework */; };
+		E923F60A1DE41C900027A4B5 /* Pods_WannarTests.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4309ED9DDD7816EB6B01FA9A /* Pods_WannarTests.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E923F60B1DE41C900027A4B5 /* Pods_WannarUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2702355115F2C875FD4BB /* Pods_WannarUITests.framework */; };
+		E923F60C1DE41C900027A4B5 /* Pods_WannarUITests.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2702355115F2C875FD4BB /* Pods_WannarUITests.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E923F60E1DE41F980027A4B5 /* WNMeNormalTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E923F60D1DE41F980027A4B5 /* WNMeNormalTCell.swift */; };
+		E94CB0191DE2C5800013D986 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94CB0181DE2C5800013D986 /* AppDelegate.swift */; };
+		E94CB01E1DE2C5800013D986 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E94CB01C1DE2C5800013D986 /* Main.storyboard */; };
+		E94CB0211DE2C5800013D986 /* Wannar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E94CB01F1DE2C5800013D986 /* Wannar.xcdatamodeld */; };
+		E94CB0231DE2C5800013D986 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E94CB0221DE2C5800013D986 /* Assets.xcassets */; };
+		E94CB0261DE2C5800013D986 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E94CB0241DE2C5800013D986 /* LaunchScreen.storyboard */; };
+		E94CB0311DE2C5800013D986 /* WannarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94CB0301DE2C5800013D986 /* WannarTests.swift */; };
+		E94CB03C1DE2C5810013D986 /* WannarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94CB03B1DE2C5810013D986 /* WannarUITests.swift */; };
+		E94CB04D1DE2C6940013D986 /* WNRootBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94CB04C1DE2C6940013D986 /* WNRootBoard.swift */; };
+		E94CB0551DE2C8910013D986 /* WNBaseBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94CB0541DE2C8910013D986 /* WNBaseBoard.swift */; };
+		E94CB05C1DE2C9240013D986 /* WNRecommendBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94CB0591DE2C9240013D986 /* WNRecommendBoard.swift */; };
+		E94CB0671DE2C9C60013D986 /* WNDestinationBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94CB0661DE2C9C60013D986 /* WNDestinationBoard.swift */; };
+		E94CB0691DE2C9DA0013D986 /* WNMeBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94CB0681DE2C9DA0013D986 /* WNMeBoard.swift */; };
+		E94CB06B1DE2C9F50013D986 /* WNPlanListBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94CB06A1DE2C9F50013D986 /* WNPlanListBoard.swift */; };
+		E9639E311E1BA11A00FC8D1B /* String+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9639E301E1BA11A00FC8D1B /* String+WN.swift */; };
+		E9AB81E81E80FE850051E5A6 /* Array+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB81E71E80FE850051E5A6 /* Array+WN.swift */; };
+		E9AB81EA1E810EF40051E5A6 /* Bundle+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB81E91E810EF40051E5A6 /* Bundle+WN.swift */; };
+		E9AB81F21E822E2F0051E5A6 /* UIScreen+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB81F11E822E2F0051E5A6 /* UIScreen+WN.swift */; };
+		E9AB81F41E8234B00051E5A6 /* CGSize+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB81F31E8234B00051E5A6 /* CGSize+WN.swift */; };
+		E9AB81F81E8274770051E5A6 /* WNMeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB81F71E8274770051E5A6 /* WNMeModel.swift */; };
+		E9AB81FB1E8283DF0051E5A6 /* WNParallaxHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB81FA1E8283DF0051E5A6 /* WNParallaxHeaderView.swift */; };
+		E9AB81FD1E8381710051E5A6 /* Collection+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB81FC1E8381710051E5A6 /* Collection+WN.swift */; };
+		E9B2F1FB1E1511270027DC1B /* WNAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B2F1FA1E1511270027DC1B /* WNAPIClient.swift */; };
+		E9B694801E6FE93E004144D4 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B6947F1E6FE93E004144D4 /* Reusable.swift */; };
+		E9B694821E6FEC32004144D4 /* UITableView+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B694811E6FEC32004144D4 /* UITableView+WN.swift */; };
+		E9B694841E6FEDC0004144D4 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B694831E6FEDC0004144D4 /* NibLoadable.swift */; };
+		E9B694861E6FF728004144D4 /* UICollectionView+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B694851E6FF728004144D4 /* UICollectionView+WN.swift */; };
+		E9BD50FC1DE3DF6C007E4D03 /* UIColor+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BD50FB1DE3DF6C007E4D03 /* UIColor+WN.swift */; };
+		E9C32CA61E711310008888D8 /* WNCommonTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C32CA51E711310008888D8 /* WNCommonTool.swift */; };
+		E9C32CA81E711327008888D8 /* WNUITool.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C32CA71E711327008888D8 /* WNUITool.swift */; };
+		E9C32CAA1E7113BC008888D8 /* UILabel+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C32CA91E7113BC008888D8 /* UILabel+WN.swift */; };
+		E9C32CAC1E71174F008888D8 /* UIButton+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C32CAB1E71174F008888D8 /* UIButton+WN.swift */; };
+		E9C32CAE1E7129E9008888D8 /* UITextField+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C32CAD1E7129E9008888D8 /* UITextField+WN.swift */; };
+		E9C32CB01E712E8F008888D8 /* UIImageView+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C32CAF1E712E8F008888D8 /* UIImageView+WN.swift */; };
+		E9C32CB21E713C50008888D8 /* WNDebugTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C32CB11E713C50008888D8 /* WNDebugTool.swift */; };
+		E9C32CB61E714D85008888D8 /* UIView+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C32CB51E714D85008888D8 /* UIView+WN.swift */; };
+		E9C32CB91E71580C008888D8 /* WNLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C32CB81E71580C008888D8 /* WNLoadingView.swift */; };
+		E9C32CBD1E725F54008888D8 /* RACTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C32CBC1E725F54008888D8 /* RACTool.swift */; };
+		E9C32CBF1E727C14008888D8 /* WNGlobalVar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C32CBE1E727C14008888D8 /* WNGlobalVar.swift */; };
+		E9C32D351E76A31E008888D8 /* DispatchQueue+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C32D341E76A31E008888D8 /* DispatchQueue+WN.swift */; };
+		E9C32D381E778A80008888D8 /* WNConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C32D371E778A80008888D8 /* WNConfig.swift */; };
+		E9C32D3A1E779F35008888D8 /* Notification+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C32D391E779F35008888D8 /* Notification+WN.swift */; };
+		E9C32D3C1E77CF50008888D8 /* Date+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C32D3B1E77CF50008888D8 /* Date+WN.swift */; };
+		E9C32D3E1E78DA3A008888D8 /* UIDevice+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C32D3D1E78DA3A008888D8 /* UIDevice+WN.swift */; };
+		E9D5CFCC1DE6A59100315460 /* UIGestureRecognizer+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D5CFCB1DE6A59100315460 /* UIGestureRecognizer+WN.swift */; };
+		E9D5CFCE1DE6A76200315460 /* UIBarButtonItem+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D5CFCD1DE6A76200315460 /* UIBarButtonItem+WN.swift */; };
+		E9D5CFD01DE6CADE00315460 /* WNSetupBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D5CFCF1DE6CADE00315460 /* WNSetupBoard.swift */; };
+		E9D5CFD21DE6CDE900315460 /* WNSetupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D5CFD11DE6CDE900315460 /* WNSetupModel.swift */; };
+		E9D5CFD41DE6D4EA00315460 /* WNSetupTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D5CFD31DE6D4EA00315460 /* WNSetupTCell.swift */; };
+		E9FBA3531DE4270E00540913 /* WNHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FBA3521DE4270E00540913 /* WNHeader.swift */; };
+		E9FBA3581DE4488600540913 /* WNAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FBA3571DE4488600540913 /* WNAction.swift */; };
+		E9FBA35A1DE44B9C00540913 /* UIControl+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FBA3591DE44B9C00540913 /* UIControl+WN.swift */; };
+		F54AB1D90D2C7D22C7C9FF08 /* Pods_Wannar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B27ADA439F653070BF462478 /* Pods_Wannar.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E94CB02D1DE2C5800013D986 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E94CB00D1DE2C5800013D986 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E94CB0141DE2C5800013D986;
+			remoteInfo = Wannar;
+		};
+		E94CB0381DE2C5810013D986 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E94CB00D1DE2C5800013D986 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E94CB0141DE2C5800013D986;
+			remoteInfo = Wannar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E923F6061DE41C410027A4B5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E923F6081DE41C900027A4B5 /* Pods_Wannar.framework in Embed Frameworks */,
+				E923F60A1DE41C900027A4B5 /* Pods_WannarTests.framework in Embed Frameworks */,
+				E923F60C1DE41C900027A4B5 /* Pods_WannarUITests.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		21E2702355115F2C875FD4BB /* Pods_WannarUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WannarUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		374A3A87E236699C0A4E82B3 /* Pods-WannarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WannarTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WannarTests/Pods-WannarTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4309ED9DDD7816EB6B01FA9A /* Pods_WannarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WannarTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75E2F26054A6D5DAB760207D /* Pods-Wannar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wannar.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wannar/Pods-Wannar.release.xcconfig"; sourceTree = "<group>"; };
+		78C9A89CE4C58BB6625D6F2D /* Pods-WannarUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WannarUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WannarUITests/Pods-WannarUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7E83010B6C9A51F22EB10FC3 /* Pods-WannarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WannarTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WannarTests/Pods-WannarTests.release.xcconfig"; sourceTree = "<group>"; };
+		AF6348C0B5EF94F4622CA4FC /* Pods-WannarUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WannarUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WannarUITests/Pods-WannarUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B27ADA439F653070BF462478 /* Pods_Wannar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wannar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7849387DA23A0F1E11D933F /* Pods-Wannar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wannar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wannar/Pods-Wannar.debug.xcconfig"; sourceTree = "<group>"; };
+		E923F60D1DE41F980027A4B5 /* WNMeNormalTCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNMeNormalTCell.swift; sourceTree = "<group>"; };
+		E94CB0151DE2C5800013D986 /* Wannar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wannar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E94CB0181DE2C5800013D986 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E94CB01D1DE2C5800013D986 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E94CB0201DE2C5800013D986 /* Wannar.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Wannar.xcdatamodel; sourceTree = "<group>"; };
+		E94CB0221DE2C5800013D986 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E94CB0251DE2C5800013D986 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E94CB0271DE2C5800013D986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E94CB02C1DE2C5800013D986 /* WannarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WannarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E94CB0301DE2C5800013D986 /* WannarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WannarTests.swift; sourceTree = "<group>"; };
+		E94CB0321DE2C5800013D986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E94CB0371DE2C5810013D986 /* WannarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WannarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E94CB03B1DE2C5810013D986 /* WannarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WannarUITests.swift; sourceTree = "<group>"; };
+		E94CB03D1DE2C5810013D986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E94CB04C1DE2C6940013D986 /* WNRootBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNRootBoard.swift; sourceTree = "<group>"; };
+		E94CB0541DE2C8910013D986 /* WNBaseBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNBaseBoard.swift; sourceTree = "<group>"; };
+		E94CB0591DE2C9240013D986 /* WNRecommendBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNRecommendBoard.swift; sourceTree = "<group>"; };
+		E94CB0661DE2C9C60013D986 /* WNDestinationBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNDestinationBoard.swift; sourceTree = "<group>"; };
+		E94CB0681DE2C9DA0013D986 /* WNMeBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNMeBoard.swift; sourceTree = "<group>"; };
+		E94CB06A1DE2C9F50013D986 /* WNPlanListBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNPlanListBoard.swift; sourceTree = "<group>"; };
+		E9639E301E1BA11A00FC8D1B /* String+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+WN.swift"; sourceTree = "<group>"; };
+		E9AB81E71E80FE850051E5A6 /* Array+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+WN.swift"; sourceTree = "<group>"; };
+		E9AB81E91E810EF40051E5A6 /* Bundle+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+WN.swift"; sourceTree = "<group>"; };
+		E9AB81F11E822E2F0051E5A6 /* UIScreen+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScreen+WN.swift"; sourceTree = "<group>"; };
+		E9AB81F31E8234B00051E5A6 /* CGSize+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGSize+WN.swift"; sourceTree = "<group>"; };
+		E9AB81F71E8274770051E5A6 /* WNMeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNMeModel.swift; sourceTree = "<group>"; };
+		E9AB81FA1E8283DF0051E5A6 /* WNParallaxHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNParallaxHeaderView.swift; sourceTree = "<group>"; };
+		E9AB81FC1E8381710051E5A6 /* Collection+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+WN.swift"; sourceTree = "<group>"; };
+		E9B2F1FA1E1511270027DC1B /* WNAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNAPIClient.swift; sourceTree = "<group>"; };
+		E9B6947F1E6FE93E004144D4 /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		E9B694811E6FEC32004144D4 /* UITableView+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+WN.swift"; sourceTree = "<group>"; };
+		E9B694831E6FEDC0004144D4 /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		E9B694851E6FF728004144D4 /* UICollectionView+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+WN.swift"; sourceTree = "<group>"; };
+		E9BD50FB1DE3DF6C007E4D03 /* UIColor+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+WN.swift"; sourceTree = "<group>"; };
+		E9C32CA51E711310008888D8 /* WNCommonTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNCommonTool.swift; sourceTree = "<group>"; };
+		E9C32CA71E711327008888D8 /* WNUITool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNUITool.swift; sourceTree = "<group>"; };
+		E9C32CA91E7113BC008888D8 /* UILabel+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+WN.swift"; sourceTree = "<group>"; };
+		E9C32CAB1E71174F008888D8 /* UIButton+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+WN.swift"; sourceTree = "<group>"; };
+		E9C32CAD1E7129E9008888D8 /* UITextField+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+WN.swift"; sourceTree = "<group>"; };
+		E9C32CAF1E712E8F008888D8 /* UIImageView+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+WN.swift"; sourceTree = "<group>"; };
+		E9C32CB11E713C50008888D8 /* WNDebugTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNDebugTool.swift; sourceTree = "<group>"; };
+		E9C32CB51E714D85008888D8 /* UIView+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+WN.swift"; sourceTree = "<group>"; };
+		E9C32CB81E71580C008888D8 /* WNLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNLoadingView.swift; sourceTree = "<group>"; };
+		E9C32CBC1E725F54008888D8 /* RACTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RACTool.swift; sourceTree = "<group>"; };
+		E9C32CBE1E727C14008888D8 /* WNGlobalVar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNGlobalVar.swift; sourceTree = "<group>"; };
+		E9C32D341E76A31E008888D8 /* DispatchQueue+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+WN.swift"; sourceTree = "<group>"; };
+		E9C32D371E778A80008888D8 /* WNConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNConfig.swift; sourceTree = "<group>"; };
+		E9C32D391E779F35008888D8 /* Notification+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notification+WN.swift"; sourceTree = "<group>"; };
+		E9C32D3B1E77CF50008888D8 /* Date+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+WN.swift"; sourceTree = "<group>"; };
+		E9C32D3D1E78DA3A008888D8 /* UIDevice+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+WN.swift"; sourceTree = "<group>"; };
+		E9D5CFCB1DE6A59100315460 /* UIGestureRecognizer+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIGestureRecognizer+WN.swift"; sourceTree = "<group>"; };
+		E9D5CFCD1DE6A76200315460 /* UIBarButtonItem+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+WN.swift"; sourceTree = "<group>"; };
+		E9D5CFCF1DE6CADE00315460 /* WNSetupBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNSetupBoard.swift; sourceTree = "<group>"; };
+		E9D5CFD11DE6CDE900315460 /* WNSetupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNSetupModel.swift; sourceTree = "<group>"; };
+		E9D5CFD31DE6D4EA00315460 /* WNSetupTCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNSetupTCell.swift; sourceTree = "<group>"; };
+		E9FBA3521DE4270E00540913 /* WNHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNHeader.swift; sourceTree = "<group>"; };
+		E9FBA3571DE4488600540913 /* WNAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNAction.swift; sourceTree = "<group>"; };
+		E9FBA3591DE44B9C00540913 /* UIControl+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+WN.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E94CB0121DE2C5800013D986 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E923F6091DE41C900027A4B5 /* Pods_WannarTests.framework in Frameworks */,
+				E923F60B1DE41C900027A4B5 /* Pods_WannarUITests.framework in Frameworks */,
+				F54AB1D90D2C7D22C7C9FF08 /* Pods_Wannar.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E94CB0291DE2C5800013D986 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2E09CEEB0575B3C2227D515 /* Pods_WannarTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E94CB0341DE2C5810013D986 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A81C415A80E62EC44C5210BA /* Pods_WannarUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8DAF58483667FAC5E63F5FA5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B27ADA439F653070BF462478 /* Pods_Wannar.framework */,
+				4309ED9DDD7816EB6B01FA9A /* Pods_WannarTests.framework */,
+				21E2702355115F2C875FD4BB /* Pods_WannarUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A77A6E20FE68222D112A1301 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B7849387DA23A0F1E11D933F /* Pods-Wannar.debug.xcconfig */,
+				75E2F26054A6D5DAB760207D /* Pods-Wannar.release.xcconfig */,
+				374A3A87E236699C0A4E82B3 /* Pods-WannarTests.debug.xcconfig */,
+				7E83010B6C9A51F22EB10FC3 /* Pods-WannarTests.release.xcconfig */,
+				AF6348C0B5EF94F4622CA4FC /* Pods-WannarUITests.debug.xcconfig */,
+				78C9A89CE4C58BB6625D6F2D /* Pods-WannarUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E94CB00C1DE2C5800013D986 = {
+			isa = PBXGroup;
+			children = (
+				E94CB0171DE2C5800013D986 /* Wannar */,
+				E94CB02F1DE2C5800013D986 /* WannarTests */,
+				E94CB03A1DE2C5810013D986 /* WannarUITests */,
+				E94CB0161DE2C5800013D986 /* Products */,
+				A77A6E20FE68222D112A1301 /* Pods */,
+				8DAF58483667FAC5E63F5FA5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E94CB0161DE2C5800013D986 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E94CB0151DE2C5800013D986 /* Wannar.app */,
+				E94CB02C1DE2C5800013D986 /* WannarTests.xctest */,
+				E94CB0371DE2C5810013D986 /* WannarUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E94CB0171DE2C5800013D986 /* Wannar */ = {
+			isa = PBXGroup;
+			children = (
+				E94CB0181DE2C5800013D986 /* AppDelegate.swift */,
+				E94CB0221DE2C5800013D986 /* Assets.xcassets */,
+				E94CB0271DE2C5800013D986 /* Info.plist */,
+				E94CB0241DE2C5800013D986 /* LaunchScreen.storyboard */,
+				E94CB01C1DE2C5800013D986 /* Main.storyboard */,
+				E94CB0521DE2C85F0013D986 /* Base */,
+				E94CB04E1DE2C8060013D986 /* Destination */,
+				E94CB04F1DE2C8060013D986 /* Me */,
+				E94CB0501DE2C8060013D986 /* Plan */,
+				E94CB0511DE2C8060013D986 /* Recommend */,
+				E94CB0491DE2C5FE0013D986 /* Root */,
+				E94CB0531DE2C85F0013D986 /* Tool */,
+				E9C32CB71E7157D4008888D8 /* View */,
+				E94CB01F1DE2C5800013D986 /* Wannar.xcdatamodeld */,
+				E9FBA3521DE4270E00540913 /* WNHeader.swift */,
+			);
+			path = Wannar;
+			sourceTree = "<group>";
+		};
+		E94CB02F1DE2C5800013D986 /* WannarTests */ = {
+			isa = PBXGroup;
+			children = (
+				E94CB0301DE2C5800013D986 /* WannarTests.swift */,
+				E94CB0321DE2C5800013D986 /* Info.plist */,
+			);
+			path = WannarTests;
+			sourceTree = "<group>";
+		};
+		E94CB03A1DE2C5810013D986 /* WannarUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E94CB03B1DE2C5810013D986 /* WannarUITests.swift */,
+				E94CB03D1DE2C5810013D986 /* Info.plist */,
+			);
+			path = WannarUITests;
+			sourceTree = "<group>";
+		};
+		E94CB0491DE2C5FE0013D986 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				E94CB04C1DE2C6940013D986 /* WNRootBoard.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		E94CB04E1DE2C8060013D986 /* Destination */ = {
+			isa = PBXGroup;
+			children = (
+				E94CB0631DE2C9AA0013D986 /* Controller */,
+				E94CB0641DE2C9AA0013D986 /* Model */,
+				E94CB0651DE2C9AA0013D986 /* View */,
+			);
+			path = Destination;
+			sourceTree = "<group>";
+		};
+		E94CB04F1DE2C8060013D986 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				E94CB0601DE2C98D0013D986 /* Controller */,
+				E94CB0611DE2C98D0013D986 /* Model */,
+				E94CB0621DE2C98D0013D986 /* View */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		E94CB0501DE2C8060013D986 /* Plan */ = {
+			isa = PBXGroup;
+			children = (
+				E94CB05D1DE2C9760013D986 /* Controller */,
+				E94CB05E1DE2C9760013D986 /* Model */,
+				E94CB05F1DE2C9760013D986 /* View */,
+			);
+			path = Plan;
+			sourceTree = "<group>";
+		};
+		E94CB0511DE2C8060013D986 /* Recommend */ = {
+			isa = PBXGroup;
+			children = (
+				E94CB0581DE2C9240013D986 /* Controller */,
+				E94CB05A1DE2C9240013D986 /* View */,
+				E94CB05B1DE2C9240013D986 /* Model */,
+			);
+			path = Recommend;
+			sourceTree = "<group>";
+		};
+		E94CB0521DE2C85F0013D986 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				E94CB0541DE2C8910013D986 /* WNBaseBoard.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		E94CB0531DE2C85F0013D986 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				E9C32D361E778A30008888D8 /* Macro */,
+				E9B2F1F91E1510C10027DC1B /* APIClient */,
+				E9C32CA41E7112F8008888D8 /* Common */,
+				E9BD50FA1DE3DF58007E4D03 /* Extensions */,
+				E9B6947E1E6FE8E6004144D4 /* Protocols */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		E94CB0581DE2C9240013D986 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E94CB0591DE2C9240013D986 /* WNRecommendBoard.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E94CB05A1DE2C9240013D986 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E94CB05B1DE2C9240013D986 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E94CB05D1DE2C9760013D986 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E94CB06A1DE2C9F50013D986 /* WNPlanListBoard.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E94CB05E1DE2C9760013D986 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E94CB05F1DE2C9760013D986 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E94CB0601DE2C98D0013D986 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E94CB0681DE2C9DA0013D986 /* WNMeBoard.swift */,
+				E9D5CFCF1DE6CADE00315460 /* WNSetupBoard.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E94CB0611DE2C98D0013D986 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E9AB81F71E8274770051E5A6 /* WNMeModel.swift */,
+				E9D5CFD11DE6CDE900315460 /* WNSetupModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E94CB0621DE2C98D0013D986 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E923F60D1DE41F980027A4B5 /* WNMeNormalTCell.swift */,
+				E9D5CFD31DE6D4EA00315460 /* WNSetupTCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E94CB0631DE2C9AA0013D986 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E94CB0661DE2C9C60013D986 /* WNDestinationBoard.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E94CB0641DE2C9AA0013D986 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E94CB0651DE2C9AA0013D986 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E9B2F1F91E1510C10027DC1B /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				E9B2F1FA1E1511270027DC1B /* WNAPIClient.swift */,
+			);
+			path = APIClient;
+			sourceTree = "<group>";
+		};
+		E9B6947E1E6FE8E6004144D4 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E9B6947F1E6FE93E004144D4 /* Reusable.swift */,
+				E9B694831E6FEDC0004144D4 /* NibLoadable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		E9BD50FA1DE3DF58007E4D03 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E9AB81E71E80FE850051E5A6 /* Array+WN.swift */,
+				E9AB81FC1E8381710051E5A6 /* Collection+WN.swift */,
+				E9AB81E91E810EF40051E5A6 /* Bundle+WN.swift */,
+				E9C32D3B1E77CF50008888D8 /* Date+WN.swift */,
+				E9C32D341E76A31E008888D8 /* DispatchQueue+WN.swift */,
+				E9C32D391E779F35008888D8 /* Notification+WN.swift */,
+				E9639E301E1BA11A00FC8D1B /* String+WN.swift */,
+				E9D5CFCD1DE6A76200315460 /* UIBarButtonItem+WN.swift */,
+				E9C32CAB1E71174F008888D8 /* UIButton+WN.swift */,
+				E9B694851E6FF728004144D4 /* UICollectionView+WN.swift */,
+				E9BD50FB1DE3DF6C007E4D03 /* UIColor+WN.swift */,
+				E9C32D3D1E78DA3A008888D8 /* UIDevice+WN.swift */,
+				E9D5CFCB1DE6A59100315460 /* UIGestureRecognizer+WN.swift */,
+				E9C32CAF1E712E8F008888D8 /* UIImageView+WN.swift */,
+				E9C32CA91E7113BC008888D8 /* UILabel+WN.swift */,
+				E9B694811E6FEC32004144D4 /* UITableView+WN.swift */,
+				E9C32CAD1E7129E9008888D8 /* UITextField+WN.swift */,
+				E9C32CB51E714D85008888D8 /* UIView+WN.swift */,
+				E9AB81F11E822E2F0051E5A6 /* UIScreen+WN.swift */,
+				E9AB81F31E8234B00051E5A6 /* CGSize+WN.swift */,
+				E9FBA3571DE4488600540913 /* WNAction.swift */,
+				E9FBA3591DE44B9C00540913 /* UIControl+WN.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E9C32CA41E7112F8008888D8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E9C32CBE1E727C14008888D8 /* WNGlobalVar.swift */,
+				E9C32CA51E711310008888D8 /* WNCommonTool.swift */,
+				E9C32CA71E711327008888D8 /* WNUITool.swift */,
+				E9C32CB11E713C50008888D8 /* WNDebugTool.swift */,
+				E9C32CBC1E725F54008888D8 /* RACTool.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		E9C32CB71E7157D4008888D8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E9C32CB81E71580C008888D8 /* WNLoadingView.swift */,
+				E9AB81FA1E8283DF0051E5A6 /* WNParallaxHeaderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E9C32D361E778A30008888D8 /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				E9C32D371E778A80008888D8 /* WNConfig.swift */,
+			);
+			path = Macro;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E94CB0141DE2C5800013D986 /* Wannar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E94CB0401DE2C5810013D986 /* Build configuration list for PBXNativeTarget "Wannar" */;
+			buildPhases = (
+				5FC39F52F15D408A3265AD74 /* [CP] Check Pods Manifest.lock */,
+				E94CB0111DE2C5800013D986 /* Sources */,
+				E94CB0121DE2C5800013D986 /* Frameworks */,
+				E94CB0131DE2C5800013D986 /* Resources */,
+				03339F8FE5CAE14EAD8D0ECD /* [CP] Embed Pods Frameworks */,
+				72463811AAD5C123673241BF /* [CP] Copy Pods Resources */,
+				E923F6061DE41C410027A4B5 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Wannar;
+			productName = Wannar;
+			productReference = E94CB0151DE2C5800013D986 /* Wannar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E94CB02B1DE2C5800013D986 /* WannarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E94CB0431DE2C5810013D986 /* Build configuration list for PBXNativeTarget "WannarTests" */;
+			buildPhases = (
+				CF42537CD4FD432EC772BD69 /* [CP] Check Pods Manifest.lock */,
+				E94CB0281DE2C5800013D986 /* Sources */,
+				E94CB0291DE2C5800013D986 /* Frameworks */,
+				E94CB02A1DE2C5800013D986 /* Resources */,
+				371126BD8C441822F37AF346 /* [CP] Embed Pods Frameworks */,
+				D6BE346259534E7679E78919 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E94CB02E1DE2C5800013D986 /* PBXTargetDependency */,
+			);
+			name = WannarTests;
+			productName = WannarTests;
+			productReference = E94CB02C1DE2C5800013D986 /* WannarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E94CB0361DE2C5810013D986 /* WannarUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E94CB0461DE2C5810013D986 /* Build configuration list for PBXNativeTarget "WannarUITests" */;
+			buildPhases = (
+				A132C3D771CBB1BC6CAA5CF9 /* [CP] Check Pods Manifest.lock */,
+				E94CB0331DE2C5810013D986 /* Sources */,
+				E94CB0341DE2C5810013D986 /* Frameworks */,
+				E94CB0351DE2C5810013D986 /* Resources */,
+				1828D45EE5F461B6DE9CB100 /* [CP] Embed Pods Frameworks */,
+				CF2D10BCE3CA822E361A9B41 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E94CB0391DE2C5810013D986 /* PBXTargetDependency */,
+			);
+			name = WannarUITests;
+			productName = WannarUITests;
+			productReference = E94CB0371DE2C5810013D986 /* WannarUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E94CB00D1DE2C5800013D986 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "玩哪儿";
+				TargetAttributes = {
+					E94CB0141DE2C5800013D986 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 9SER6B58E4;
+						ProvisioningStyle = Automatic;
+					};
+					E94CB02B1DE2C5800013D986 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 9SER6B58E4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E94CB0141DE2C5800013D986;
+					};
+					E94CB0361DE2C5810013D986 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 9SER6B58E4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E94CB0141DE2C5800013D986;
+					};
+				};
+			};
+			buildConfigurationList = E94CB0101DE2C5800013D986 /* Build configuration list for PBXProject "Wannar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E94CB00C1DE2C5800013D986;
+			productRefGroup = E94CB0161DE2C5800013D986 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E94CB0141DE2C5800013D986 /* Wannar */,
+				E94CB02B1DE2C5800013D986 /* WannarTests */,
+				E94CB0361DE2C5810013D986 /* WannarUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E94CB0131DE2C5800013D986 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E94CB0261DE2C5800013D986 /* LaunchScreen.storyboard in Resources */,
+				E94CB0231DE2C5800013D986 /* Assets.xcassets in Resources */,
+				E94CB01E1DE2C5800013D986 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E94CB02A1DE2C5800013D986 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E94CB0351DE2C5810013D986 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03339F8FE5CAE14EAD8D0ECD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Wannar/Pods-Wannar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1828D45EE5F461B6DE9CB100 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WannarUITests/Pods-WannarUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		371126BD8C441822F37AF346 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WannarTests/Pods-WannarTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5FC39F52F15D408A3265AD74 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		72463811AAD5C123673241BF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Wannar/Pods-Wannar-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A132C3D771CBB1BC6CAA5CF9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CF2D10BCE3CA822E361A9B41 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WannarUITests/Pods-WannarUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF42537CD4FD432EC772BD69 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D6BE346259534E7679E78919 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WannarTests/Pods-WannarTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E94CB0111DE2C5800013D986 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9AB81F81E8274770051E5A6 /* WNMeModel.swift in Sources */,
+				E9C32CBD1E725F54008888D8 /* RACTool.swift in Sources */,
+				E9BD50FC1DE3DF6C007E4D03 /* UIColor+WN.swift in Sources */,
+				E9D5CFD21DE6CDE900315460 /* WNSetupModel.swift in Sources */,
+				E9639E311E1BA11A00FC8D1B /* String+WN.swift in Sources */,
+				E94CB0671DE2C9C60013D986 /* WNDestinationBoard.swift in Sources */,
+				E923F60E1DE41F980027A4B5 /* WNMeNormalTCell.swift in Sources */,
+				E94CB0691DE2C9DA0013D986 /* WNMeBoard.swift in Sources */,
+				E9C32D3A1E779F35008888D8 /* Notification+WN.swift in Sources */,
+				E9FBA3531DE4270E00540913 /* WNHeader.swift in Sources */,
+				E9AB81EA1E810EF40051E5A6 /* Bundle+WN.swift in Sources */,
+				E9AB81FB1E8283DF0051E5A6 /* WNParallaxHeaderView.swift in Sources */,
+				E94CB0211DE2C5800013D986 /* Wannar.xcdatamodeld in Sources */,
+				E9D5CFD41DE6D4EA00315460 /* WNSetupTCell.swift in Sources */,
+				E9B694841E6FEDC0004144D4 /* NibLoadable.swift in Sources */,
+				E9C32CBF1E727C14008888D8 /* WNGlobalVar.swift in Sources */,
+				E9AB81FD1E8381710051E5A6 /* Collection+WN.swift in Sources */,
+				E9C32CAC1E71174F008888D8 /* UIButton+WN.swift in Sources */,
+				E9FBA35A1DE44B9C00540913 /* UIControl+WN.swift in Sources */,
+				E9C32D381E778A80008888D8 /* WNConfig.swift in Sources */,
+				E94CB04D1DE2C6940013D986 /* WNRootBoard.swift in Sources */,
+				E9D5CFCE1DE6A76200315460 /* UIBarButtonItem+WN.swift in Sources */,
+				E9B694801E6FE93E004144D4 /* Reusable.swift in Sources */,
+				E9C32CAE1E7129E9008888D8 /* UITextField+WN.swift in Sources */,
+				E9C32D3E1E78DA3A008888D8 /* UIDevice+WN.swift in Sources */,
+				E94CB05C1DE2C9240013D986 /* WNRecommendBoard.swift in Sources */,
+				E9FBA3581DE4488600540913 /* WNAction.swift in Sources */,
+				E9B694861E6FF728004144D4 /* UICollectionView+WN.swift in Sources */,
+				E9C32CA61E711310008888D8 /* WNCommonTool.swift in Sources */,
+				E9D5CFD01DE6CADE00315460 /* WNSetupBoard.swift in Sources */,
+				E9AB81F41E8234B00051E5A6 /* CGSize+WN.swift in Sources */,
+				E9B2F1FB1E1511270027DC1B /* WNAPIClient.swift in Sources */,
+				E9C32CB21E713C50008888D8 /* WNDebugTool.swift in Sources */,
+				E9B694821E6FEC32004144D4 /* UITableView+WN.swift in Sources */,
+				E9C32CB01E712E8F008888D8 /* UIImageView+WN.swift in Sources */,
+				E9C32CA81E711327008888D8 /* WNUITool.swift in Sources */,
+				E9C32D3C1E77CF50008888D8 /* Date+WN.swift in Sources */,
+				E9AB81E81E80FE850051E5A6 /* Array+WN.swift in Sources */,
+				E9C32CB91E71580C008888D8 /* WNLoadingView.swift in Sources */,
+				E9D5CFCC1DE6A59100315460 /* UIGestureRecognizer+WN.swift in Sources */,
+				E94CB0191DE2C5800013D986 /* AppDelegate.swift in Sources */,
+				E9C32CAA1E7113BC008888D8 /* UILabel+WN.swift in Sources */,
+				E9AB81F21E822E2F0051E5A6 /* UIScreen+WN.swift in Sources */,
+				E94CB06B1DE2C9F50013D986 /* WNPlanListBoard.swift in Sources */,
+				E9C32CB61E714D85008888D8 /* UIView+WN.swift in Sources */,
+				E9C32D351E76A31E008888D8 /* DispatchQueue+WN.swift in Sources */,
+				E94CB0551DE2C8910013D986 /* WNBaseBoard.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E94CB0281DE2C5800013D986 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E94CB0311DE2C5800013D986 /* WannarTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E94CB0331DE2C5810013D986 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E94CB03C1DE2C5810013D986 /* WannarUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E94CB02E1DE2C5800013D986 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E94CB0141DE2C5800013D986 /* Wannar */;
+			targetProxy = E94CB02D1DE2C5800013D986 /* PBXContainerItemProxy */;
+		};
+		E94CB0391DE2C5810013D986 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E94CB0141DE2C5800013D986 /* Wannar */;
+			targetProxy = E94CB0381DE2C5810013D986 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E94CB01C1DE2C5800013D986 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E94CB01D1DE2C5800013D986 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E94CB0241DE2C5800013D986 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E94CB0251DE2C5800013D986 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E94CB03E1DE2C5810013D986 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E94CB03F1DE2C5810013D986 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E94CB0411DE2C5810013D986 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7849387DA23A0F1E11D933F /* Pods-Wannar.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9SER6B58E4;
+				INFOPLIST_FILE = Wannar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wannar.WannarTravel.Wannar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		E94CB0421DE2C5810013D986 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75E2F26054A6D5DAB760207D /* Pods-Wannar.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9SER6B58E4;
+				INFOPLIST_FILE = Wannar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wannar.WannarTravel.Wannar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		E94CB0441DE2C5810013D986 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 374A3A87E236699C0A4E82B3 /* Pods-WannarTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 9SER6B58E4;
+				INFOPLIST_FILE = WannarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wannar.WannarTravel.WannarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wannar.app/Wannar";
+			};
+			name = Debug;
+		};
+		E94CB0451DE2C5810013D986 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E83010B6C9A51F22EB10FC3 /* Pods-WannarTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 9SER6B58E4;
+				INFOPLIST_FILE = WannarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wannar.WannarTravel.WannarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wannar.app/Wannar";
+			};
+			name = Release;
+		};
+		E94CB0471DE2C5810013D986 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF6348C0B5EF94F4622CA4FC /* Pods-WannarUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 9SER6B58E4;
+				INFOPLIST_FILE = WannarUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wannar.WannarTravel.WannarUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Wannar;
+			};
+			name = Debug;
+		};
+		E94CB0481DE2C5810013D986 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78C9A89CE4C58BB6625D6F2D /* Pods-WannarUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 9SER6B58E4;
+				INFOPLIST_FILE = WannarUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wannar.WannarTravel.WannarUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Wannar;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E94CB0101DE2C5800013D986 /* Build configuration list for PBXProject "Wannar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E94CB03E1DE2C5810013D986 /* Debug */,
+				E94CB03F1DE2C5810013D986 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E94CB0401DE2C5810013D986 /* Build configuration list for PBXNativeTarget "Wannar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E94CB0411DE2C5810013D986 /* Debug */,
+				E94CB0421DE2C5810013D986 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E94CB0431DE2C5810013D986 /* Build configuration list for PBXNativeTarget "WannarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E94CB0441DE2C5810013D986 /* Debug */,
+				E94CB0451DE2C5810013D986 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E94CB0461DE2C5810013D986 /* Build configuration list for PBXNativeTarget "WannarUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E94CB0471DE2C5810013D986 /* Debug */,
+				E94CB0481DE2C5810013D986 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E94CB01F1DE2C5800013D986 /* Wannar.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E94CB0201DE2C5800013D986 /* Wannar.xcdatamodel */,
+			);
+			currentVersion = E94CB0201DE2C5800013D986 /* Wannar.xcdatamodel */;
+			path = Wannar.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E94CB00D1DE2C5800013D986 /* Project object */;
+}
