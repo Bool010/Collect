@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>@mark</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#pragma mark - &lt;&lt;&lt;&lt;&lt;&lt; Life Cycle &gt;&gt;&gt;&gt;&gt;&gt; -
+
+
+
+#pragma mark - &lt;&lt;&lt;&lt;&lt;&lt; Nofifaction Action &gt;&gt;&gt;&gt;&gt;&gt; -
+
+
+
+#pragma mark - &lt;&lt;&lt;&lt;&lt;&lt; Event &gt;&gt;&gt;&gt;&gt;&gt; -
+
+
+
+#pragma mark - &lt;&lt;&lt;&lt;&lt;&lt; IBoutlet &gt;&gt;&gt;&gt;&gt;&gt; -
+
+
+
+#pragma mark - &lt;&lt;&lt;&lt;&lt;&lt; Delegate &gt;&gt;&gt;&gt;&gt;&gt; -
+
+
+
+#pragma mark - &lt;&lt;&lt;&lt;&lt;&lt; Get/Set &gt;&gt;&gt;&gt;&gt;&gt; -
+
+
+
+#pragma mark - &lt;&lt;&lt;&lt;&lt;&lt; Dealloc &gt;&gt;&gt;&gt;&gt;&gt; -</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>9FD9D157-1013-4AFF-B027-4919CA84650F</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>分类注释</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>@mark分类注释</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
