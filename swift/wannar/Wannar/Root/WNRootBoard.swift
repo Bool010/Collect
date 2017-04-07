@@ -22,17 +22,19 @@ class WNRootBoard: UITabBarController, UITabBarControllerDelegate {
                       "query": "col_scenery_id:46",
                       "facets": "col_scenery_recommand_tour",
                       "facetExtensions": "col_scenery_recommand_tour,tour,tour_id,is_discount_now|tour_main_picture|tour_id|tour_title_app|tour_display_price|tour_discount_percent_now|tour_activity|current_price"]
-        let url = "http://api.wannar.com/api/4.6/list/get-list.php"
+        let url = "list/get-list.php"
         
-        WNAPIClient.request(method: .post, url: url, params: params, isEncrypt: false, retryCount: 5, delay: 0, timeout: 30, convertData: { (responseObject) -> JSON? in
-            return nil
-        }, success: { (responseObject) in
-            print(responseObject ?? "responseObject不存在")
+        WNHttpClient.post(subURL: url, param: params, handle: { (response) -> JSON? in
+            return nil;
+        }, success: { (json) in
+            print(json)
         }, fail: { (error) in
-            print(error ?? "error为nil")
-        }) { (Void) in
+            print(error)
+        }) { () in
             
         }
+        
+        
         
         // 监测网络连接状态
         startMonitoringNetwork()
