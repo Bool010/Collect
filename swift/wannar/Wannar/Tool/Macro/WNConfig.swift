@@ -55,11 +55,11 @@ final public class WNConfig {
     /// Base URL
     public struct BaseURL {
         
-        public static let release = "https://www.wannar.com/api/4.8/"
-        public static let debug = "http://test.wannar.com/api/4.8"
-        public static let website = "http://website.wannar.com/"
-        public static let yelpImage = "http://yelp.wannar.com/"
-        public static let scenicImage = "http://ins.wannar.com/"
+        public static let release = "https://www.wannar.com/api/5.01/"
+        public static let debug = "https://test.wannar.com/api/5.01"
+        public static let website = "https://website.wannar.com/"
+        public static let yelpImage = "https://yelp.wannar.com/"
+        public static let scenicImage = "https://ins.wannar.com/"
     }
     
     
