@@ -12,6 +12,7 @@ class WNMeBoard: WNBaseBoard {
 
     var tableView : UITableView!
     var model = WNMeModel()
+    var test = 1
     
     
     
