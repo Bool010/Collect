@@ -34,7 +34,7 @@ func iOSLater(version: Double) -> Bool {
     if let systemVersion = systemVersion {
         return systemVersion >= version
     } else {
-        wn_debugMessage("发生一个❌错误❌需要处理, 获取系统版本号转换Double时候出错")
+        wn_debugMessage("发生一个#### 错误 ####需要处理, 获取系统版本号转换Double时候出错")
         return false
     }
 }

@@ -33,12 +33,8 @@ class WNRootBoard: UITabBarController, UITabBarControllerDelegate {
         }) { () in
             
         }
-        
-        
-        
         // 监测网络连接状态
         startMonitoringNetwork()
-
     }
     
     

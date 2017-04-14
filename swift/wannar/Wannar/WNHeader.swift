@@ -11,3 +11,4 @@ import UIKit
 import SnapKit
 import Spring
 import Alamofire
+import SwiftyJSON

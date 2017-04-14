@@ -15,6 +15,7 @@
 		E923F60B1DE41C900027A4B5 /* Pods_WannarUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2702355115F2C875FD4BB /* Pods_WannarUITests.framework */; };
 		E923F60C1DE41C900027A4B5 /* Pods_WannarUITests.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2702355115F2C875FD4BB /* Pods_WannarUITests.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E923F60E1DE41F980027A4B5 /* WNMeNormalTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E923F60D1DE41F980027A4B5 /* WNMeNormalTCell.swift */; };
+		E9251BBD1E9F77D000B0BC0A /* WNRecommendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9251BBC1E9F77D000B0BC0A /* WNRecommendModel.swift */; };
 		E94CB0191DE2C5800013D986 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94CB0181DE2C5800013D986 /* AppDelegate.swift */; };
 		E94CB01E1DE2C5800013D986 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E94CB01C1DE2C5800013D986 /* Main.storyboard */; };
 		E94CB0211DE2C5800013D986 /* Wannar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E94CB01F1DE2C5800013D986 /* Wannar.xcdatamodeld */; };
@@ -58,6 +59,8 @@
 		E9C32D3A1E779F35008888D8 /* Notification+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C32D391E779F35008888D8 /* Notification+WN.swift */; };
 		E9C32D3C1E77CF50008888D8 /* Date+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C32D3B1E77CF50008888D8 /* Date+WN.swift */; };
 		E9C32D3E1E78DA3A008888D8 /* UIDevice+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C32D3D1E78DA3A008888D8 /* UIDevice+WN.swift */; };
+		E9D15FEB1EA0B070008E9E54 /* WNRecommendBannerCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D15FEA1EA0B070008E9E54 /* WNRecommendBannerCCell.swift */; };
+		E9D15FED1EA0C11A008E9E54 /* WNRecommendMeauCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D15FEC1EA0C11A008E9E54 /* WNRecommendMeauCCell.swift */; };
 		E9D5CFCC1DE6A59100315460 /* UIGestureRecognizer+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D5CFCB1DE6A59100315460 /* UIGestureRecognizer+WN.swift */; };
 		E9D5CFCE1DE6A76200315460 /* UIBarButtonItem+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D5CFCD1DE6A76200315460 /* UIBarButtonItem+WN.swift */; };
 		E9D5CFD01DE6CADE00315460 /* WNSetupBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D5CFCF1DE6CADE00315460 /* WNSetupBoard.swift */; };
@@ -113,6 +116,7 @@
 		B27ADA439F653070BF462478 /* Pods_Wannar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wannar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7849387DA23A0F1E11D933F /* Pods-Wannar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wannar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wannar/Pods-Wannar.debug.xcconfig"; sourceTree = "<group>"; };
 		E923F60D1DE41F980027A4B5 /* WNMeNormalTCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNMeNormalTCell.swift; sourceTree = "<group>"; };
+		E9251BBC1E9F77D000B0BC0A /* WNRecommendModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNRecommendModel.swift; sourceTree = "<group>"; };
 		E94CB0151DE2C5800013D986 /* Wannar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wannar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E94CB0181DE2C5800013D986 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E94CB01D1DE2C5800013D986 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -162,6 +166,8 @@
 		E9C32D391E779F35008888D8 /* Notification+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notification+WN.swift"; sourceTree = "<group>"; };
 		E9C32D3B1E77CF50008888D8 /* Date+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+WN.swift"; sourceTree = "<group>"; };
 		E9C32D3D1E78DA3A008888D8 /* UIDevice+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+WN.swift"; sourceTree = "<group>"; };
+		E9D15FEA1EA0B070008E9E54 /* WNRecommendBannerCCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNRecommendBannerCCell.swift; sourceTree = "<group>"; };
+		E9D15FEC1EA0C11A008E9E54 /* WNRecommendMeauCCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNRecommendMeauCCell.swift; sourceTree = "<group>"; };
 		E9D5CFCB1DE6A59100315460 /* UIGestureRecognizer+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIGestureRecognizer+WN.swift"; sourceTree = "<group>"; };
 		E9D5CFCD1DE6A76200315460 /* UIBarButtonItem+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+WN.swift"; sourceTree = "<group>"; };
 		E9D5CFCF1DE6CADE00315460 /* WNSetupBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNSetupBoard.swift; sourceTree = "<group>"; };
@@ -366,6 +372,8 @@
 		E94CB05A1DE2C9240013D986 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E9D15FEA1EA0B070008E9E54 /* WNRecommendBannerCCell.swift */,
+				E9D15FEC1EA0C11A008E9E54 /* WNRecommendMeauCCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -373,6 +381,7 @@
 		E94CB05B1DE2C9240013D986 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E9251BBC1E9F77D000B0BC0A /* WNRecommendModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -809,6 +818,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9AB81F81E8274770051E5A6 /* WNMeModel.swift in Sources */,
+				E9251BBD1E9F77D000B0BC0A /* WNRecommendModel.swift in Sources */,
 				E96C4E501E978E5A00168054 /* WNHttpClient.swift in Sources */,
 				E9C32CBD1E725F54008888D8 /* RACTool.swift in Sources */,
 				E9BD50FC1DE3DF6C007E4D03 /* UIColor+WN.swift in Sources */,
@@ -822,6 +832,7 @@
 				E9AB81EA1E810EF40051E5A6 /* Bundle+WN.swift in Sources */,
 				E9AB81FB1E8283DF0051E5A6 /* WNParallaxHeaderView.swift in Sources */,
 				E94CB0211DE2C5800013D986 /* Wannar.xcdatamodeld in Sources */,
+				E9D15FED1EA0C11A008E9E54 /* WNRecommendMeauCCell.swift in Sources */,
 				E9D5CFD41DE6D4EA00315460 /* WNSetupTCell.swift in Sources */,
 				E9B694841E6FEDC0004144D4 /* NibLoadable.swift in Sources */,
 				E9C32CBF1E727C14008888D8 /* WNGlobalVar.swift in Sources */,
@@ -833,6 +844,7 @@
 				E9D5CFCE1DE6A76200315460 /* UIBarButtonItem+WN.swift in Sources */,
 				E9B694801E6FE93E004144D4 /* Reusable.swift in Sources */,
 				E9C32CAE1E7129E9008888D8 /* UITextField+WN.swift in Sources */,
+				E9D15FEB1EA0B070008E9E54 /* WNRecommendBannerCCell.swift in Sources */,
 				E9C32D3E1E78DA3A008888D8 /* UIDevice+WN.swift in Sources */,
 				E94CB05C1DE2C9240013D986 /* WNRecommendBoard.swift in Sources */,
 				E9FBA3581DE4488600540913 /* WNAction.swift in Sources */,

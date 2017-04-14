@@ -20,6 +20,7 @@ target 'Wannar' do
     pod 'RxCocoa',    '~> 3.0'
     pod 'IQKeyboardManagerSwift'
     pod 'Kingfisher'
+    pod 'FSPagerView'
 #    pod 'ReactiveCocoa', '~> 5.0.0'
 
 end

@@ -74,6 +74,8 @@ final public class WNConfig {
     
     /// Path
     public struct Path {
+        // 首页推荐
+        public static let recommend = "config/get-latest-homepage-json.php"
         
         public static let destinationTour = "scenic/get-scenic-tour.php"
         public static let destinationPlan = "redis-scenic-plan.php"
