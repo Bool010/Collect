@@ -35,6 +35,14 @@ class ISOFormatter: DateFormatter {
 
 extension Date {
     
+    init(str: String, format: String) {
+        self.init()
+        let dateFormat = DateFormatter()
+        dateFormat.dateFormat = format
+        dateFormat.date(from: str)
+    }
+    
+    
     /// 返回一个Date的年份
     ///
     /// - Returns: 年份

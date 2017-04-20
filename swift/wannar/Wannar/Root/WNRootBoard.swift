@@ -18,21 +18,6 @@ class WNRootBoard: UITabBarController, UITabBarControllerDelegate {
         self.setAppearance()
         self.initChildBoard()
         
-        let params = ["solr": "scenic",
-                      "query": "col_scenery_id:46",
-                      "facets": "col_scenery_recommand_tour",
-                      "facetExtensions": "col_scenery_recommand_tour,tour,tour_id,is_discount_now|tour_main_picture|tour_id|tour_title_app|tour_display_price|tour_discount_percent_now|tour_activity|current_price"]
-        let url = "list/get-list.php"
-        
-        WNHttpClient.post(subURL: url, param: params, handle: { (response) -> JSON? in
-            return nil;
-        }, success: { (json) in
-            print(json)
-        }, fail: { (error) in
-            print(error)
-        }) { () in
-            
-        }
         // 监测网络连接状态
         startMonitoringNetwork()
     }
@@ -65,11 +50,13 @@ class WNRootBoard: UITabBarController, UITabBarControllerDelegate {
     /// Set Appearance
     private func setAppearance() -> Void {
         
-        let tabBar = UITabBarItem.appearance()
-        tabBar.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.textColor()], for: .normal)
-        tabBar.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.themColor()], for: .selected)
+        let tabBarItem = UITabBarItem.appearance()
+        tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.textColor()], for: .normal)
+        tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.themColor()], for: .selected)
+        tabBar.isTranslucent = false
         
         let navigation = UINavigationBar.appearance()
+        navigation.isTranslucent = false
         navigation.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.textColor(),
                                           NSFontAttributeName: UIFont.boldSystemFont(ofSize: 16.0)]
         

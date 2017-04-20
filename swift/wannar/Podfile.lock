@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.3.0)
+  - DZNEmptyDataSet (1.8.1)
   - FSPagerView (0.2.0)
   - IQKeyboardManagerSwift (4.0.8)
   - Kingfisher (3.5.0)
@@ -16,6 +17,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
+  - DZNEmptyDataSet
   - FSPagerView
   - IQKeyboardManagerSwift
   - Kingfisher
@@ -41,6 +43,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   FSPagerView: 1360ba3e026b37dec254c048667da5c096bf4db4
   IQKeyboardManagerSwift: c04bc9f68473823f825eb44d958fce98d921bead
   Kingfisher: 7c62087039d93d26c54c8dd9b0b588d2ce55cef6
@@ -54,6 +57,6 @@ SPEC CHECKSUMS:
   TextFieldEffects: faa47d428ee8eafb781a8413ac4345420d2328c4
   Toast-Swift: 5b2f8f720f7e78e48511f693df1f9c9a6e38a25a
 
-PODFILE CHECKSUM: e55124e27d15a2f3268fd539527bcc712141d171
+PODFILE CHECKSUM: b4481d481e5301a1ec7b4a2db422f7dbec6b939f
 
 COCOAPODS: 1.1.1

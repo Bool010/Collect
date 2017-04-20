@@ -56,6 +56,10 @@ struct WNRecommendModel {
                     let theme = Thems.init(json: dic)
                     data.append(theme)
                 }
+                if idName == WNRecommendKey.scenic {
+                    let scenic = Scenics.init(json: dic)
+                    data.append(scenic)
+                }
                 if idName == WNRecommendKey.season {
                     let season = Seasons.init(json: dic)
                     data.append(season)
@@ -171,7 +175,7 @@ struct WNRecommendModel {
             if let json = json {
                 id = json["id"].stringValue
                 enable = json["enable"].boolValue
-                title = json["slogan"].stringValue
+                title = json["title"].stringValue
                 subtitle = json["subtitle"].stringValue
                 icon = json["icon"].stringValue
                 
@@ -284,6 +288,11 @@ struct WNRecommendModel {
         var action: String = ""
         var text: String = ""
         var param: Dictionary = [String: JSON]()
+        var isHaveCover: Bool {
+            get {
+                return !(self.image.isEmpty || self.image == "")
+            }
+        }
         var data: Array = [RecommendTour]()
         
         init(json: JSON?) {

@@ -31,12 +31,22 @@
 		E94CB06B1DE2C9F50013D986 /* WNPlanListBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94CB06A1DE2C9F50013D986 /* WNPlanListBoard.swift */; };
 		E9639E311E1BA11A00FC8D1B /* String+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9639E301E1BA11A00FC8D1B /* String+WN.swift */; };
 		E96C4E501E978E5A00168054 /* WNHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C4E4F1E978E5A00168054 /* WNHttpClient.swift */; };
+		E975E8691EA4627800F65FFD /* WNLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E975E8671EA4627800F65FFD /* WNLoadingView.swift */; };
+		E975E86A1EA4627800F65FFD /* WNParallaxHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E975E8681EA4627800F65FFD /* WNParallaxHeaderView.swift */; };
+		E975E86C1EA462DB00F65FFD /* WNButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E975E86B1EA462DB00F65FFD /* WNButton.swift */; };
+		E975E86E1EA5C1FF00F65FFD /* WNRecommendWeeksCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E975E86D1EA5C1FF00F65FFD /* WNRecommendWeeksCCell.swift */; };
+		E975E8841EA71D6300F65FFD /* WNRecommendThemsCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E975E8831EA71D6300F65FFD /* WNRecommendThemsCCell.swift */; };
+		E975E8861EA71D9F00F65FFD /* WNRecommendScenicsCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E975E8851EA71D9F00F65FFD /* WNRecommendScenicsCCell.swift */; };
+		E975E8881EA71DDF00F65FFD /* WNRecommendSeasonsCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E975E8871EA71DDF00F65FFD /* WNRecommendSeasonsCCell.swift */; };
+		E975E88A1EA71DFA00F65FFD /* WNRecommendMinisCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E975E8891EA71DFA00F65FFD /* WNRecommendMinisCCell.swift */; };
+		E975E88C1EA71E1100F65FFD /* WNRecommendHotCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E975E88B1EA71E1100F65FFD /* WNRecommendHotCCell.swift */; };
+		E975E88E1EA7239200F65FFD /* WNRecommendCoverCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E975E88D1EA7239200F65FFD /* WNRecommendCoverCCell.swift */; };
+		E975E8901EA85CF400F65FFD /* WNRecommendHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E975E88F1EA85CF400F65FFD /* WNRecommendHeaderView.swift */; };
 		E9AB81E81E80FE850051E5A6 /* Array+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB81E71E80FE850051E5A6 /* Array+WN.swift */; };
 		E9AB81EA1E810EF40051E5A6 /* Bundle+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB81E91E810EF40051E5A6 /* Bundle+WN.swift */; };
 		E9AB81F21E822E2F0051E5A6 /* UIScreen+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB81F11E822E2F0051E5A6 /* UIScreen+WN.swift */; };
 		E9AB81F41E8234B00051E5A6 /* CGSize+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB81F31E8234B00051E5A6 /* CGSize+WN.swift */; };
 		E9AB81F81E8274770051E5A6 /* WNMeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB81F71E8274770051E5A6 /* WNMeModel.swift */; };
-		E9AB81FB1E8283DF0051E5A6 /* WNParallaxHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB81FA1E8283DF0051E5A6 /* WNParallaxHeaderView.swift */; };
 		E9AB81FD1E8381710051E5A6 /* Collection+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB81FC1E8381710051E5A6 /* Collection+WN.swift */; };
 		E9B694801E6FE93E004144D4 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B6947F1E6FE93E004144D4 /* Reusable.swift */; };
 		E9B694821E6FEC32004144D4 /* UITableView+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B694811E6FEC32004144D4 /* UITableView+WN.swift */; };
@@ -51,7 +61,6 @@
 		E9C32CB01E712E8F008888D8 /* UIImageView+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C32CAF1E712E8F008888D8 /* UIImageView+WN.swift */; };
 		E9C32CB21E713C50008888D8 /* WNDebugTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C32CB11E713C50008888D8 /* WNDebugTool.swift */; };
 		E9C32CB61E714D85008888D8 /* UIView+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C32CB51E714D85008888D8 /* UIView+WN.swift */; };
-		E9C32CB91E71580C008888D8 /* WNLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C32CB81E71580C008888D8 /* WNLoadingView.swift */; };
 		E9C32CBD1E725F54008888D8 /* RACTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C32CBC1E725F54008888D8 /* RACTool.swift */; };
 		E9C32CBF1E727C14008888D8 /* WNGlobalVar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C32CBE1E727C14008888D8 /* WNGlobalVar.swift */; };
 		E9C32D351E76A31E008888D8 /* DispatchQueue+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C32D341E76A31E008888D8 /* DispatchQueue+WN.swift */; };
@@ -138,12 +147,22 @@
 		E94CB06A1DE2C9F50013D986 /* WNPlanListBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNPlanListBoard.swift; sourceTree = "<group>"; };
 		E9639E301E1BA11A00FC8D1B /* String+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+WN.swift"; sourceTree = "<group>"; };
 		E96C4E4F1E978E5A00168054 /* WNHttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNHttpClient.swift; sourceTree = "<group>"; };
+		E975E8671EA4627800F65FFD /* WNLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNLoadingView.swift; sourceTree = "<group>"; };
+		E975E8681EA4627800F65FFD /* WNParallaxHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNParallaxHeaderView.swift; sourceTree = "<group>"; };
+		E975E86B1EA462DB00F65FFD /* WNButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNButton.swift; sourceTree = "<group>"; };
+		E975E86D1EA5C1FF00F65FFD /* WNRecommendWeeksCCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNRecommendWeeksCCell.swift; sourceTree = "<group>"; };
+		E975E8831EA71D6300F65FFD /* WNRecommendThemsCCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNRecommendThemsCCell.swift; sourceTree = "<group>"; };
+		E975E8851EA71D9F00F65FFD /* WNRecommendScenicsCCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNRecommendScenicsCCell.swift; sourceTree = "<group>"; };
+		E975E8871EA71DDF00F65FFD /* WNRecommendSeasonsCCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNRecommendSeasonsCCell.swift; sourceTree = "<group>"; };
+		E975E8891EA71DFA00F65FFD /* WNRecommendMinisCCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNRecommendMinisCCell.swift; sourceTree = "<group>"; };
+		E975E88B1EA71E1100F65FFD /* WNRecommendHotCCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNRecommendHotCCell.swift; sourceTree = "<group>"; };
+		E975E88D1EA7239200F65FFD /* WNRecommendCoverCCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNRecommendCoverCCell.swift; sourceTree = "<group>"; };
+		E975E88F1EA85CF400F65FFD /* WNRecommendHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNRecommendHeaderView.swift; sourceTree = "<group>"; };
 		E9AB81E71E80FE850051E5A6 /* Array+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+WN.swift"; sourceTree = "<group>"; };
 		E9AB81E91E810EF40051E5A6 /* Bundle+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+WN.swift"; sourceTree = "<group>"; };
 		E9AB81F11E822E2F0051E5A6 /* UIScreen+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScreen+WN.swift"; sourceTree = "<group>"; };
 		E9AB81F31E8234B00051E5A6 /* CGSize+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGSize+WN.swift"; sourceTree = "<group>"; };
 		E9AB81F71E8274770051E5A6 /* WNMeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNMeModel.swift; sourceTree = "<group>"; };
-		E9AB81FA1E8283DF0051E5A6 /* WNParallaxHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNParallaxHeaderView.swift; sourceTree = "<group>"; };
 		E9AB81FC1E8381710051E5A6 /* Collection+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+WN.swift"; sourceTree = "<group>"; };
 		E9B6947F1E6FE93E004144D4 /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		E9B694811E6FEC32004144D4 /* UITableView+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+WN.swift"; sourceTree = "<group>"; };
@@ -158,7 +177,6 @@
 		E9C32CAF1E712E8F008888D8 /* UIImageView+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+WN.swift"; sourceTree = "<group>"; };
 		E9C32CB11E713C50008888D8 /* WNDebugTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNDebugTool.swift; sourceTree = "<group>"; };
 		E9C32CB51E714D85008888D8 /* UIView+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+WN.swift"; sourceTree = "<group>"; };
-		E9C32CB81E71580C008888D8 /* WNLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNLoadingView.swift; sourceTree = "<group>"; };
 		E9C32CBC1E725F54008888D8 /* RACTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RACTool.swift; sourceTree = "<group>"; };
 		E9C32CBE1E727C14008888D8 /* WNGlobalVar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNGlobalVar.swift; sourceTree = "<group>"; };
 		E9C32D341E76A31E008888D8 /* DispatchQueue+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+WN.swift"; sourceTree = "<group>"; };
@@ -268,7 +286,7 @@
 				E94CB0511DE2C8060013D986 /* Recommend */,
 				E94CB0491DE2C5FE0013D986 /* Root */,
 				E94CB0531DE2C85F0013D986 /* Tool */,
-				E9C32CB71E7157D4008888D8 /* View */,
+				E975E8661EA4627800F65FFD /* Control */,
 				E94CB01F1DE2C5800013D986 /* Wannar.xcdatamodeld */,
 				E9FBA3521DE4270E00540913 /* WNHeader.swift */,
 			);
@@ -372,8 +390,16 @@
 		E94CB05A1DE2C9240013D986 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E975E88F1EA85CF400F65FFD /* WNRecommendHeaderView.swift */,
 				E9D15FEA1EA0B070008E9E54 /* WNRecommendBannerCCell.swift */,
 				E9D15FEC1EA0C11A008E9E54 /* WNRecommendMeauCCell.swift */,
+				E975E86D1EA5C1FF00F65FFD /* WNRecommendWeeksCCell.swift */,
+				E975E8831EA71D6300F65FFD /* WNRecommendThemsCCell.swift */,
+				E975E8851EA71D9F00F65FFD /* WNRecommendScenicsCCell.swift */,
+				E975E8871EA71DDF00F65FFD /* WNRecommendSeasonsCCell.swift */,
+				E975E88D1EA7239200F65FFD /* WNRecommendCoverCCell.swift */,
+				E975E8891EA71DFA00F65FFD /* WNRecommendMinisCCell.swift */,
+				E975E88B1EA71E1100F65FFD /* WNRecommendHotCCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -457,6 +483,16 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		E975E8661EA4627800F65FFD /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				E975E8671EA4627800F65FFD /* WNLoadingView.swift */,
+				E975E8681EA4627800F65FFD /* WNParallaxHeaderView.swift */,
+				E975E86B1EA462DB00F65FFD /* WNButton.swift */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
 		E9B2F1F91E1510C10027DC1B /* APIClient */ = {
 			isa = PBXGroup;
 			children = (
@@ -513,15 +549,6 @@
 				E9C32CBC1E725F54008888D8 /* RACTool.swift */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		E9C32CB71E7157D4008888D8 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				E9C32CB81E71580C008888D8 /* WNLoadingView.swift */,
-				E9AB81FA1E8283DF0051E5A6 /* WNParallaxHeaderView.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		E9C32D361E778A30008888D8 /* Macro */ = {
@@ -825,13 +852,16 @@
 				E9D5CFD21DE6CDE900315460 /* WNSetupModel.swift in Sources */,
 				E9639E311E1BA11A00FC8D1B /* String+WN.swift in Sources */,
 				E94CB0671DE2C9C60013D986 /* WNDestinationBoard.swift in Sources */,
+				E975E88A1EA71DFA00F65FFD /* WNRecommendMinisCCell.swift in Sources */,
 				E923F60E1DE41F980027A4B5 /* WNMeNormalTCell.swift in Sources */,
 				E94CB0691DE2C9DA0013D986 /* WNMeBoard.swift in Sources */,
 				E9C32D3A1E779F35008888D8 /* Notification+WN.swift in Sources */,
+				E975E8691EA4627800F65FFD /* WNLoadingView.swift in Sources */,
 				E9FBA3531DE4270E00540913 /* WNHeader.swift in Sources */,
 				E9AB81EA1E810EF40051E5A6 /* Bundle+WN.swift in Sources */,
-				E9AB81FB1E8283DF0051E5A6 /* WNParallaxHeaderView.swift in Sources */,
+				E975E88C1EA71E1100F65FFD /* WNRecommendHotCCell.swift in Sources */,
 				E94CB0211DE2C5800013D986 /* Wannar.xcdatamodeld in Sources */,
+				E975E86E1EA5C1FF00F65FFD /* WNRecommendWeeksCCell.swift in Sources */,
 				E9D15FED1EA0C11A008E9E54 /* WNRecommendMeauCCell.swift in Sources */,
 				E9D5CFD41DE6D4EA00315460 /* WNSetupTCell.swift in Sources */,
 				E9B694841E6FEDC0004144D4 /* NibLoadable.swift in Sources */,
@@ -842,8 +872,10 @@
 				E9C32D381E778A80008888D8 /* WNConfig.swift in Sources */,
 				E94CB04D1DE2C6940013D986 /* WNRootBoard.swift in Sources */,
 				E9D5CFCE1DE6A76200315460 /* UIBarButtonItem+WN.swift in Sources */,
+				E975E86C1EA462DB00F65FFD /* WNButton.swift in Sources */,
 				E9B694801E6FE93E004144D4 /* Reusable.swift in Sources */,
 				E9C32CAE1E7129E9008888D8 /* UITextField+WN.swift in Sources */,
+				E975E88E1EA7239200F65FFD /* WNRecommendCoverCCell.swift in Sources */,
 				E9D15FEB1EA0B070008E9E54 /* WNRecommendBannerCCell.swift in Sources */,
 				E9C32D3E1E78DA3A008888D8 /* UIDevice+WN.swift in Sources */,
 				E94CB05C1DE2C9240013D986 /* WNRecommendBoard.swift in Sources */,
@@ -852,18 +884,22 @@
 				E9C32CA61E711310008888D8 /* WNCommonTool.swift in Sources */,
 				E9D5CFD01DE6CADE00315460 /* WNSetupBoard.swift in Sources */,
 				E9AB81F41E8234B00051E5A6 /* CGSize+WN.swift in Sources */,
+				E975E86A1EA4627800F65FFD /* WNParallaxHeaderView.swift in Sources */,
 				E9C32CB21E713C50008888D8 /* WNDebugTool.swift in Sources */,
+				E975E8901EA85CF400F65FFD /* WNRecommendHeaderView.swift in Sources */,
 				E9B694821E6FEC32004144D4 /* UITableView+WN.swift in Sources */,
 				E9C32CB01E712E8F008888D8 /* UIImageView+WN.swift in Sources */,
 				E9C32CA81E711327008888D8 /* WNUITool.swift in Sources */,
 				E9C32D3C1E77CF50008888D8 /* Date+WN.swift in Sources */,
 				E9AB81E81E80FE850051E5A6 /* Array+WN.swift in Sources */,
-				E9C32CB91E71580C008888D8 /* WNLoadingView.swift in Sources */,
+				E975E8881EA71DDF00F65FFD /* WNRecommendSeasonsCCell.swift in Sources */,
 				E9D5CFCC1DE6A59100315460 /* UIGestureRecognizer+WN.swift in Sources */,
 				E94CB0191DE2C5800013D986 /* AppDelegate.swift in Sources */,
 				E9C32CAA1E7113BC008888D8 /* UILabel+WN.swift in Sources */,
 				E9AB81F21E822E2F0051E5A6 /* UIScreen+WN.swift in Sources */,
+				E975E8841EA71D6300F65FFD /* WNRecommendThemsCCell.swift in Sources */,
 				E94CB06B1DE2C9F50013D986 /* WNPlanListBoard.swift in Sources */,
+				E975E8861EA71D9F00F65FFD /* WNRecommendScenicsCCell.swift in Sources */,
 				E9C32CB61E714D85008888D8 /* UIView+WN.swift in Sources */,
 				E9C32D351E76A31E008888D8 /* DispatchQueue+WN.swift in Sources */,
 				E94CB0551DE2C8910013D986 /* WNBaseBoard.swift in Sources */,

@@ -24,6 +24,12 @@ extension UICollectionView {
     }
     
     
+    func registerHeaderClassOf<T: UICollectionReusableView>(_: T.Type) where T: Reusable {
+        
+        register(T.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: T.wn_reuseIdentifier)
+    }
+    
+    
     func registerHeaderNibOf<T: UICollectionReusableView>(_: T.Type) where T: Reusable, T: NibLoadable {
         
         let nib = UINib(nibName: T.wn_nibName, bundle: nil)
@@ -36,6 +42,11 @@ extension UICollectionView {
         register(T.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: T.wn_reuseIdentifier)
     }
     
+    func registerFooterNibOf<T: UICollectionReusableView>(_: T.Type) where T: Reusable, T: NibLoadable {
+        
+        let nib = UINib(nibName: T.wn_nibName, bundle: nil)
+        register(nib, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: T.wn_reuseIdentifier)
+    }
     
     func dequeueReusableCell<T: UICollectionViewCell>(forIndexPath indexPath: IndexPath) -> T where T: Reusable {
         

@@ -15,7 +15,6 @@ import Foundation
 
 extension String {
     
-    
     /// 将字符串转换为日期
     ///
     /// - Returns: 字符串转换过后的日期
@@ -49,4 +48,36 @@ extension String {
         return Double(self)
     }
     
+    
+    /// 获取APP标题
+    ///
+    /// - Returns: 去掉'【' \ '】'中间的字符串
+    @discardableResult
+    func app() -> String {
+        let string = self
+        if string.isEmpty {
+            return ""
+        }
+        if string.contains("【") && string.contains("】") {
+            let range1 = string.range(of: "【")
+            let range2 = string.range(of: "】")
+            var str = string.substring(with: (range1?.upperBound)! ..< (range2?.lowerBound)!)
+            str = "【\(str)】"
+            str = string.replacingOccurrences(of: str, with: "")
+            return str
+        }
+        return string;
+    }
+    
+    
+    /// 将日期字符串旧的Formatter变为新的Formatter
+    ///
+    /// - Parameters:
+    ///   - oldFormat: 原本的Formatter
+    ///   - newFormat: 要转换成的Formatter
+    /// - Returns: 新Formatter样式的日期字符串
+    func date(oldFormat: String, newFormat: String) -> String {
+        let date = Date.init(str: self, format: oldFormat)
+        return date.string(format: newFormat)
+    }
 }

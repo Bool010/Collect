@@ -11,7 +11,7 @@ import UIKit
 class WNRecommendMeauCCell: UICollectionViewCell {
     
     var slogan: UILabel!
-    var btns: [UIButton] = [UIButton]()
+    var btns: [WNButton] = [WNButton]()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -28,8 +28,9 @@ class WNRecommendMeauCCell: UICollectionViewCell {
         let slogan = UILabel.init(color: UIColor.textColor(), size: 15, textAlignment: .center)
         self.contentView.addSubview(slogan)
         slogan.snp.makeConstraints { (make) in
-            make.left.right.top.equalToSuperview().offset(0.0)
-            make.height.equalTo(30.0)
+            make.top.equalToSuperview().offset(15.0)
+            make.left.right.equalToSuperview().offset(0.0)
+            make.height.equalTo(25.0)
         }
         self.slogan = slogan
         
@@ -43,9 +44,10 @@ class WNRecommendMeauCCell: UICollectionViewCell {
         
         /// Meau Button
         for i in 0...4 {
-            let btn = UIButton.init()
-            btn.setTitleColor(UIColor.textColor(), for: .normal)
-            btn.backgroundColor = UIColor.randomColor()
+            let btn: WNButton = WNButton.init(imagePosition: .top, imageSize: CGSize.init(width: 35, height: 35))
+            btn.titleLabel.textColor = UIColor.textColor()
+            btn.titleLabel.font = UIFont.systemFont(ofSize: 15.0)
+            btn.space = 5
             container.addSubview(btn)
             btn.snp.makeConstraints({ (make) in
                 make.left.equalToSuperview().offset(Double(i) * (UIScreen.width / 5.0))
