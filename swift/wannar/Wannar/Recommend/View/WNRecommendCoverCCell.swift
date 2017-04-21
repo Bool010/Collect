@@ -47,7 +47,10 @@ class WNRecommendCoverCCell: UICollectionViewCell {
         }
         
         /// Title Label
-        self.title = UILabel.init(color: UIColor.textColor(), font: UIFont.boldSystemFont(ofSize: 15.0), textAlignment: .left)
+        self.title = UILabel.init(color: UIColor.textColor(),
+                                  fontName: WNConfig.FontName.kaitiBold,
+                                  size: 15,
+                                  textAlignment: .left)
         self.contentView.addSubview(self.title)
         self.title.snp.makeConstraints { [weak self] (make) in
             if let strongSelf = self {
@@ -57,6 +60,16 @@ class WNRecommendCoverCCell: UICollectionViewCell {
             }
         }
 
+        /// Line View
+        let lineView = UIView.init()
+        lineView.backgroundColor = UIColor.separatorColor()
+        self.contentView.addSubview(lineView)
+        lineView.snp.makeConstraints { (make) in
+            make.left.equalToSuperview().offset(15.0)
+            make.right.equalToSuperview().offset(-15.0)
+            make.bottom.equalToSuperview().offset(0.0)
+            make.height.equalTo(0.5)
+        }
     }
     
 }

@@ -100,7 +100,7 @@ class WNRecommendWeekCCell: UICollectionViewCell {
         
         /// Title
         let titleView: UIView = UIView.init()
-        titleView.backgroundColor = UIColor.init(white: 0.0, alpha: 0.35)
+        titleView.backgroundColor = UIColor.init(white: 0.0, alpha: 0.5)
         containerView.addSubview(titleView)
         titleView.snp.makeConstraints { [weak self] (make) in
             if let strongSelf = self {
@@ -109,7 +109,10 @@ class WNRecommendWeekCCell: UICollectionViewCell {
             }
         }
         
-        self.titleLabel = UILabel.init(color: UIColor.white, size: 13, textAlignment: .left)
+        self.titleLabel = UILabel.init(color: UIColor.white,
+                                       fontName: WNConfig.FontName.kaitiRegular,
+                                       size: 13,
+                                       textAlignment: .left)
         self.titleLabel.numberOfLines = 2
         titleView.addSubview(self.titleLabel)
         titleLabel.snp.makeConstraints { (make) in
@@ -121,7 +124,8 @@ class WNRecommendWeekCCell: UICollectionViewCell {
         
         /// Discount
         self.discountLabel = UILabel.init(color: UIColor.textColor(),
-                                          font: UIFont.boldSystemFont(ofSize: 17.0),
+                                          fontName: WNConfig.FontName.kaitiBlack,
+                                          size: 17,
                                           textAlignment: .left)
         containerView.addSubview(self.discountLabel)
         self.discountLabel.snp.makeConstraints { [weak self] (make) in
@@ -133,7 +137,10 @@ class WNRecommendWeekCCell: UICollectionViewCell {
         }
         
         /// City
-        self.cityLabel = UILabel.init(color: UIColor.textColor(), size: 10.0, textAlignment: .left)
+        self.cityLabel = UILabel.init(color: UIColor.textColor(),
+                                      fontName: WNConfig.FontName.kaitiRegular,
+                                      size: 10,
+                                      textAlignment: .left)
         containerView.addSubview(self.cityLabel)
         self.cityLabel.snp.makeConstraints { [weak self] (make) in
             if let strongSelf = self {
@@ -143,7 +150,10 @@ class WNRecommendWeekCCell: UICollectionViewCell {
         }
         
         /// End Date
-        self.endDateLabel = UILabel.init(color: UIColor.textColor(), size: 10.0, textAlignment: .left)
+        self.endDateLabel = UILabel.init(color: UIColor.textColor(),
+                                         fontName: WNConfig.FontName.kaitiRegular,
+                                         size: 10,
+                                         textAlignment: .left)
         containerView.addSubview(self.endDateLabel)
         self.endDateLabel.snp.makeConstraints { [weak self] (make) in
             if let strongSelf = self {
@@ -153,7 +163,10 @@ class WNRecommendWeekCCell: UICollectionViewCell {
         }
         
         /// Price
-        self.priceLabel = UILabel.init(color: UIColor.themColor(), size: 16.0, textAlignment: .left)
+        self.priceLabel = UILabel.init(color: UIColor.themColor(),
+                                       fontName: WNConfig.FontName.kaitiBold,
+                                       size: 16,
+                                       textAlignment: .left)
         containerView.addSubview(self.priceLabel)
         self.priceLabel.snp.makeConstraints { [weak self] (make) in
             if let strongSelf = self {
@@ -188,12 +201,24 @@ class WNRecommendWeeksCCell: UICollectionViewCell {
         collectionView.showsHorizontalScrollIndicator = false
         self.contentView.addSubview(collectionView)
         collectionView.snp.makeConstraints { (make) in
-            make.left.right.bottom.top.equalToSuperview().offset(0.0)
+            make.left.right.top.equalToSuperview().offset(0.0)
+            make.bottom.equalToSuperview().offset(-10.0)
         }
         collectionView.delegate = self;
         collectionView.dataSource = self;
         collectionView.registerClassOf(WNRecommendWeekCCell.self)
         self.collectionView = collectionView
+        
+        /// Line View
+        let lineView = UIView.init()
+        lineView.backgroundColor = UIColor.separatorColor()
+        self.contentView.addSubview(lineView)
+        lineView.snp.makeConstraints { (make) in
+            make.left.equalToSuperview().offset(15.0)
+            make.right.equalToSuperview().offset(-15.0)
+            make.bottom.equalToSuperview().offset(0.0)
+            make.height.equalTo(0.5)
+        }
     }
 }
 

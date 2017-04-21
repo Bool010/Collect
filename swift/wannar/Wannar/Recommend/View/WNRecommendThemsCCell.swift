@@ -46,7 +46,10 @@ class WNRecommendThemCCell: UICollectionViewCell {
         }
         
         /// Title Label
-        self.title = UILabel.init(color: UIColor.white, font: UIFont.boldSystemFont(ofSize: 20.0), textAlignment: .center)
+        self.title = UILabel.init(color: UIColor.white,
+                                  fontName: WNConfig.FontName.kaitiBlack,
+                                  size: 20,
+                                  textAlignment: .center)
         self.contentView.addSubview(self.title)
         self.title.snp.makeConstraints { (make) in
             make.left.right.top.bottom.equalToSuperview().offset(0.0)
@@ -77,12 +80,24 @@ class WNRecommendThemsCCell: UICollectionViewCell {
         collectionView.showsHorizontalScrollIndicator = false
         self.contentView.addSubview(collectionView)
         collectionView.snp.makeConstraints { (make) in
-            make.left.right.bottom.top.equalToSuperview().offset(0.0)
+            make.left.right.top.equalToSuperview().offset(0.0)
+            make.bottom.equalToSuperview().offset(-10.0)
         }
         collectionView.delegate = self;
         collectionView.dataSource = self;
         collectionView.registerClassOf(WNRecommendThemCCell.self)
         self.collectionView = collectionView
+        
+        /// Line View
+        let lineView = UIView.init()
+        lineView.backgroundColor = UIColor.separatorColor()
+        self.contentView.addSubview(lineView)
+        lineView.snp.makeConstraints { (make) in
+            make.left.equalToSuperview().offset(15.0)
+            make.right.equalToSuperview().offset(-15.0)
+            make.bottom.equalToSuperview().offset(0.0)
+            make.height.equalTo(0.5)
+        }
     }
 }
 

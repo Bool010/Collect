@@ -42,6 +42,7 @@
 		E975E88C1EA71E1100F65FFD /* WNRecommendHotCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E975E88B1EA71E1100F65FFD /* WNRecommendHotCCell.swift */; };
 		E975E88E1EA7239200F65FFD /* WNRecommendCoverCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E975E88D1EA7239200F65FFD /* WNRecommendCoverCCell.swift */; };
 		E975E8901EA85CF400F65FFD /* WNRecommendHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E975E88F1EA85CF400F65FFD /* WNRecommendHeaderView.swift */; };
+		E975E8921EA8956E00F65FFD /* UIFont+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E975E8911EA8956E00F65FFD /* UIFont+WN.swift */; };
 		E9AB81E81E80FE850051E5A6 /* Array+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB81E71E80FE850051E5A6 /* Array+WN.swift */; };
 		E9AB81EA1E810EF40051E5A6 /* Bundle+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB81E91E810EF40051E5A6 /* Bundle+WN.swift */; };
 		E9AB81F21E822E2F0051E5A6 /* UIScreen+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB81F11E822E2F0051E5A6 /* UIScreen+WN.swift */; };
@@ -158,6 +159,7 @@
 		E975E88B1EA71E1100F65FFD /* WNRecommendHotCCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNRecommendHotCCell.swift; sourceTree = "<group>"; };
 		E975E88D1EA7239200F65FFD /* WNRecommendCoverCCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNRecommendCoverCCell.swift; sourceTree = "<group>"; };
 		E975E88F1EA85CF400F65FFD /* WNRecommendHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNRecommendHeaderView.swift; sourceTree = "<group>"; };
+		E975E8911EA8956E00F65FFD /* UIFont+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+WN.swift"; sourceTree = "<group>"; };
 		E9AB81E71E80FE850051E5A6 /* Array+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+WN.swift"; sourceTree = "<group>"; };
 		E9AB81E91E810EF40051E5A6 /* Bundle+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+WN.swift"; sourceTree = "<group>"; };
 		E9AB81F11E822E2F0051E5A6 /* UIScreen+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScreen+WN.swift"; sourceTree = "<group>"; };
@@ -525,6 +527,7 @@
 				E9B694851E6FF728004144D4 /* UICollectionView+WN.swift */,
 				E9BD50FB1DE3DF6C007E4D03 /* UIColor+WN.swift */,
 				E9C32D3D1E78DA3A008888D8 /* UIDevice+WN.swift */,
+				E975E8911EA8956E00F65FFD /* UIFont+WN.swift */,
 				E9D5CFCB1DE6A59100315460 /* UIGestureRecognizer+WN.swift */,
 				E9C32CAF1E712E8F008888D8 /* UIImageView+WN.swift */,
 				E9C32CA91E7113BC008888D8 /* UILabel+WN.swift */,
@@ -863,6 +866,7 @@
 				E94CB0211DE2C5800013D986 /* Wannar.xcdatamodeld in Sources */,
 				E975E86E1EA5C1FF00F65FFD /* WNRecommendWeeksCCell.swift in Sources */,
 				E9D15FED1EA0C11A008E9E54 /* WNRecommendMeauCCell.swift in Sources */,
+				E975E8921EA8956E00F65FFD /* UIFont+WN.swift in Sources */,
 				E9D5CFD41DE6D4EA00315460 /* WNSetupTCell.swift in Sources */,
 				E9B694841E6FEDC0004144D4 /* NibLoadable.swift in Sources */,
 				E9C32CBF1E727C14008888D8 /* WNGlobalVar.swift in Sources */,

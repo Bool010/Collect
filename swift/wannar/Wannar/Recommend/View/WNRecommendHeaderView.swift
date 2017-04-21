@@ -44,7 +44,10 @@ class WNRecommendHeaderView: UICollectionReusableView {
         self.icon = icon
         
         /// Title
-        let title = UILabel.init(color: UIColor.textColor(), font: UIFont.boldSystemFont(ofSize: 18.0), textAlignment: .left)
+        let title = UILabel.init(color: UIColor.textColor(),
+                                 fontName: WNConfig.FontName.kaitiBlack,
+                                 size: 18,
+                                 textAlignment: .left)
         containerView.addSubview(title)
         title.snp.makeConstraints { (make) in
             make.left.equalTo(icon.snp.right).offset(2.0)
@@ -53,7 +56,10 @@ class WNRecommendHeaderView: UICollectionReusableView {
         self.title = title;
         
         /// Subtitle
-        let subtitle = UILabel.init(color: UIColor.textColor(), size: 12.0, textAlignment: .left)
+        let subtitle = UILabel.init(color: UIColor.textColor(),
+                                 fontName: WNConfig.FontName.kaitiRegular,
+                                 size: 11,
+                                 textAlignment: .left)
         containerView.addSubview(subtitle)
         subtitle.snp.makeConstraints { (make) in
             make.left.right.equalToSuperview().offset(0.0)

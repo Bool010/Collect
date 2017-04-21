@@ -120,5 +120,15 @@ final public class WNConfig {
         /// 语言改变
         public static let languageChange = "wannar.notification.name.languageChange"
     }
+    
+    /// FontName
+    public struct FontName {
+        // 楷体-常规体
+        public static let kaitiRegular = "STKaitiSC-Regular"
+        // 楷体-粗体
+        public static let kaitiBold = "STKaitiSC-Bold"
+        // 楷体-黑体
+        public static let kaitiBlack = "STKaitiSC-Black"
+    }
 }
 

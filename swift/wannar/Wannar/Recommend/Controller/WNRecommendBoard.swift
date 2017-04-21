@@ -25,6 +25,12 @@ class WNRecommendBoard: WNBaseBoard {
         self.fetchData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
     override func didReceiveMemoryWarning() {
         
         super.didReceiveMemoryWarning()
@@ -264,13 +270,13 @@ extension WNRecommendBoard: UICollectionViewDelegate, UICollectionViewDataSource
             return CGSize.init(width: UIScreen.width, height: 120)
         }
         if a is WNRecommendModel.Weeklys {
-            return CGSize.init(width: UIScreen.width, height: 220)
+            return CGSize.init(width: UIScreen.width, height: 230)
         }
         if a is WNRecommendModel.Thems {
-            return CGSize.init(width: UIScreen.width, height: 90)
+            return CGSize.init(width: UIScreen.width, height: 100)
         }
         if a is WNRecommendModel.Scenics {
-            return CGSize.init(width: UIScreen.width, height: 240)
+            return CGSize.init(width: UIScreen.width, height: 250)
         }
         if a is WNRecommendModel.Seasons {
             let x: WNRecommendModel.Seasons = a as! WNRecommendModel.Seasons
@@ -281,7 +287,7 @@ extension WNRecommendBoard: UICollectionViewDelegate, UICollectionViewDataSource
             }
         }
         if a is WNRecommendModel.MiniTours {
-            return CGSize.init(width: UIScreen.width, height: 220)
+            return CGSize.init(width: UIScreen.width, height: 230)
         }
         return CGSize.init(width: UIScreen.width, height: 180)
         

@@ -50,7 +50,10 @@ class WNRecommendSeasonsCCell: UICollectionViewCell {
         }
         
         /// Title Label
-        self.title = UILabel.init(color: UIColor.textColor(), size: 13, textAlignment: .left)
+        self.title = UILabel.init(color: UIColor.textColor(),
+                                  fontName: WNConfig.FontName.kaitiRegular,
+                                  size: 13,
+                                  textAlignment: .left)
         self.title.numberOfLines = 2
         self.contentView.addSubview(self.title)
         self.title.snp.makeConstraints { [weak self] (make) in
@@ -62,7 +65,10 @@ class WNRecommendSeasonsCCell: UICollectionViewCell {
         }
         
         /// Price Label
-        self.price = UILabel.init(color: UIColor.themColor(), size: 13, textAlignment: .left)
+        self.price = UILabel.init(color: UIColor.themColor(),
+                                  fontName: WNConfig.FontName.kaitiBold,
+                                  size: 13,
+                                  textAlignment: .left)
         self.contentView.addSubview(self.price)
         self.price.snp.makeConstraints { [weak self] (make) in
             if let strongSelf = self {
@@ -71,6 +77,16 @@ class WNRecommendSeasonsCCell: UICollectionViewCell {
             }
         }
         
+        /// Line View
+        let lineView = UIView.init()
+        lineView.backgroundColor = UIColor.separatorColor()
+        self.contentView.addSubview(lineView)
+        lineView.snp.makeConstraints { (make) in
+            make.left.equalToSuperview().offset(15.0)
+            make.right.equalToSuperview().offset(-15.0)
+            make.bottom.equalToSuperview().offset(0.0)
+            make.height.equalTo(0.5)
+        }
     }
 
 }

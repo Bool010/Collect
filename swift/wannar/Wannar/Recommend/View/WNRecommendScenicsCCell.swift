@@ -46,7 +46,10 @@ class WNRecommendScenicCCell: UICollectionViewCell {
         }
         
         /// Title Label
-        self.title = UILabel.init(color: UIColor.textColor(), font: UIFont.boldSystemFont(ofSize: 15.0), textAlignment: .center)
+        self.title = UILabel.init(color: UIColor.textColor(),
+                                  fontName: WNConfig.FontName.kaitiBold,
+                                  size: 15,
+                                  textAlignment: .center)
         self.contentView.addSubview(self.title)
         self.title.snp.makeConstraints { [weak self] (make) in
             if let strongSelf = self {
@@ -81,12 +84,24 @@ class WNRecommendScenicsCCell: UICollectionViewCell {
         collectionView.showsHorizontalScrollIndicator = false
         self.contentView.addSubview(collectionView)
         collectionView.snp.makeConstraints { (make) in
-            make.left.right.bottom.top.equalToSuperview().offset(0.0)
+            make.left.right.top.equalToSuperview().offset(0.0)
+            make.bottom.equalToSuperview().offset(-10.0)
         }
         collectionView.delegate = self;
         collectionView.dataSource = self;
         collectionView.registerClassOf(WNRecommendScenicCCell.self)
         self.collectionView = collectionView
+        
+        /// Line View
+        let lineView = UIView.init()
+        lineView.backgroundColor = UIColor.separatorColor()
+        self.contentView.addSubview(lineView)
+        lineView.snp.makeConstraints { (make) in
+            make.left.equalToSuperview().offset(15.0)
+            make.right.equalToSuperview().offset(-15.0)
+            make.bottom.equalToSuperview().offset(0.0)
+            make.height.equalTo(0.5)
+        }
     }
 }
 

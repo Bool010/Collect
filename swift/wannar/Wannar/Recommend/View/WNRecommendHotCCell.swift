@@ -92,7 +92,10 @@ class WNRecommendHotCCell: UICollectionViewCell {
         }
         
         /// Departure
-        self.departure = UILabel.init(color: UIColor.textColor(), size: 10.0, textAlignment: .left)
+        self.departure = UILabel.init(color: UIColor.textColor(),
+                                      fontName: WNConfig.FontName.kaitiRegular,
+                                      size: 10,
+                                      textAlignment: .left)
         self.contentView.addSubview(self.departure)
         self.departure.snp.makeConstraints { [weak self] (make) in
             if let strongSelf = self {
@@ -102,7 +105,10 @@ class WNRecommendHotCCell: UICollectionViewCell {
         }
         
         /// Title Label 
-        self.title = UILabel.init(color: UIColor.textColor(), size: 13.0, textAlignment: .left)
+        self.title = UILabel.init(color: UIColor.textColor(),
+                                  fontName: WNConfig.FontName.kaitiRegular,
+                                  size: 13,
+                                  textAlignment: .left)
         self.contentView.addSubview(self.title)
         self.title.snp.makeConstraints { [weak self] (make) in
             if let strongSelf = self {
@@ -112,7 +118,10 @@ class WNRecommendHotCCell: UICollectionViewCell {
         }
         
         /// Discount
-        self.discount = UILabel.init(color: UIColor.white, font: UIFont.boldSystemFont(ofSize: 13.0), textAlignment: .center)
+        self.discount = UILabel.init(color: UIColor.textColor(),
+                                     fontName: WNConfig.FontName.kaitiBold,
+                                     size: 13,
+                                     textAlignment: .center)
         self.discount.backgroundColor = UIColor.themColor()
         self.discount.layer.cornerRadius = 3.0
         self.discount.layer.masksToBounds = true
@@ -125,7 +134,10 @@ class WNRecommendHotCCell: UICollectionViewCell {
         }
         
         /// Price
-        self.price = UILabel.init(color: UIColor.themColor(), size: 15.0, textAlignment: .left)
+        self.price = UILabel.init(color: UIColor.themColor(),
+                                  fontName: WNConfig.FontName.kaitiBold,
+                                  size: 15,
+                                  textAlignment: .left)
         self.contentView.addSubview(self.price)
         self.price.snp.makeConstraints { [weak self] (make) in
             if let strongSelf = self {

@@ -9,6 +9,32 @@
 import UIKit
 
 extension UILabel {
+    
+    convenience init(color: UIColor?, fontName: String?, size: CGFloat, textAlignment: NSTextAlignment?) {
+        self.init()
+        self.textColor = color
+        if let textAlignment = textAlignment {
+            self.textAlignment = textAlignment
+        }
+        if let fontName = fontName {
+            UIFont.set(fontName: fontName, label: self, size: size)
+        } else {
+            self.font = UIFont.systemFont(ofSize: size)
+        }
+    }
+    
+    func set(color: UIColor?, fontName: String?, size: CGFloat, textAlignment: NSTextAlignment?) {
+        self.textColor = color
+        if let textAlignment = textAlignment {
+            self.textAlignment = textAlignment
+        }
+        if let fontName = fontName {
+            UIFont.set(fontName: fontName, label: self, size: size)
+        } else {
+            self.font = UIFont.systemFont(ofSize: size)
+        }
+    }
+    
     convenience init(color: UIColor?, font: UIFont?, textAlignment: NSTextAlignment?) {
         
         self.init()
