@@ -76,6 +76,10 @@ final public class WNConfig {
     public struct Path {
         // 首页推荐
         public static let recommend = "config/get-latest-homepage-json.php"
+        // 注册
+        public static let register = "register.php"
+        // 登录
+        public static let signIn = "login.php"
         
         public static let destinationTour = "scenic/get-scenic-tour.php"
         public static let destinationPlan = "redis-scenic-plan.php"
@@ -111,6 +115,15 @@ final public class WNConfig {
         
         /// 未读订单
         public static let unreadOrder = "wannar.config.sandboxKey.unreadOrder"
+        
+        /// 用户信息
+        public static let userModel = "wannar.config.sandboxKey.userModel"
+        
+        /// 用户名
+        public static let account = "wannar.config.sandboxKey.account"
+        
+        /// 密码
+        public static let password = "wannar.config.sandboxKey.password"
     }
     
     

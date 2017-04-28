@@ -48,14 +48,14 @@ extension UIView {
                                                          width: UIScreen.width - 100,
                                                          height: 44))
         titleLabel.font = UIFont.boldSystemFont(ofSize: 16)
-        titleLabel.textColor = UIColor.textColor()
+        titleLabel.textColor = .textColor
         titleLabel.textAlignment = .center
         navigationView.addSubview(titleLabel)
         
         
         /// Line View
         let lineView = UIView.init(frame: CGRect.init(x: 0.0, y: 63.5, width: UIScreen.width, height: 0.5))
-        lineView.backgroundColor = UIColor.separatorColor()
+        lineView.backgroundColor = .separatorColor
         navigationView.addSubview(lineView)
         
         closure(leftBtn, rightBtn, titleLabel)

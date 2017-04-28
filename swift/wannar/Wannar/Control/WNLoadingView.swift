@@ -30,7 +30,7 @@ class WNLoadingView: UIView {
     
     /// 提示文本框
     lazy var hintLabel: UILabel = {
-        let label = UILabel.init(color: UIColor.textColor(),
+        let label = UILabel.init(color: .textColor,
                                  size: 13.0,
                                  textAlignment: .center)
         return label
@@ -39,7 +39,7 @@ class WNLoadingView: UIView {
     
     /// 标题文本
     lazy var titleLabel: UILabel = {
-        let label = UILabel.init(color: UIColor.textColor(),
+        let label = UILabel.init(color: .textColor,
                                  font: UIFont.boldSystemFont(ofSize: 16.0),
                                  textAlignment: .center)
         return label
@@ -49,7 +49,7 @@ class WNLoadingView: UIView {
     /// 重试按钮
     lazy var button: UIButton = {
         let btn = UIButton()
-        btn.backgroundColor = UIColor.themColor()
+        btn.backgroundColor = .themColor
         btn.layer.cornerRadius = 3.0
         btn.setTitle("重试", for: .normal)
         btn.titleLabel?.font = UIFont.systemFont(ofSize: 14)

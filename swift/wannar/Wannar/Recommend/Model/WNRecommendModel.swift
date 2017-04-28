@@ -404,8 +404,8 @@ struct WNRecommendModel {
 class WNRecommendAPI: WNHttpClient {
     
     class func fetch(success: ((WNRecommendModel) -> Void)?) -> Void {
-        let param = ["ver" : ""]
         
+        let param = ["ver" : ""]
         self.post(subURL: WNConfig.Path.recommend, param: param, handle: { (data) -> JSON? in
             if !(data is JSON) {
                 return nil

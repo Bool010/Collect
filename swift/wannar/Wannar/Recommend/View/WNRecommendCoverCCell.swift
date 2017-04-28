@@ -47,7 +47,7 @@ class WNRecommendCoverCCell: UICollectionViewCell {
         }
         
         /// Title Label
-        self.title = UILabel.init(color: UIColor.textColor(),
+        self.title = UILabel.init(color: .textColor,
                                   fontName: WNConfig.FontName.kaitiBold,
                                   size: 15,
                                   textAlignment: .left)
@@ -62,7 +62,7 @@ class WNRecommendCoverCCell: UICollectionViewCell {
 
         /// Line View
         let lineView = UIView.init()
-        lineView.backgroundColor = UIColor.separatorColor()
+        lineView.backgroundColor = .separatorColor
         self.contentView.addSubview(lineView)
         lineView.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(15.0)

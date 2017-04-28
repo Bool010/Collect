@@ -41,7 +41,7 @@ class WNSetupTCell: UITableViewCell {
     private func buildUI() {
         
         /// Title Label
-        let titleLabel: UILabel = UILabel.init(color: UIColor.textColor(),
+        let titleLabel: UILabel = UILabel.init(color: .textColor,
                                                size: 15)
         self.contentView.addSubview(titleLabel)
         titleLabel.snp.makeConstraints { (make) in
@@ -64,7 +64,7 @@ class WNSetupTCell: UITableViewCell {
         
         
         /// Subtitle Label
-        let subtitleLabel: UILabel = UILabel.init(color: UIColor.textColor(),
+        let subtitleLabel: UILabel = UILabel.init(color: .textColor,
                                                   size: 11.0,
                                                   textAlignment: .right)
         self.contentView.addSubview(subtitleLabel)

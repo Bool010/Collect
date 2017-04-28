@@ -92,7 +92,7 @@ class WNRecommendHotCCell: UICollectionViewCell {
         }
         
         /// Departure
-        self.departure = UILabel.init(color: UIColor.textColor(),
+        self.departure = UILabel.init(color: .textColor,
                                       fontName: WNConfig.FontName.kaitiRegular,
                                       size: 10,
                                       textAlignment: .left)
@@ -105,7 +105,7 @@ class WNRecommendHotCCell: UICollectionViewCell {
         }
         
         /// Title Label 
-        self.title = UILabel.init(color: UIColor.textColor(),
+        self.title = UILabel.init(color: .textColor,
                                   fontName: WNConfig.FontName.kaitiRegular,
                                   size: 13,
                                   textAlignment: .left)
@@ -118,11 +118,11 @@ class WNRecommendHotCCell: UICollectionViewCell {
         }
         
         /// Discount
-        self.discount = UILabel.init(color: UIColor.textColor(),
+        self.discount = UILabel.init(color: .textColor,
                                      fontName: WNConfig.FontName.kaitiBold,
                                      size: 13,
                                      textAlignment: .center)
-        self.discount.backgroundColor = UIColor.themColor()
+        self.discount.backgroundColor = .themColor
         self.discount.layer.cornerRadius = 3.0
         self.discount.layer.masksToBounds = true
         self.discount.layer.shouldRasterize = true
@@ -134,7 +134,7 @@ class WNRecommendHotCCell: UICollectionViewCell {
         }
         
         /// Price
-        self.price = UILabel.init(color: UIColor.themColor(),
+        self.price = UILabel.init(color: .themColor,
                                   fontName: WNConfig.FontName.kaitiBold,
                                   size: 15,
                                   textAlignment: .left)

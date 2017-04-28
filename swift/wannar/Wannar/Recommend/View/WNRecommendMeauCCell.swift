@@ -26,7 +26,7 @@ class WNRecommendMeauCCell: UICollectionViewCell {
     fileprivate func buildUI() -> Void {
         
         /// Slogan
-        let slogan = UILabel.init(color: UIColor.textColor(),
+        let slogan = UILabel.init(color: .textColor,
                                   fontName: WNConfig.FontName.kaitiRegular,
                                   size: 13,
                                   textAlignment: .center)
@@ -51,7 +51,7 @@ class WNRecommendMeauCCell: UICollectionViewCell {
         /// Meau Button
         for i in 0...4 {
             let btn: WNButton = WNButton.init(imagePosition: .top, imageSize: CGSize.init(width: 35, height: 35))
-            btn.titleLabel.set(color: UIColor.textColor(),
+            btn.titleLabel.set(color: .textColor,
                                fontName: WNConfig.FontName.kaitiBold,
                                size: 15.0,
                                textAlignment: .center)
@@ -68,7 +68,7 @@ class WNRecommendMeauCCell: UICollectionViewCell {
         
         /// Line View
         let lineView = UIView.init()
-        lineView.backgroundColor = UIColor.separatorColor()
+        lineView.backgroundColor = .separatorColor
         self.contentView.addSubview(lineView)
         lineView.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(15.0)

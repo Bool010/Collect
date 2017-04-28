@@ -8,6 +8,7 @@ PODS:
   - RxCocoa (3.2.0):
     - RxSwift (~> 3.1)
   - RxSwift (3.2.0)
+  - SABlurImageView (3.0.1)
   - SnapKit (3.0.2)
   - Spring (1.0.3)
   - StarWars (2.0)
@@ -24,6 +25,7 @@ DEPENDENCIES:
   - LTMorphingLabel
   - RxCocoa (~> 3.0)
   - RxSwift (~> 3.0)
+  - SABlurImageView
   - SnapKit (~> 3.0.2)
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift3`)
   - StarWars (~> 2.0)
@@ -50,6 +52,7 @@ SPEC CHECKSUMS:
   LTMorphingLabel: d9a85f16ac306f0e07321d6819964deb2dc69638
   RxCocoa: ccdf43101a70407097a29082f648ba1676075b30
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
+  SABlurImageView: bd0940330d0e8571379a495623e57c436659a202
   SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
   StarWars: 3c68dc5e9f1b6ca6d407b1d4218fd8a65c2eacfa
@@ -57,6 +60,6 @@ SPEC CHECKSUMS:
   TextFieldEffects: faa47d428ee8eafb781a8413ac4345420d2328c4
   Toast-Swift: 5b2f8f720f7e78e48511f693df1f9c9a6e38a25a
 
-PODFILE CHECKSUM: b4481d481e5301a1ec7b4a2db422f7dbec6b939f
+PODFILE CHECKSUM: fcc67482d361d1c15dbe76b147156e60ed426692
 
 COCOAPODS: 1.1.1

@@ -16,6 +16,16 @@
 		E923F60C1DE41C900027A4B5 /* Pods_WannarUITests.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2702355115F2C875FD4BB /* Pods_WannarUITests.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E923F60E1DE41F980027A4B5 /* WNMeNormalTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E923F60D1DE41F980027A4B5 /* WNMeNormalTCell.swift */; };
 		E9251BBD1E9F77D000B0BC0A /* WNRecommendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9251BBC1E9F77D000B0BC0A /* WNRecommendModel.swift */; };
+		E93560451EAEFA9500F4FA2B /* WNUserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93560441EAEFA9500F4FA2B /* WNUserAPI.swift */; };
+		E93560471EAF433000F4FA2B /* WNUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93560461EAF433000F4FA2B /* WNUserModel.swift */; };
+		E93560491EB04D0A00F4FA2B /* Dictionary+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93560481EB04D0A00F4FA2B /* Dictionary+WN.swift */; };
+		E935604D1EB06D9200F4FA2B /* WNMeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E935604C1EB06D9200F4FA2B /* WNMeHeaderView.swift */; };
+		E93560521EB1C52E00F4FA2B /* WNAboutusBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93560511EB1C52E00F4FA2B /* WNAboutusBoard.swift */; };
+		E93560541EB1EBFE00F4FA2B /* WNAboutusCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93560531EB1EBFE00F4FA2B /* WNAboutusCCell.swift */; };
+		E93560571EB1FF5B00F4FA2B /* WNPhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93560561EB1FF5B00F4FA2B /* WNPhoneView.swift */; };
+		E93560591EB3195A00F4FA2B /* CALayer+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93560581EB3195A00F4FA2B /* CALayer+WN.swift */; };
+		E935605F1EB32D4F00F4FA2B /* WNItemListBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E935605E1EB32D4F00F4FA2B /* WNItemListBoard.swift */; };
+		E93560611EB332B200F4FA2B /* WNItemListAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93560601EB332B200F4FA2B /* WNItemListAPI.swift */; };
 		E94CB0191DE2C5800013D986 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94CB0181DE2C5800013D986 /* AppDelegate.swift */; };
 		E94CB01E1DE2C5800013D986 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E94CB01C1DE2C5800013D986 /* Main.storyboard */; };
 		E94CB0211DE2C5800013D986 /* Wannar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E94CB01F1DE2C5800013D986 /* Wannar.xcdatamodeld */; };
@@ -43,6 +53,24 @@
 		E975E88E1EA7239200F65FFD /* WNRecommendCoverCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E975E88D1EA7239200F65FFD /* WNRecommendCoverCCell.swift */; };
 		E975E8901EA85CF400F65FFD /* WNRecommendHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E975E88F1EA85CF400F65FFD /* WNRecommendHeaderView.swift */; };
 		E975E8921EA8956E00F65FFD /* UIFont+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E975E8911EA8956E00F65FFD /* UIFont+WN.swift */; };
+		E99FDCC81EADAAA700F69D2C /* WNLoginBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99FDCC51EADAAA700F69D2C /* WNLoginBoard.swift */; };
+		E99FDCCA1EADAAF100F69D2C /* WNLoginEmailTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99FDCC91EADAAF100F69D2C /* WNLoginEmailTCell.swift */; };
+		E99FDCCC1EADCF9B00F69D2C /* WNLoginPlatformTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99FDCCB1EADCF9B00F69D2C /* WNLoginPlatformTCell.swift */; };
+		E99FDCD51EADD35300F69D2C /* qq@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E99FDCCF1EADD35300F69D2C /* qq@2x.png */; };
+		E99FDCD61EADD35300F69D2C /* qq@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E99FDCD01EADD35300F69D2C /* qq@3x.png */; };
+		E99FDCD71EADD35300F69D2C /* wechat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E99FDCD11EADD35300F69D2C /* wechat@2x.png */; };
+		E99FDCD81EADD35300F69D2C /* wechat@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E99FDCD21EADD35300F69D2C /* wechat@3x.png */; };
+		E99FDCD91EADD35300F69D2C /* weibo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E99FDCD31EADD35300F69D2C /* weibo@2x.png */; };
+		E99FDCDA1EADD35300F69D2C /* weibo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E99FDCD41EADD35300F69D2C /* weibo@3x.png */; };
+		E99FDCDC1EADD48900F69D2C /* CGFloat+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99FDCDB1EADD48900F69D2C /* CGFloat+WN.swift */; };
+		E99FDCDE1EADD56000F69D2C /* Double+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99FDCDD1EADD56000F69D2C /* Double+WN.swift */; };
+		E99FDCE01EADD6CF00F69D2C /* Int+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99FDCDF1EADD6CF00F69D2C /* Int+WN.swift */; };
+		E99FDCE21EADDA6B00F69D2C /* WNNavigationBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99FDCE11EADDA6B00F69D2C /* WNNavigationBoard.swift */; };
+		E99FDCE41EADE80E00F69D2C /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E99FDCE31EADE80E00F69D2C /* logo.png */; };
+		E99FDCE61EADE90B00F69D2C /* UIImage+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99FDCE51EADE90B00F69D2C /* UIImage+WN.swift */; };
+		E99FDCEA1EADF3B500F69D2C /* loginBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E99FDCE91EADF3B500F69D2C /* loginBackground.jpg */; };
+		E99FDCEC1EAE00FD00F69D2C /* WNSignUpBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99FDCEB1EAE00FD00F69D2C /* WNSignUpBoard.swift */; };
+		E99FDCEE1EAE02E800F69D2C /* WNSignUpTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99FDCED1EAE02E800F69D2C /* WNSignUpTCell.swift */; };
 		E9AB81E81E80FE850051E5A6 /* Array+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB81E71E80FE850051E5A6 /* Array+WN.swift */; };
 		E9AB81EA1E810EF40051E5A6 /* Bundle+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB81E91E810EF40051E5A6 /* Bundle+WN.swift */; };
 		E9AB81F21E822E2F0051E5A6 /* UIScreen+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB81F11E822E2F0051E5A6 /* UIScreen+WN.swift */; };
@@ -127,6 +155,16 @@
 		B7849387DA23A0F1E11D933F /* Pods-Wannar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wannar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wannar/Pods-Wannar.debug.xcconfig"; sourceTree = "<group>"; };
 		E923F60D1DE41F980027A4B5 /* WNMeNormalTCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNMeNormalTCell.swift; sourceTree = "<group>"; };
 		E9251BBC1E9F77D000B0BC0A /* WNRecommendModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNRecommendModel.swift; sourceTree = "<group>"; };
+		E93560441EAEFA9500F4FA2B /* WNUserAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNUserAPI.swift; sourceTree = "<group>"; };
+		E93560461EAF433000F4FA2B /* WNUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNUserModel.swift; sourceTree = "<group>"; };
+		E93560481EB04D0A00F4FA2B /* Dictionary+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+WN.swift"; sourceTree = "<group>"; };
+		E935604C1EB06D9200F4FA2B /* WNMeHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNMeHeaderView.swift; sourceTree = "<group>"; };
+		E93560511EB1C52E00F4FA2B /* WNAboutusBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNAboutusBoard.swift; sourceTree = "<group>"; };
+		E93560531EB1EBFE00F4FA2B /* WNAboutusCCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNAboutusCCell.swift; sourceTree = "<group>"; };
+		E93560561EB1FF5B00F4FA2B /* WNPhoneView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNPhoneView.swift; sourceTree = "<group>"; };
+		E93560581EB3195A00F4FA2B /* CALayer+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+WN.swift"; sourceTree = "<group>"; };
+		E935605E1EB32D4F00F4FA2B /* WNItemListBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNItemListBoard.swift; sourceTree = "<group>"; };
+		E93560601EB332B200F4FA2B /* WNItemListAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNItemListAPI.swift; sourceTree = "<group>"; };
 		E94CB0151DE2C5800013D986 /* Wannar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wannar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E94CB0181DE2C5800013D986 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E94CB01D1DE2C5800013D986 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -160,6 +198,24 @@
 		E975E88D1EA7239200F65FFD /* WNRecommendCoverCCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNRecommendCoverCCell.swift; sourceTree = "<group>"; };
 		E975E88F1EA85CF400F65FFD /* WNRecommendHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNRecommendHeaderView.swift; sourceTree = "<group>"; };
 		E975E8911EA8956E00F65FFD /* UIFont+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+WN.swift"; sourceTree = "<group>"; };
+		E99FDCC51EADAAA700F69D2C /* WNLoginBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNLoginBoard.swift; sourceTree = "<group>"; };
+		E99FDCC91EADAAF100F69D2C /* WNLoginEmailTCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNLoginEmailTCell.swift; sourceTree = "<group>"; };
+		E99FDCCB1EADCF9B00F69D2C /* WNLoginPlatformTCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNLoginPlatformTCell.swift; sourceTree = "<group>"; };
+		E99FDCCF1EADD35300F69D2C /* qq@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qq@2x.png"; sourceTree = "<group>"; };
+		E99FDCD01EADD35300F69D2C /* qq@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qq@3x.png"; sourceTree = "<group>"; };
+		E99FDCD11EADD35300F69D2C /* wechat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wechat@2x.png"; sourceTree = "<group>"; };
+		E99FDCD21EADD35300F69D2C /* wechat@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wechat@3x.png"; sourceTree = "<group>"; };
+		E99FDCD31EADD35300F69D2C /* weibo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weibo@2x.png"; sourceTree = "<group>"; };
+		E99FDCD41EADD35300F69D2C /* weibo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weibo@3x.png"; sourceTree = "<group>"; };
+		E99FDCDB1EADD48900F69D2C /* CGFloat+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+WN.swift"; sourceTree = "<group>"; };
+		E99FDCDD1EADD56000F69D2C /* Double+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+WN.swift"; sourceTree = "<group>"; };
+		E99FDCDF1EADD6CF00F69D2C /* Int+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+WN.swift"; sourceTree = "<group>"; };
+		E99FDCE11EADDA6B00F69D2C /* WNNavigationBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNNavigationBoard.swift; sourceTree = "<group>"; };
+		E99FDCE31EADE80E00F69D2C /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		E99FDCE51EADE90B00F69D2C /* UIImage+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+WN.swift"; sourceTree = "<group>"; };
+		E99FDCE91EADF3B500F69D2C /* loginBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = loginBackground.jpg; sourceTree = "<group>"; };
+		E99FDCEB1EAE00FD00F69D2C /* WNSignUpBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNSignUpBoard.swift; sourceTree = "<group>"; };
+		E99FDCED1EAE02E800F69D2C /* WNSignUpTCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNSignUpTCell.swift; sourceTree = "<group>"; };
 		E9AB81E71E80FE850051E5A6 /* Array+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+WN.swift"; sourceTree = "<group>"; };
 		E9AB81E91E810EF40051E5A6 /* Bundle+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+WN.swift"; sourceTree = "<group>"; };
 		E9AB81F11E822E2F0051E5A6 /* UIScreen+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScreen+WN.swift"; sourceTree = "<group>"; };
@@ -251,6 +307,46 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E93560551EB1FF4300F4FA2B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E93560561EB1FF5B00F4FA2B /* WNPhoneView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E935605A1EB32CF900F4FA2B /* List */ = {
+			isa = PBXGroup;
+			children = (
+				E935605B1EB32D0F00F4FA2B /* Controller */,
+				E935605C1EB32D0F00F4FA2B /* Model */,
+				E935605D1EB32D0F00F4FA2B /* View */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		E935605B1EB32D0F00F4FA2B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E935605E1EB32D4F00F4FA2B /* WNItemListBoard.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E935605C1EB32D0F00F4FA2B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E935605D1EB32D0F00F4FA2B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		E94CB00C1DE2C5800013D986 = {
 			isa = PBXGroup;
 			children = (
@@ -276,19 +372,23 @@
 		E94CB0171DE2C5800013D986 /* Wannar */ = {
 			isa = PBXGroup;
 			children = (
+				E99FDCCD1EADD35300F69D2C /* IMAGE */,
 				E94CB0181DE2C5800013D986 /* AppDelegate.swift */,
 				E94CB0221DE2C5800013D986 /* Assets.xcassets */,
 				E94CB0271DE2C5800013D986 /* Info.plist */,
 				E94CB0241DE2C5800013D986 /* LaunchScreen.storyboard */,
 				E94CB01C1DE2C5800013D986 /* Main.storyboard */,
 				E94CB0521DE2C85F0013D986 /* Base */,
+				E99FDCC11EADA22B00F69D2C /* Login */,
 				E94CB04E1DE2C8060013D986 /* Destination */,
 				E94CB04F1DE2C8060013D986 /* Me */,
+				E935605A1EB32CF900F4FA2B /* List */,
 				E94CB0501DE2C8060013D986 /* Plan */,
 				E94CB0511DE2C8060013D986 /* Recommend */,
 				E94CB0491DE2C5FE0013D986 /* Root */,
 				E94CB0531DE2C85F0013D986 /* Tool */,
 				E975E8661EA4627800F65FFD /* Control */,
+				E93560551EB1FF4300F4FA2B /* View */,
 				E94CB01F1DE2C5800013D986 /* Wannar.xcdatamodeld */,
 				E9FBA3521DE4270E00540913 /* WNHeader.swift */,
 			);
@@ -317,6 +417,7 @@
 			isa = PBXGroup;
 			children = (
 				E94CB04C1DE2C6940013D986 /* WNRootBoard.swift */,
+				E99FDCE11EADDA6B00F69D2C /* WNNavigationBoard.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -441,6 +542,7 @@
 			children = (
 				E94CB0681DE2C9DA0013D986 /* WNMeBoard.swift */,
 				E9D5CFCF1DE6CADE00315460 /* WNSetupBoard.swift */,
+				E93560511EB1C52E00F4FA2B /* WNAboutusBoard.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -458,7 +560,9 @@
 			isa = PBXGroup;
 			children = (
 				E923F60D1DE41F980027A4B5 /* WNMeNormalTCell.swift */,
+				E935604C1EB06D9200F4FA2B /* WNMeHeaderView.swift */,
 				E9D5CFD31DE6D4EA00315460 /* WNSetupTCell.swift */,
+				E93560531EB1EBFE00F4FA2B /* WNAboutusCCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -495,10 +599,72 @@
 			path = Control;
 			sourceTree = "<group>";
 		};
+		E99FDCC11EADA22B00F69D2C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E99FDCC41EADAAA700F69D2C /* Controller */,
+				E99FDCC61EADAAA700F69D2C /* View */,
+				E99FDCC71EADAAA700F69D2C /* Model */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		E99FDCC41EADAAA700F69D2C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E99FDCC51EADAAA700F69D2C /* WNLoginBoard.swift */,
+				E99FDCEB1EAE00FD00F69D2C /* WNSignUpBoard.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E99FDCC61EADAAA700F69D2C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E99FDCC91EADAAF100F69D2C /* WNLoginEmailTCell.swift */,
+				E99FDCCB1EADCF9B00F69D2C /* WNLoginPlatformTCell.swift */,
+				E99FDCED1EAE02E800F69D2C /* WNSignUpTCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E99FDCC71EADAAA700F69D2C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E93560461EAF433000F4FA2B /* WNUserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E99FDCCD1EADD35300F69D2C /* IMAGE */ = {
+			isa = PBXGroup;
+			children = (
+				E99FDCCE1EADD35300F69D2C /* Login */,
+			);
+			path = IMAGE;
+			sourceTree = "<group>";
+		};
+		E99FDCCE1EADD35300F69D2C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E99FDCE91EADF3B500F69D2C /* loginBackground.jpg */,
+				E99FDCE31EADE80E00F69D2C /* logo.png */,
+				E99FDCCF1EADD35300F69D2C /* qq@2x.png */,
+				E99FDCD01EADD35300F69D2C /* qq@3x.png */,
+				E99FDCD11EADD35300F69D2C /* wechat@2x.png */,
+				E99FDCD21EADD35300F69D2C /* wechat@3x.png */,
+				E99FDCD31EADD35300F69D2C /* weibo@2x.png */,
+				E99FDCD41EADD35300F69D2C /* weibo@3x.png */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		E9B2F1F91E1510C10027DC1B /* APIClient */ = {
 			isa = PBXGroup;
 			children = (
 				E96C4E4F1E978E5A00168054 /* WNHttpClient.swift */,
+				E93560441EAEFA9500F4FA2B /* WNUserAPI.swift */,
+				E93560601EB332B200F4FA2B /* WNItemListAPI.swift */,
 			);
 			path = APIClient;
 			sourceTree = "<group>";
@@ -516,28 +682,34 @@
 			isa = PBXGroup;
 			children = (
 				E9AB81E71E80FE850051E5A6 /* Array+WN.swift */,
-				E9AB81FC1E8381710051E5A6 /* Collection+WN.swift */,
 				E9AB81E91E810EF40051E5A6 /* Bundle+WN.swift */,
+				E99FDCDB1EADD48900F69D2C /* CGFloat+WN.swift */,
+				E9AB81F31E8234B00051E5A6 /* CGSize+WN.swift */,
+				E9AB81FC1E8381710051E5A6 /* Collection+WN.swift */,
 				E9C32D3B1E77CF50008888D8 /* Date+WN.swift */,
 				E9C32D341E76A31E008888D8 /* DispatchQueue+WN.swift */,
+				E99FDCDD1EADD56000F69D2C /* Double+WN.swift */,
+				E93560481EB04D0A00F4FA2B /* Dictionary+WN.swift */,
+				E99FDCDF1EADD6CF00F69D2C /* Int+WN.swift */,
 				E9C32D391E779F35008888D8 /* Notification+WN.swift */,
 				E9639E301E1BA11A00FC8D1B /* String+WN.swift */,
 				E9D5CFCD1DE6A76200315460 /* UIBarButtonItem+WN.swift */,
 				E9C32CAB1E71174F008888D8 /* UIButton+WN.swift */,
 				E9B694851E6FF728004144D4 /* UICollectionView+WN.swift */,
 				E9BD50FB1DE3DF6C007E4D03 /* UIColor+WN.swift */,
+				E9FBA3591DE44B9C00540913 /* UIControl+WN.swift */,
 				E9C32D3D1E78DA3A008888D8 /* UIDevice+WN.swift */,
 				E975E8911EA8956E00F65FFD /* UIFont+WN.swift */,
 				E9D5CFCB1DE6A59100315460 /* UIGestureRecognizer+WN.swift */,
+				E99FDCE51EADE90B00F69D2C /* UIImage+WN.swift */,
 				E9C32CAF1E712E8F008888D8 /* UIImageView+WN.swift */,
 				E9C32CA91E7113BC008888D8 /* UILabel+WN.swift */,
+				E9AB81F11E822E2F0051E5A6 /* UIScreen+WN.swift */,
 				E9B694811E6FEC32004144D4 /* UITableView+WN.swift */,
 				E9C32CAD1E7129E9008888D8 /* UITextField+WN.swift */,
 				E9C32CB51E714D85008888D8 /* UIView+WN.swift */,
-				E9AB81F11E822E2F0051E5A6 /* UIScreen+WN.swift */,
-				E9AB81F31E8234B00051E5A6 /* CGSize+WN.swift */,
 				E9FBA3571DE4488600540913 /* WNAction.swift */,
-				E9FBA3591DE44B9C00540913 /* UIControl+WN.swift */,
+				E93560581EB3195A00F4FA2B /* CALayer+WN.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -682,9 +854,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E99FDCD81EADD35300F69D2C /* wechat@3x.png in Resources */,
+				E99FDCD71EADD35300F69D2C /* wechat@2x.png in Resources */,
+				E99FDCD61EADD35300F69D2C /* qq@3x.png in Resources */,
+				E99FDCEA1EADF3B500F69D2C /* loginBackground.jpg in Resources */,
+				E99FDCD51EADD35300F69D2C /* qq@2x.png in Resources */,
 				E94CB0261DE2C5800013D986 /* LaunchScreen.storyboard in Resources */,
 				E94CB0231DE2C5800013D986 /* Assets.xcassets in Resources */,
+				E99FDCE41EADE80E00F69D2C /* logo.png in Resources */,
 				E94CB01E1DE2C5800013D986 /* Main.storyboard in Resources */,
+				E99FDCDA1EADD35300F69D2C /* weibo@3x.png in Resources */,
+				E99FDCD91EADD35300F69D2C /* weibo@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -855,14 +1035,17 @@
 				E9D5CFD21DE6CDE900315460 /* WNSetupModel.swift in Sources */,
 				E9639E311E1BA11A00FC8D1B /* String+WN.swift in Sources */,
 				E94CB0671DE2C9C60013D986 /* WNDestinationBoard.swift in Sources */,
+				E93560611EB332B200F4FA2B /* WNItemListAPI.swift in Sources */,
 				E975E88A1EA71DFA00F65FFD /* WNRecommendMinisCCell.swift in Sources */,
 				E923F60E1DE41F980027A4B5 /* WNMeNormalTCell.swift in Sources */,
 				E94CB0691DE2C9DA0013D986 /* WNMeBoard.swift in Sources */,
 				E9C32D3A1E779F35008888D8 /* Notification+WN.swift in Sources */,
+				E93560571EB1FF5B00F4FA2B /* WNPhoneView.swift in Sources */,
 				E975E8691EA4627800F65FFD /* WNLoadingView.swift in Sources */,
 				E9FBA3531DE4270E00540913 /* WNHeader.swift in Sources */,
 				E9AB81EA1E810EF40051E5A6 /* Bundle+WN.swift in Sources */,
 				E975E88C1EA71E1100F65FFD /* WNRecommendHotCCell.swift in Sources */,
+				E99FDCEC1EAE00FD00F69D2C /* WNSignUpBoard.swift in Sources */,
 				E94CB0211DE2C5800013D986 /* Wannar.xcdatamodeld in Sources */,
 				E975E86E1EA5C1FF00F65FFD /* WNRecommendWeeksCCell.swift in Sources */,
 				E9D15FED1EA0C11A008E9E54 /* WNRecommendMeauCCell.swift in Sources */,
@@ -870,6 +1053,7 @@
 				E9D5CFD41DE6D4EA00315460 /* WNSetupTCell.swift in Sources */,
 				E9B694841E6FEDC0004144D4 /* NibLoadable.swift in Sources */,
 				E9C32CBF1E727C14008888D8 /* WNGlobalVar.swift in Sources */,
+				E93560521EB1C52E00F4FA2B /* WNAboutusBoard.swift in Sources */,
 				E9AB81FD1E8381710051E5A6 /* Collection+WN.swift in Sources */,
 				E9C32CAC1E71174F008888D8 /* UIButton+WN.swift in Sources */,
 				E9FBA35A1DE44B9C00540913 /* UIControl+WN.swift in Sources */,
@@ -878,10 +1062,16 @@
 				E9D5CFCE1DE6A76200315460 /* UIBarButtonItem+WN.swift in Sources */,
 				E975E86C1EA462DB00F65FFD /* WNButton.swift in Sources */,
 				E9B694801E6FE93E004144D4 /* Reusable.swift in Sources */,
+				E935604D1EB06D9200F4FA2B /* WNMeHeaderView.swift in Sources */,
 				E9C32CAE1E7129E9008888D8 /* UITextField+WN.swift in Sources */,
+				E99FDCCC1EADCF9B00F69D2C /* WNLoginPlatformTCell.swift in Sources */,
+				E93560451EAEFA9500F4FA2B /* WNUserAPI.swift in Sources */,
 				E975E88E1EA7239200F65FFD /* WNRecommendCoverCCell.swift in Sources */,
 				E9D15FEB1EA0B070008E9E54 /* WNRecommendBannerCCell.swift in Sources */,
 				E9C32D3E1E78DA3A008888D8 /* UIDevice+WN.swift in Sources */,
+				E93560491EB04D0A00F4FA2B /* Dictionary+WN.swift in Sources */,
+				E99FDCE61EADE90B00F69D2C /* UIImage+WN.swift in Sources */,
+				E99FDCE21EADDA6B00F69D2C /* WNNavigationBoard.swift in Sources */,
 				E94CB05C1DE2C9240013D986 /* WNRecommendBoard.swift in Sources */,
 				E9FBA3581DE4488600540913 /* WNAction.swift in Sources */,
 				E9B694861E6FF728004144D4 /* UICollectionView+WN.swift in Sources */,
@@ -890,19 +1080,29 @@
 				E9AB81F41E8234B00051E5A6 /* CGSize+WN.swift in Sources */,
 				E975E86A1EA4627800F65FFD /* WNParallaxHeaderView.swift in Sources */,
 				E9C32CB21E713C50008888D8 /* WNDebugTool.swift in Sources */,
+				E935605F1EB32D4F00F4FA2B /* WNItemListBoard.swift in Sources */,
 				E975E8901EA85CF400F65FFD /* WNRecommendHeaderView.swift in Sources */,
+				E93560471EAF433000F4FA2B /* WNUserModel.swift in Sources */,
+				E93560591EB3195A00F4FA2B /* CALayer+WN.swift in Sources */,
+				E99FDCCA1EADAAF100F69D2C /* WNLoginEmailTCell.swift in Sources */,
+				E99FDCEE1EAE02E800F69D2C /* WNSignUpTCell.swift in Sources */,
 				E9B694821E6FEC32004144D4 /* UITableView+WN.swift in Sources */,
 				E9C32CB01E712E8F008888D8 /* UIImageView+WN.swift in Sources */,
 				E9C32CA81E711327008888D8 /* WNUITool.swift in Sources */,
 				E9C32D3C1E77CF50008888D8 /* Date+WN.swift in Sources */,
 				E9AB81E81E80FE850051E5A6 /* Array+WN.swift in Sources */,
 				E975E8881EA71DDF00F65FFD /* WNRecommendSeasonsCCell.swift in Sources */,
+				E99FDCE01EADD6CF00F69D2C /* Int+WN.swift in Sources */,
 				E9D5CFCC1DE6A59100315460 /* UIGestureRecognizer+WN.swift in Sources */,
+				E99FDCDE1EADD56000F69D2C /* Double+WN.swift in Sources */,
 				E94CB0191DE2C5800013D986 /* AppDelegate.swift in Sources */,
+				E99FDCC81EADAAA700F69D2C /* WNLoginBoard.swift in Sources */,
 				E9C32CAA1E7113BC008888D8 /* UILabel+WN.swift in Sources */,
 				E9AB81F21E822E2F0051E5A6 /* UIScreen+WN.swift in Sources */,
 				E975E8841EA71D6300F65FFD /* WNRecommendThemsCCell.swift in Sources */,
 				E94CB06B1DE2C9F50013D986 /* WNPlanListBoard.swift in Sources */,
+				E93560541EB1EBFE00F4FA2B /* WNAboutusCCell.swift in Sources */,
+				E99FDCDC1EADD48900F69D2C /* CGFloat+WN.swift in Sources */,
 				E975E8861EA71D9F00F65FFD /* WNRecommendScenicsCCell.swift in Sources */,
 				E9C32CB61E714D85008888D8 /* UIView+WN.swift in Sources */,
 				E9C32D351E76A31E008888D8 /* DispatchQueue+WN.swift in Sources */,
@@ -1002,7 +1202,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1047,7 +1247,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

@@ -80,4 +80,40 @@ extension String {
         let date = Date.init(str: self, format: oldFormat)
         return date.string(format: newFormat)
     }
+    
+    
+    /// 邮箱验证
+    func isEmail() -> Bool {
+        return validateText(type: "Email", text: self)
+    }
+    
+    
+    /// 手机号码验证
+    func isPhone() -> Bool {
+        return validateText(type: "Phone", text: self)
+    }
+    
+    
+    /// 私有方法：根据正则表达式验证内容
+    ///
+    /// - Parameters:
+    ///   - type: 待验证类型
+    ///   - text: 待验证文本
+    /// - Returns: Bool
+    fileprivate func validateText(type: String, text: String) -> Bool {
+        do {
+            var pattern: String = ""
+            if type == "Email" {
+                pattern = "^([a-z0-9_\\.-]+)@([\\da-z\\.-]+)\\.([a-z\\.]{2,6})$"
+            }
+            if type == "Phone" {
+                pattern = "^1[0-9]{10}$"
+            }
+            let regex: NSRegularExpression = try NSRegularExpression.init(pattern: pattern, options: .caseInsensitive)
+            let matches = regex.matches(in: text, options: .reportProgress, range: NSMakeRange(0, text.characters.count))
+            return matches.count > 0
+        } catch {
+            return false
+        }
+    }
 }

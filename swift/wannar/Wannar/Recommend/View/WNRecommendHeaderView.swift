@@ -44,7 +44,7 @@ class WNRecommendHeaderView: UICollectionReusableView {
         self.icon = icon
         
         /// Title
-        let title = UILabel.init(color: UIColor.textColor(),
+        let title = UILabel.init(color: .textColor,
                                  fontName: WNConfig.FontName.kaitiBlack,
                                  size: 18,
                                  textAlignment: .left)
@@ -56,7 +56,7 @@ class WNRecommendHeaderView: UICollectionReusableView {
         self.title = title;
         
         /// Subtitle
-        let subtitle = UILabel.init(color: UIColor.textColor(),
+        let subtitle = UILabel.init(color: .textColor,
                                  fontName: WNConfig.FontName.kaitiRegular,
                                  size: 11,
                                  textAlignment: .left)

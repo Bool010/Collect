@@ -50,7 +50,7 @@ class WNRecommendSeasonsCCell: UICollectionViewCell {
         }
         
         /// Title Label
-        self.title = UILabel.init(color: UIColor.textColor(),
+        self.title = UILabel.init(color: .textColor,
                                   fontName: WNConfig.FontName.kaitiRegular,
                                   size: 13,
                                   textAlignment: .left)
@@ -65,7 +65,7 @@ class WNRecommendSeasonsCCell: UICollectionViewCell {
         }
         
         /// Price Label
-        self.price = UILabel.init(color: UIColor.themColor(),
+        self.price = UILabel.init(color: .themColor,
                                   fontName: WNConfig.FontName.kaitiBold,
                                   size: 13,
                                   textAlignment: .left)
@@ -79,7 +79,7 @@ class WNRecommendSeasonsCCell: UICollectionViewCell {
         
         /// Line View
         let lineView = UIView.init()
-        lineView.backgroundColor = UIColor.separatorColor()
+        lineView.backgroundColor = .separatorColor
         self.contentView.addSubview(lineView)
         lineView.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(15.0)

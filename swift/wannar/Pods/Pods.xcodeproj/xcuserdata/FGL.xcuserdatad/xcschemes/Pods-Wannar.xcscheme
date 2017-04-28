@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0820"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2263ADEA2E82B5857BECBE46138C8396"
+               BlueprintIdentifier = "65AA60EC9F412220405F461DFFEDAF70"
                BuildableName = "Pods_Wannar.framework"
                BlueprintName = "Pods-Wannar"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2263ADEA2E82B5857BECBE46138C8396"
+            BlueprintIdentifier = "65AA60EC9F412220405F461DFFEDAF70"
             BuildableName = "Pods_Wannar.framework"
             BlueprintName = "Pods-Wannar"
             ReferencedContainer = "container:Pods.xcodeproj">

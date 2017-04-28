@@ -33,4 +33,13 @@ extension UITextField {
     convenience init(text: String?, size: Float?, textColor: UIColor?, placeholder: String?) {
         self.init(text: text, size: size, textColor: textColor, backgroundColor: nil, placeholder: placeholder)
     }
+    
+    func set(fontName: String?, size: CGFloat) {
+
+        if let fontName = fontName {
+            UIFont.set(fontName: fontName, control: self, size: size)
+        } else {
+            self.font = UIFont.systemFont(ofSize: size)
+        }
+    }
 }

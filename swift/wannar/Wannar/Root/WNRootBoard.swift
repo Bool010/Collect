@@ -27,14 +27,14 @@ class WNRootBoard: UITabBarController, UITabBarControllerDelegate {
         
         super.viewDidAppear(animated)
         // 显示FPS
-        wn_showFPS()
-        let fpsLabel = WNFPSLabel.init(frame: CGRect.init(x: 15, y: UIScreen.main.bounds.size.height - 80.0, width: 60.0, height: 25.0))
-        self.view.addSubview(fpsLabel)
-        let tap = UITapGestureRecognizer.init()
-        tap.addClosure("fps") { 
-            wn_print("成功")
-        }
-        fpsLabel.addGestureRecognizer(tap)
+//        wn_showFPS()
+//        let fpsLabel = WNFPSLabel.init(frame: CGRect.init(x: 15, y: UIScreen.main.bounds.size.height - 80.0, width: 60.0, height: 25.0))
+//        self.view.addSubview(fpsLabel)
+//        let tap = UITapGestureRecognizer.init()
+//        tap.addClosure("fps") { 
+//            wn_print("成功")
+//        }
+//        fpsLabel.addGestureRecognizer(tap)
         
     }
     
@@ -51,13 +51,13 @@ class WNRootBoard: UITabBarController, UITabBarControllerDelegate {
     private func setAppearance() -> Void {
         
         let tabBarItem = UITabBarItem.appearance()
-        tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.textColor()], for: .normal)
-        tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.themColor()], for: .selected)
+        tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.textColor], for: .normal)
+        tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.themColor], for: .selected)
         tabBar.isTranslucent = false
         
         let navigation = UINavigationBar.appearance()
         navigation.isTranslucent = false
-        navigation.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.textColor(),
+        navigation.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.textColor,
                                           NSFontAttributeName: UIFont.boldSystemFont(ofSize: 16.0)]
         
     }
@@ -87,7 +87,8 @@ class WNRootBoard: UITabBarController, UITabBarControllerDelegate {
         board.tabBarItem.titlePositionAdjustment = UIOffsetMake(0.0, -15.0)
         board.tabBarItem.image = UIImage.init(named: imageName)?.withRenderingMode(.alwaysOriginal)
         board.tabBarItem.selectedImage = UIImage.init(named: selectImageName)?.withRenderingMode(.alwaysOriginal)
-        self.addChildViewController(UINavigationController.init(rootViewController: board))
+        let nav: WNNavigationBoard = WNNavigationBoard.init(rootViewController: board)
+        self.addChildViewController(nav)
         
     }
     

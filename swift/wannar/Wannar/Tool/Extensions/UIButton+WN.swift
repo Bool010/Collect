@@ -42,10 +42,10 @@ extension UIButton {
         
         self.init()
         if let image = image {
-            self.setImage(UIImage.init(imageLiteralResourceName: image), for: .normal)
+            self.setImage(UIImage.init(named: image), for: .normal)
         }
         if let mode = mode {
-            self.contentMode = mode
+            self.imageView?.contentMode = mode
         }
     }
 }

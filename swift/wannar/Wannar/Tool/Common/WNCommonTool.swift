@@ -38,3 +38,28 @@ func iOSLater(version: Double) -> Bool {
         return false
     }
 }
+
+func topBoard() -> UIViewController? {
+    
+    return topBoard(root: UIApplication.shared.keyWindow?.rootViewController)
+}
+
+fileprivate func topBoard(root: UIViewController?) -> UIViewController? {
+    
+    if root is UITabBarController {
+        
+        return topBoard(root: (root as! UITabBarController).selectedViewController!)
+        
+    } else if root is UINavigationController {
+        
+        return topBoard(root: (root as! UINavigationController).visibleViewController)
+        
+    } else if (root?.presentedViewController != nil) {
+        
+        return topBoard(root: root?.presentedViewController)
+        
+    } else {
+        
+        return root
+    }
+}

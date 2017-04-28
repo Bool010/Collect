@@ -123,7 +123,7 @@ class WNRecommendWeekCCell: UICollectionViewCell {
         }
         
         /// Discount
-        self.discountLabel = UILabel.init(color: UIColor.textColor(),
+        self.discountLabel = UILabel.init(color: .textColor,
                                           fontName: WNConfig.FontName.kaitiBlack,
                                           size: 17,
                                           textAlignment: .left)
@@ -137,7 +137,7 @@ class WNRecommendWeekCCell: UICollectionViewCell {
         }
         
         /// City
-        self.cityLabel = UILabel.init(color: UIColor.textColor(),
+        self.cityLabel = UILabel.init(color: .textColor,
                                       fontName: WNConfig.FontName.kaitiRegular,
                                       size: 10,
                                       textAlignment: .left)
@@ -150,7 +150,7 @@ class WNRecommendWeekCCell: UICollectionViewCell {
         }
         
         /// End Date
-        self.endDateLabel = UILabel.init(color: UIColor.textColor(),
+        self.endDateLabel = UILabel.init(color: .textColor,
                                          fontName: WNConfig.FontName.kaitiRegular,
                                          size: 10,
                                          textAlignment: .left)
@@ -163,7 +163,7 @@ class WNRecommendWeekCCell: UICollectionViewCell {
         }
         
         /// Price
-        self.priceLabel = UILabel.init(color: UIColor.themColor(),
+        self.priceLabel = UILabel.init(color: .themColor,
                                        fontName: WNConfig.FontName.kaitiBold,
                                        size: 16,
                                        textAlignment: .left)
@@ -211,7 +211,7 @@ class WNRecommendWeeksCCell: UICollectionViewCell {
         
         /// Line View
         let lineView = UIView.init()
-        lineView.backgroundColor = UIColor.separatorColor()
+        lineView.backgroundColor = .separatorColor
         self.contentView.addSubview(lineView)
         lineView.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(15.0)

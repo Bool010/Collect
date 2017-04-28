@@ -46,7 +46,7 @@ class WNRecommendBannerCCell: UICollectionViewCell {
         let pageControl = FSPageControl.init()
         pageControl.contentHorizontalAlignment = .center
         pageControl.setFillColor(.white, for: .normal)
-        pageControl.setFillColor(UIColor.themColor(), for: .selected)
+        pageControl.setFillColor(.themColor, for: .selected)
         pageView.addSubview(pageControl)
         pageControl.snp.makeConstraints { (make) in
             make.left.right.equalToSuperview().offset(0.0)

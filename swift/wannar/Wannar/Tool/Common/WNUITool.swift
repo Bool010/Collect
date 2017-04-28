@@ -41,7 +41,7 @@ func initNavigationToView(view: UIView,
                                                      width: UIScreen.width - 100,
                                                      height: 44))
     titleLabel.font = UIFont.systemFont(ofSize: 16)
-    titleLabel.textColor = UIColor.textColor()
+    titleLabel.textColor = .textColor
     titleLabel.textAlignment = .center
     navigationView.addSubview(titleLabel)
     

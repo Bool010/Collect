@@ -10,16 +10,24 @@ import UIKit
 
 class WNMeBoard: WNBaseBoard {
 
-    var tableView : UITableView!
+    weak var tableView : UITableView!
     var model = WNMeModel()
+    var userModel: WNUserModel?
     
     
     
-    // MARK: - ------------------------ Life Cycle ------------------------
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        self.fetchUserModel()
         self.buildUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = false
     }
     
     override func didReceiveMemoryWarning() {
@@ -28,38 +36,63 @@ class WNMeBoard: WNBaseBoard {
         
     }
     
+    deinit {
+        print("我的销毁")
+    }
     
-    // MARK: - ------------------------ Event ------------------------
+    
+    
+    // MARK: - Event
+    private func fetchUserModel() -> Void {
+        
+        let userModel = WNUserModel.selectLocalModel()
+        self.userModel = userModel
+    }
+    
     private func buildUI() -> Void {
         
+        self.view.backgroundColor = .white
+        
+        /// Right Bar Item
         let rightBarItem: UIBarButtonItem = UIBarButtonItem.init(title: "设置") {
             let setupboard: WNSetupBoard = WNSetupBoard.init()
             self.navigationController?.pushViewController(setupboard, animated: true)
             print("设置点击")
         }
-        rightBarItem.tintColor = UIColor.textColor()
+        rightBarItem.tintColor = .textColor
         self.navigationItem.rightBarButtonItem = rightBarItem
         
-        
-        self.view.backgroundColor = UIColor.white
-        
-        self.tableView = UITableView.init()
-        self.tableView.separatorStyle = .none
-        self.tableView.estimatedRowHeight = 50.0
-        self.tableView.rowHeight = UITableViewAutomaticDimension
+        /// Tabel View
+        let tableView = UITableView.init()
+        tableView.separatorStyle = .none
+        tableView.estimatedRowHeight = 50.0
+        tableView.rowHeight = UITableViewAutomaticDimension
         self.view.addSubview(tableView)
-        self.tableView.snp.makeConstraints { (maker) in
+        tableView.snp.makeConstraints { (maker) in
             maker.edges.equalTo(self.view).inset(UIEdgeInsetsMake(0, 0, 0, 0))
         }
-        self.tableView.registerClassOf(WNMeNormalTCell.self)
-        self.tableView.delegate = self;
-        self.tableView.dataSource = self;
-    }
-    
-    
-    // MARK: - ------------------------ Deinit ------------------------
-    deinit {
-        print("我的销毁")
+        tableView.registerClassOf(WNMeNormalTCell.self)
+        tableView.delegate = self;
+        tableView.dataSource = self;
+        self.tableView = tableView
+        
+        
+        /// Table Header View
+        let tableHeader = WNMeHeaderView.init()
+        tableView.tableHeaderView = tableHeader
+        tableHeader.snp.makeConstraints { (make) in
+            make.left.right.top.bottom.equalTo(0.0)
+            make.height.equalTo(100.0)
+            make.width.equalToSuperview()
+        }
+        tableHeader.layoutIfNeeded()
+        
+        guard let userModel = self.userModel else { return }
+        tableHeader.accountLabel.text = userModel.account
+        tableHeader.creditLabel.text = "积分：\(userModel.credit)"
+        tableHeader.userNameLabel.text = userModel.name
+        guard let head = userModel.head else { return }
+        tableHeader.userIcon.kf.setImage(with: URL.init(string: head))
     }
 }
 
@@ -79,6 +112,16 @@ extension WNMeBoard: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            let board = WNLoginBoard.init()
+            self.navigationController?.pushViewController(board, animated: true)
+        } else if indexPath.row == 1 {
+            WNPhoneView.show()
+        } else {
+            let board = WNAboutusBoard.init()
+            self.navigationController?.pushViewController(board, animated: true)
+        }
+
         print("点击第\(indexPath.row)行")
     }
     

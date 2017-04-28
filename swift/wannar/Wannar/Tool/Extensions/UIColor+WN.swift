@@ -15,7 +15,6 @@ import Foundation
 #endif
 
 
-
 extension UIColor {
     
     /// RGB
@@ -38,31 +37,39 @@ extension UIColor {
     ///   - b: blue
     ///   - a: alpha
     /// - Returns: UIColor
-    class func RGBA (r:CGFloat, g:CGFloat, b:CGFloat, a:CGFloat) ->UIColor{
+    class func RGBA (r:CGFloat, g:CGFloat, b:CGFloat, a:CGFloat) -> UIColor {
         return UIColor (red: r/255.0, green: g/255.0, blue: b/255.0, alpha: a)
     }
     
     /// 主题色
-    class func themColor() -> UIColor {
-        return RGB(R: 255.0, G: 53.0, B: 116.0)
+    open class var themColor: UIColor {
+        get {
+            return UIColor.RGB(R: 255.0, G: 53.0, B: 116.0)
+        }
     }
     
     /// 普通文本色
-    class func textColor() -> UIColor {
-        return RGB(R: 76.0, G: 76.0, B: 76.0)
+    open class var textColor: UIColor {
+        get {
+            return UIColor.RGB(R: 76.0, G: 76.0, B: 76.0)
+        }
     }
     
     /// 分割线颜色
-    class func separatorColor() -> UIColor {
-        return RGB(R: 200.0, G: 199.0, B: 204.0)
+    open class var separatorColor: UIColor {
+        get {
+            return UIColor.RGB(R: 200.0, G: 199.0, B: 204.0)
+        }
     }
     
     /// 随机色
-    class func randomColor() -> UIColor{
-        let R = CGFloat(arc4random_uniform(255))/CGFloat(255.0)
-        let G = CGFloat( arc4random_uniform(255))/CGFloat(255.0)
-        let B = CGFloat(arc4random_uniform(255))/CGFloat(255.0)
-        return UIColor.init(red: R, green: G, blue: B, alpha: 1.0)
+    open class var randomColor: UIColor {
+        get {
+            let R = CGFloat(arc4random_uniform(255))/CGFloat(255.0)
+            let G = CGFloat( arc4random_uniform(255))/CGFloat(255.0)
+            let B = CGFloat(arc4random_uniform(255))/CGFloat(255.0)
+            return UIColor.init(red: R, green: G, blue: B, alpha: 1.0)
+        }
     }
     
     //// 16进制 转 RGBA

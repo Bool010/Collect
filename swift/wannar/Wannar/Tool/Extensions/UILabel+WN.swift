@@ -17,7 +17,7 @@ extension UILabel {
             self.textAlignment = textAlignment
         }
         if let fontName = fontName {
-            UIFont.set(fontName: fontName, label: self, size: size)
+            UIFont.set(fontName: fontName, control: self, size: size)
         } else {
             self.font = UIFont.systemFont(ofSize: size)
         }
@@ -29,7 +29,7 @@ extension UILabel {
             self.textAlignment = textAlignment
         }
         if let fontName = fontName {
-            UIFont.set(fontName: fontName, label: self, size: size)
+            UIFont.set(fontName: fontName, control: self, size: size)
         } else {
             self.font = UIFont.systemFont(ofSize: size)
         }

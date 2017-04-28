@@ -45,6 +45,9 @@ target 'Wannar' do
     # 空列表处理
     pod 'DZNEmptyDataSet'
     
+    # Image虚化效果
+    pod 'SABlurImageView'
+    
 #    pod 'ReactiveCocoa', '~> 5.0.0'
 
 end

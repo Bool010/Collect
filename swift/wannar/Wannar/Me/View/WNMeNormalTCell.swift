@@ -50,8 +50,10 @@ class WNMeNormalTCell: UITableViewCell {
         self.iconImage = iconImage
 
         /// Title Label
-        let titleLabel = UILabel.init(color: UIColor.textColor(),
-                                      size: 15)
+        let titleLabel = UILabel.init(color: .textColor,
+                                      fontName: WNConfig.FontName.kaitiRegular,
+                                      size: 15.0,
+                                      textAlignment: .left)
         self.contentView.addSubview(titleLabel)
         titleLabel.snp.makeConstraints { (make) in
             make.left.equalTo(iconImage.snp.right).offset(0.0)
@@ -63,7 +65,7 @@ class WNMeNormalTCell: UITableViewCell {
         
         /// Line View
         let lineView = UIView.init()
-        lineView.backgroundColor = UIColor.separatorColor()
+        lineView.backgroundColor = .separatorColor
         self.contentView.addSubview(lineView)
         lineView.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(15.0)

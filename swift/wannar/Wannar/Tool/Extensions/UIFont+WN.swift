@@ -29,13 +29,24 @@ extension UIFont {
         }
     }
     
-    class func set(fontName: String, label: UILabel, size: CGFloat) {
+    class func set(fontName: String, control: AnyObject, size: CGFloat) {
         
         let descs = creatFontDescriptor(fontName: fontName)
         CTFontDescriptorMatchFontDescriptorsWithProgressHandler(descs, nil) { (state, progress) -> Bool in
             if (state == CTFontDescriptorMatchingState.didMatch) {
                 DispatchQueue.main.sync {
-                    label.font = UIFont.init(name: fontName, size: size)
+                    if control is UILabel {
+                        (control as! UILabel).font = UIFont.init(name: fontName, size: size)
+                    }
+                    else if control is UITextField {
+                        (control as! UITextField).font = UIFont.init(name: fontName, size: size)
+                    }
+                    else if control is UIButton {
+                        (control as! UIButton).titleLabel?.font = UIFont.init(name: fontName, size: size)
+                    }
+                    else {
+                        wn_debugMessage("Set Font 出现未处理的类型")
+                    }
                 }
             }
             return true;
