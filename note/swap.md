@@ -1,16 +1,17 @@
 # swap(a, b)的几种实现
 
 ### 1.临时变量
-`
-func swap(a: Int, b: Int) -> Void{  
+```
+func swap(a: Int, b: Int) -> Void{
     int temp = 0  
-    temp = b  
-    b = a  
-    a = temp  
+    temp = b 
+    b = a 
+    a = temp   
 }  
-`
+```
+
 ### 2.加法
-`
+```
 func swap(a: Int, b: Int) -> Void {  
     a = a + b  
     b = a - b  
@@ -20,10 +21,10 @@ func swap(a: Int, b: Int) -> Void {
 func swap(a: Int, b: Int) -> Void {  
     a = a + b - (b = a)  
 }
-`
+```
 
 ### 3.异或
-`
+```
 func swap(a: Int, b: Int) -> Void {  
     a = a ^ b  
     b = a ^ b  
@@ -33,7 +34,8 @@ func swap(a: Int, b: Int) -> Void {
 func swap(a: Int, b: Int) -> Void {  
     a ^= b ^= a ^= b  
 }  
-`
+```
+  
 Note: 
 什么样的运算才能保证把两段信息放到一个变量中，知道一段信息就可以分离出另一段信息呢？  
 最容易想到的是位运算  
