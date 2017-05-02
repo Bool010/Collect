@@ -47,7 +47,7 @@ class WNItemListAPI: WNHttpClient {
         param["offset"] = offset
         
         /// Post
-        self.post(subURL: WNConfig.Path.register, param: param, handle: { (data) -> JSON? in
+        self.post(subURL: WNConfig.Path.itemList, param: param, handle: { (data) -> JSON? in
             
             if !(data is JSON) {
                 return nil

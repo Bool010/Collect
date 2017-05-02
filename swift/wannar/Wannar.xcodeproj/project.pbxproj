@@ -53,6 +53,7 @@
 		E975E88E1EA7239200F65FFD /* WNRecommendCoverCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E975E88D1EA7239200F65FFD /* WNRecommendCoverCCell.swift */; };
 		E975E8901EA85CF400F65FFD /* WNRecommendHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E975E88F1EA85CF400F65FFD /* WNRecommendHeaderView.swift */; };
 		E975E8921EA8956E00F65FFD /* UIFont+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E975E8911EA8956E00F65FFD /* UIFont+WN.swift */; };
+		E976FC451EB833C700C20236 /* WNSortModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E976FC441EB833C700C20236 /* WNSortModel.swift */; };
 		E99FDCC81EADAAA700F69D2C /* WNLoginBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99FDCC51EADAAA700F69D2C /* WNLoginBoard.swift */; };
 		E99FDCCA1EADAAF100F69D2C /* WNLoginEmailTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99FDCC91EADAAF100F69D2C /* WNLoginEmailTCell.swift */; };
 		E99FDCCC1EADCF9B00F69D2C /* WNLoginPlatformTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99FDCCB1EADCF9B00F69D2C /* WNLoginPlatformTCell.swift */; };
@@ -198,6 +199,7 @@
 		E975E88D1EA7239200F65FFD /* WNRecommendCoverCCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNRecommendCoverCCell.swift; sourceTree = "<group>"; };
 		E975E88F1EA85CF400F65FFD /* WNRecommendHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNRecommendHeaderView.swift; sourceTree = "<group>"; };
 		E975E8911EA8956E00F65FFD /* UIFont+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+WN.swift"; sourceTree = "<group>"; };
+		E976FC441EB833C700C20236 /* WNSortModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNSortModel.swift; sourceTree = "<group>"; };
 		E99FDCC51EADAAA700F69D2C /* WNLoginBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNLoginBoard.swift; sourceTree = "<group>"; };
 		E99FDCC91EADAAF100F69D2C /* WNLoginEmailTCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNLoginEmailTCell.swift; sourceTree = "<group>"; };
 		E99FDCCB1EADCF9B00F69D2C /* WNLoginPlatformTCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNLoginPlatformTCell.swift; sourceTree = "<group>"; };
@@ -336,6 +338,7 @@
 		E935605C1EB32D0F00F4FA2B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E976FC441EB833C700C20236 /* WNSortModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1028,6 +1031,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9AB81F81E8274770051E5A6 /* WNMeModel.swift in Sources */,
+				E976FC451EB833C700C20236 /* WNSortModel.swift in Sources */,
 				E9251BBD1E9F77D000B0BC0A /* WNRecommendModel.swift in Sources */,
 				E96C4E501E978E5A00168054 /* WNHttpClient.swift in Sources */,
 				E9C32CBD1E725F54008888D8 /* RACTool.swift in Sources */,

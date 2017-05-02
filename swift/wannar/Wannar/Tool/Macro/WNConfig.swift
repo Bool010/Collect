@@ -80,6 +80,8 @@ final public class WNConfig {
         public static let register = "register.php"
         // 登录
         public static let signIn = "login.php"
+        // 列表
+        public static let itemList = "tour/get-tour-list-app.php"
         
         public static let destinationTour = "scenic/get-scenic-tour.php"
         public static let destinationPlan = "redis-scenic-plan.php"

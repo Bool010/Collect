@@ -80,6 +80,14 @@ class WNRecommendBoard: WNBaseBoard {
                 strongSelf.collectionView?.reloadData()
             }
         }
+        
+        WNItemListAPI.selectTour(query: "", sort: "", offset: 0, isNeedTitle: false, isCountOnly: false, distance: nil, success: {
+            
+        }, fail: { 
+            
+        }) { 
+            
+        }
     }
     
     // MARK: - Dealloc
