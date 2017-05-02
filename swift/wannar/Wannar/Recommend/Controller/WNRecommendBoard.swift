@@ -80,14 +80,6 @@ class WNRecommendBoard: WNBaseBoard {
                 strongSelf.collectionView?.reloadData()
             }
         }
-        
-        WNItemListAPI.selectTour(query: "", sort: "", offset: 0, isNeedTitle: false, isCountOnly: false, distance: nil, success: {
-            
-        }, fail: { 
-            
-        }) { 
-            
-        }
     }
     
     // MARK: - Dealloc
@@ -204,7 +196,10 @@ extension WNRecommendBoard: UICollectionViewDelegate, UICollectionViewDataSource
                 let btn = cell.btns[i]
                 btn.imageView.kf.setImage(with: URL.init(string: meau.image))
                 btn.titleLabel.text = meau.text
-                btn.click = { (btn) in
+                btn.click = { [weak self] (btn) in
+                    guard let _self = self else { return }
+                    let board = WNItemListBoard.init()
+                    _self.navigationController?.pushViewController(board, animated: true)
                     wn_print("按钮点击成功")
                 }
             }

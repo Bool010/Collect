@@ -54,6 +54,8 @@
 		E975E8901EA85CF400F65FFD /* WNRecommendHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E975E88F1EA85CF400F65FFD /* WNRecommendHeaderView.swift */; };
 		E975E8921EA8956E00F65FFD /* UIFont+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E975E8911EA8956E00F65FFD /* UIFont+WN.swift */; };
 		E976FC451EB833C700C20236 /* WNSortModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E976FC441EB833C700C20236 /* WNSortModel.swift */; };
+		E976FC471EB87E5800C20236 /* WNItemListTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E976FC461EB87E5800C20236 /* WNItemListTCell.swift */; };
+		E976FC491EB886FA00C20236 /* WNTourModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E976FC481EB886FA00C20236 /* WNTourModel.swift */; };
 		E99FDCC81EADAAA700F69D2C /* WNLoginBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99FDCC51EADAAA700F69D2C /* WNLoginBoard.swift */; };
 		E99FDCCA1EADAAF100F69D2C /* WNLoginEmailTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99FDCC91EADAAF100F69D2C /* WNLoginEmailTCell.swift */; };
 		E99FDCCC1EADCF9B00F69D2C /* WNLoginPlatformTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99FDCCB1EADCF9B00F69D2C /* WNLoginPlatformTCell.swift */; };
@@ -200,6 +202,8 @@
 		E975E88F1EA85CF400F65FFD /* WNRecommendHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNRecommendHeaderView.swift; sourceTree = "<group>"; };
 		E975E8911EA8956E00F65FFD /* UIFont+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+WN.swift"; sourceTree = "<group>"; };
 		E976FC441EB833C700C20236 /* WNSortModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNSortModel.swift; sourceTree = "<group>"; };
+		E976FC461EB87E5800C20236 /* WNItemListTCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNItemListTCell.swift; sourceTree = "<group>"; };
+		E976FC481EB886FA00C20236 /* WNTourModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNTourModel.swift; sourceTree = "<group>"; };
 		E99FDCC51EADAAA700F69D2C /* WNLoginBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNLoginBoard.swift; sourceTree = "<group>"; };
 		E99FDCC91EADAAF100F69D2C /* WNLoginEmailTCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNLoginEmailTCell.swift; sourceTree = "<group>"; };
 		E99FDCCB1EADCF9B00F69D2C /* WNLoginPlatformTCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNLoginPlatformTCell.swift; sourceTree = "<group>"; };
@@ -339,6 +343,7 @@
 			isa = PBXGroup;
 			children = (
 				E976FC441EB833C700C20236 /* WNSortModel.swift */,
+				E976FC481EB886FA00C20236 /* WNTourModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -346,6 +351,7 @@
 		E935605D1EB32D0F00F4FA2B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E976FC461EB87E5800C20236 /* WNItemListTCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1062,6 +1068,7 @@
 				E9C32CAC1E71174F008888D8 /* UIButton+WN.swift in Sources */,
 				E9FBA35A1DE44B9C00540913 /* UIControl+WN.swift in Sources */,
 				E9C32D381E778A80008888D8 /* WNConfig.swift in Sources */,
+				E976FC491EB886FA00C20236 /* WNTourModel.swift in Sources */,
 				E94CB04D1DE2C6940013D986 /* WNRootBoard.swift in Sources */,
 				E9D5CFCE1DE6A76200315460 /* UIBarButtonItem+WN.swift in Sources */,
 				E975E86C1EA462DB00F65FFD /* WNButton.swift in Sources */,
@@ -1084,6 +1091,7 @@
 				E9AB81F41E8234B00051E5A6 /* CGSize+WN.swift in Sources */,
 				E975E86A1EA4627800F65FFD /* WNParallaxHeaderView.swift in Sources */,
 				E9C32CB21E713C50008888D8 /* WNDebugTool.swift in Sources */,
+				E976FC471EB87E5800C20236 /* WNItemListTCell.swift in Sources */,
 				E935605F1EB32D4F00F4FA2B /* WNItemListBoard.swift in Sources */,
 				E975E8901EA85CF400F65FFD /* WNRecommendHeaderView.swift in Sources */,
 				E93560471EAF433000F4FA2B /* WNUserModel.swift in Sources */,

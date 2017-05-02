@@ -17,10 +17,11 @@ class WNItemListAPI: WNHttpClient {
                           isNeedTitle: Bool = true,
                           isCountOnly: Bool = false,
                           distance: Double? = nil,
-                          success: (() -> Void)? = nil,
+                          success: ((WNToursModel?) -> Void)? = nil,
                           fail: (()-> Void)? = nil,
                           finish:(()-> Void)? = nil) -> Void {
-        let fields = "tour_id,tour_departure,tour_leave,tour_display_price,current_price,tour_code,tour_sale_start,tour_sale_end,tour_discount_start,tour_discount_end,tour_display_price,tour_teaser,tour_travel_together_post,tour_recommand,tour_discount_percent,tour_title_app,tour_tag1,tour_tag2,tour_tag3,tour_buy2get1,tour_buy2get2,tour_airport,tour_pickup,tour_hotel,tour_share,tour_extradiscount,tour_getpoints,tour_usepoints,tour_vipdiscount,tour_double_confirm,tour_cancelable,tour_updatable,tour_birthday,tour_passport,tour_slider_pictures,tour_monday,tour_tuesday,tour_wednesday,tour_thursday,tour_friday,tour_saturday,tour_sunday,tour_transportation,tour_day,tour_main_picture,tour_url,tour_discount_percent_now,activity_tags,tour_rating,tour_reviews,tag,tour_base_price_info,tour_special_promotion,is_discount_now,is_sale_now,tour_activity"
+        
+        let fields = "tour_id,tour_title,tour_siblings,discount,scenic,tour_departure_en_cn,tour_main_picture,tour_slider_pictures,is_sale_now,is_discount_now,current_price,tour_discount_percent,week"
         let facets = "tour_departure_en_cn,tour_leave_single_en_cn,scenic,tag,tour_day,week,discount,service,area"
         let facetsExtend = "tag:tag;tour_departure_en_cn:tour_departure_en;tour_leave_single_en_cn:tour_leave_single_en;scenic:scenic;discount:discount;service:service;week:week"
         let escapes = "tag,tour_departure_en_cn,tour_leave_single_en_cn,scenic,discount,service,week"
@@ -56,7 +57,13 @@ class WNItemListAPI: WNHttpClient {
         }, success: { (json) in
             
             if let success = success {
-                success()
+                var model: WNToursModel?
+                if let json = json {
+                    if let a = json["data"].array {
+                        model = WNToursModel.init(array: a)
+                    }
+                }
+                success(model)
             }
         }, fail: { (error) in
             
