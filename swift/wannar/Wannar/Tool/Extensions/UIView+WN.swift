@@ -18,45 +18,57 @@ extension UIView {
     func addNavigation(closure: ((_ leftBtn: UIButton, _ rightBtn: UIButton, _ titleLabel: UILabel) -> Void)) {
         
         /// Navigation View
-        let navigationView = UIView.init(frame: CGRect.init(x: 0.0,
-                                                            y: 0.0,
-                                                            width: UIScreen.width,
-                                                            height: 64.0))
+        let navigationView = UIView.init()
         navigationView.backgroundColor = UIColor.white
         self.addSubview(navigationView)
+        navigationView.snp.makeConstraints { (make) in
+            make.left.right.top.equalToSuperview().offset(0.0)
+            make.height.equalTo(64.0)
+        }
         
         
         /// Left Btn
-        let leftBtn = UIButton.init(frame: CGRect.init(x: 0.0,
-                                                       y: 20.0,
-                                                       width: 50.0,
-                                                       height: 44.0))
+        let leftBtn = UIButton.init()
         navigationView.addSubview(leftBtn)
+        leftBtn.snp.makeConstraints { (make) in
+            make.left.bottom.equalToSuperview().offset(0.0)
+            make.top.equalToSuperview().offset(20.0)
+            make.width.equalTo(50.0)
+        }
         
         
         /// Right Btn
-        let rightBtn = UIButton.init(frame: CGRect.init(x: UIScreen.width - 50.0,
-                                                        y: 20,
-                                                        width: 50,
-                                                        height: 44.0))
+        let rightBtn = UIButton.init()
         navigationView.addSubview(rightBtn)
+        rightBtn.snp.makeConstraints { (make) in
+            make.right.bottom.equalToSuperview().offset(0.0)
+            make.top.equalToSuperview().offset(20.0)
+            make.width.equalTo(50.0)
+        }
         
         
         /// Title Label
-        let titleLabel = UILabel.init(frame: CGRect.init(x: 50.0,
-                                                         y: 20,
-                                                         width: UIScreen.width - 100,
-                                                         height: 44))
+        let titleLabel = UILabel.init()
         titleLabel.font = UIFont.boldSystemFont(ofSize: 16)
         titleLabel.textColor = .textColor
         titleLabel.textAlignment = .center
         navigationView.addSubview(titleLabel)
+        titleLabel.snp.makeConstraints { (make) in
+            make.left.equalTo(leftBtn.snp.right).offset(0.0)
+            make.right.equalTo(rightBtn.snp.left).offset(0.0)
+            make.top.equalToSuperview().offset(20.0)
+            make.bottom.equalToSuperview().offset(0.0)
+        }
         
         
         /// Line View
-        let lineView = UIView.init(frame: CGRect.init(x: 0.0, y: 63.5, width: UIScreen.width, height: 0.5))
+        let lineView = UIView.init()
         lineView.backgroundColor = .separatorColor
         navigationView.addSubview(lineView)
+        lineView.snp.makeConstraints { (make) in
+            make.left.right.bottom.equalToSuperview().offset(0.0)
+            make.height.equalTo(0.5)
+        }
         
         closure(leftBtn, rightBtn, titleLabel)
     }

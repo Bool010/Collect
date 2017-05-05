@@ -39,6 +39,7 @@ func iOSLater(version: Double) -> Bool {
     }
 }
 
+/// 获取当前控制器
 func topBoard() -> UIViewController? {
     
     return topBoard(root: UIApplication.shared.keyWindow?.rootViewController)
@@ -62,4 +63,22 @@ fileprivate func topBoard(root: UIViewController?) -> UIViewController? {
         
         return root
     }
+}
+
+
+func toJSONString(dict: Dictionary<String, Any>) -> String {
+
+    if (!JSONSerialization.isValidJSONObject(dict)) {
+        print("无法解析出JSONString")
+        return ""
+    }
+    let data = try? JSONSerialization.data(withJSONObject: dict, options: [])
+    guard data != nil else {
+        return ""
+    }
+    let str = String.init(data: data!, encoding: String.Encoding.utf8)
+    guard str != nil else {
+        return ""
+    }
+    return str!
 }

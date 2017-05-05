@@ -59,9 +59,7 @@ class WNItemListAPI: WNHttpClient {
             if let success = success {
                 var model: WNToursModel?
                 if let json = json {
-                    if let a = json["data"].array {
-                        model = WNToursModel.init(array: a)
-                    }
+                    model = WNToursModel.init(json: json)
                 }
                 success(model)
             }

@@ -56,6 +56,10 @@
 		E976FC451EB833C700C20236 /* WNSortModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E976FC441EB833C700C20236 /* WNSortModel.swift */; };
 		E976FC471EB87E5800C20236 /* WNItemListTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E976FC461EB87E5800C20236 /* WNItemListTCell.swift */; };
 		E976FC491EB886FA00C20236 /* WNTourModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E976FC481EB886FA00C20236 /* WNTourModel.swift */; };
+		E976FC4B1EB995A800C20236 /* WNFilterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E976FC4A1EB995A800C20236 /* WNFilterModel.swift */; };
+		E976FC4D1EB9C7FC00C20236 /* WNFilterBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E976FC4C1EB9C7FC00C20236 /* WNFilterBoard.swift */; };
+		E976FC4F1EB9C80800C20236 /* WNSortBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E976FC4E1EB9C80800C20236 /* WNSortBoard.swift */; };
+		E976FC511EB9E27A00C20236 /* WNFilterTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E976FC501EB9E27A00C20236 /* WNFilterTCell.swift */; };
 		E99FDCC81EADAAA700F69D2C /* WNLoginBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99FDCC51EADAAA700F69D2C /* WNLoginBoard.swift */; };
 		E99FDCCA1EADAAF100F69D2C /* WNLoginEmailTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99FDCC91EADAAF100F69D2C /* WNLoginEmailTCell.swift */; };
 		E99FDCCC1EADCF9B00F69D2C /* WNLoginPlatformTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99FDCCB1EADCF9B00F69D2C /* WNLoginPlatformTCell.swift */; };
@@ -107,6 +111,7 @@
 		E9D5CFD01DE6CADE00315460 /* WNSetupBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D5CFCF1DE6CADE00315460 /* WNSetupBoard.swift */; };
 		E9D5CFD21DE6CDE900315460 /* WNSetupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D5CFD11DE6CDE900315460 /* WNSetupModel.swift */; };
 		E9D5CFD41DE6D4EA00315460 /* WNSetupTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D5CFD31DE6D4EA00315460 /* WNSetupTCell.swift */; };
+		E9EBB5D41EBC1DE0000B38BC /* WNHalfwayPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EBB5D31EBC1DE0000B38BC /* WNHalfwayPresentation.swift */; };
 		E9FBA3531DE4270E00540913 /* WNHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FBA3521DE4270E00540913 /* WNHeader.swift */; };
 		E9FBA3581DE4488600540913 /* WNAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FBA3571DE4488600540913 /* WNAction.swift */; };
 		E9FBA35A1DE44B9C00540913 /* UIControl+WN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FBA3591DE44B9C00540913 /* UIControl+WN.swift */; };
@@ -204,6 +209,10 @@
 		E976FC441EB833C700C20236 /* WNSortModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNSortModel.swift; sourceTree = "<group>"; };
 		E976FC461EB87E5800C20236 /* WNItemListTCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNItemListTCell.swift; sourceTree = "<group>"; };
 		E976FC481EB886FA00C20236 /* WNTourModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNTourModel.swift; sourceTree = "<group>"; };
+		E976FC4A1EB995A800C20236 /* WNFilterModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNFilterModel.swift; sourceTree = "<group>"; };
+		E976FC4C1EB9C7FC00C20236 /* WNFilterBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNFilterBoard.swift; sourceTree = "<group>"; };
+		E976FC4E1EB9C80800C20236 /* WNSortBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNSortBoard.swift; sourceTree = "<group>"; };
+		E976FC501EB9E27A00C20236 /* WNFilterTCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNFilterTCell.swift; sourceTree = "<group>"; };
 		E99FDCC51EADAAA700F69D2C /* WNLoginBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNLoginBoard.swift; sourceTree = "<group>"; };
 		E99FDCC91EADAAF100F69D2C /* WNLoginEmailTCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNLoginEmailTCell.swift; sourceTree = "<group>"; };
 		E99FDCCB1EADCF9B00F69D2C /* WNLoginPlatformTCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNLoginPlatformTCell.swift; sourceTree = "<group>"; };
@@ -255,6 +264,7 @@
 		E9D5CFCF1DE6CADE00315460 /* WNSetupBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNSetupBoard.swift; sourceTree = "<group>"; };
 		E9D5CFD11DE6CDE900315460 /* WNSetupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNSetupModel.swift; sourceTree = "<group>"; };
 		E9D5CFD31DE6D4EA00315460 /* WNSetupTCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNSetupTCell.swift; sourceTree = "<group>"; };
+		E9EBB5D31EBC1DE0000B38BC /* WNHalfwayPresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNHalfwayPresentation.swift; sourceTree = "<group>"; };
 		E9FBA3521DE4270E00540913 /* WNHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNHeader.swift; sourceTree = "<group>"; };
 		E9FBA3571DE4488600540913 /* WNAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNAction.swift; sourceTree = "<group>"; };
 		E9FBA3591DE44B9C00540913 /* UIControl+WN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+WN.swift"; sourceTree = "<group>"; };
@@ -335,6 +345,8 @@
 			isa = PBXGroup;
 			children = (
 				E935605E1EB32D4F00F4FA2B /* WNItemListBoard.swift */,
+				E976FC4C1EB9C7FC00C20236 /* WNFilterBoard.swift */,
+				E976FC4E1EB9C80800C20236 /* WNSortBoard.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -343,6 +355,7 @@
 			isa = PBXGroup;
 			children = (
 				E976FC441EB833C700C20236 /* WNSortModel.swift */,
+				E976FC4A1EB995A800C20236 /* WNFilterModel.swift */,
 				E976FC481EB886FA00C20236 /* WNTourModel.swift */,
 			);
 			path = Model;
@@ -352,6 +365,7 @@
 			isa = PBXGroup;
 			children = (
 				E976FC461EB87E5800C20236 /* WNItemListTCell.swift */,
+				E976FC501EB9E27A00C20236 /* WNFilterTCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -387,6 +401,7 @@
 				E94CB0271DE2C5800013D986 /* Info.plist */,
 				E94CB0241DE2C5800013D986 /* LaunchScreen.storyboard */,
 				E94CB01C1DE2C5800013D986 /* Main.storyboard */,
+				E97F30191EBADAB200A39852 /* Transition */,
 				E94CB0521DE2C85F0013D986 /* Base */,
 				E99FDCC11EADA22B00F69D2C /* Login */,
 				E94CB04E1DE2C8060013D986 /* Destination */,
@@ -606,6 +621,14 @@
 				E975E86B1EA462DB00F65FFD /* WNButton.swift */,
 			);
 			path = Control;
+			sourceTree = "<group>";
+		};
+		E97F30191EBADAB200A39852 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				E9EBB5D31EBC1DE0000B38BC /* WNHalfwayPresentation.swift */,
+			);
+			path = Transition;
 			sourceTree = "<group>";
 		};
 		E99FDCC11EADA22B00F69D2C /* Login */ = {
@@ -1046,6 +1069,7 @@
 				E9639E311E1BA11A00FC8D1B /* String+WN.swift in Sources */,
 				E94CB0671DE2C9C60013D986 /* WNDestinationBoard.swift in Sources */,
 				E93560611EB332B200F4FA2B /* WNItemListAPI.swift in Sources */,
+				E976FC4B1EB995A800C20236 /* WNFilterModel.swift in Sources */,
 				E975E88A1EA71DFA00F65FFD /* WNRecommendMinisCCell.swift in Sources */,
 				E923F60E1DE41F980027A4B5 /* WNMeNormalTCell.swift in Sources */,
 				E94CB0691DE2C9DA0013D986 /* WNMeBoard.swift in Sources */,
@@ -1059,6 +1083,7 @@
 				E94CB0211DE2C5800013D986 /* Wannar.xcdatamodeld in Sources */,
 				E975E86E1EA5C1FF00F65FFD /* WNRecommendWeeksCCell.swift in Sources */,
 				E9D15FED1EA0C11A008E9E54 /* WNRecommendMeauCCell.swift in Sources */,
+				E976FC4D1EB9C7FC00C20236 /* WNFilterBoard.swift in Sources */,
 				E975E8921EA8956E00F65FFD /* UIFont+WN.swift in Sources */,
 				E9D5CFD41DE6D4EA00315460 /* WNSetupTCell.swift in Sources */,
 				E9B694841E6FEDC0004144D4 /* NibLoadable.swift in Sources */,
@@ -1075,6 +1100,7 @@
 				E9B694801E6FE93E004144D4 /* Reusable.swift in Sources */,
 				E935604D1EB06D9200F4FA2B /* WNMeHeaderView.swift in Sources */,
 				E9C32CAE1E7129E9008888D8 /* UITextField+WN.swift in Sources */,
+				E976FC4F1EB9C80800C20236 /* WNSortBoard.swift in Sources */,
 				E99FDCCC1EADCF9B00F69D2C /* WNLoginPlatformTCell.swift in Sources */,
 				E93560451EAEFA9500F4FA2B /* WNUserAPI.swift in Sources */,
 				E975E88E1EA7239200F65FFD /* WNRecommendCoverCCell.swift in Sources */,
@@ -1100,7 +1126,9 @@
 				E99FDCEE1EAE02E800F69D2C /* WNSignUpTCell.swift in Sources */,
 				E9B694821E6FEC32004144D4 /* UITableView+WN.swift in Sources */,
 				E9C32CB01E712E8F008888D8 /* UIImageView+WN.swift in Sources */,
+				E976FC511EB9E27A00C20236 /* WNFilterTCell.swift in Sources */,
 				E9C32CA81E711327008888D8 /* WNUITool.swift in Sources */,
+				E9EBB5D41EBC1DE0000B38BC /* WNHalfwayPresentation.swift in Sources */,
 				E9C32D3C1E77CF50008888D8 /* Date+WN.swift in Sources */,
 				E9AB81E81E80FE850051E5A6 /* Array+WN.swift in Sources */,
 				E975E8881EA71DDF00F65FFD /* WNRecommendSeasonsCCell.swift in Sources */,

@@ -19,14 +19,28 @@ class WNItemListTCell: UITableViewCell {
         didSet {
             guard let model = model else { return }
             self.picture.kf.setImage(with: URL.init(string: "\(WNConfig.BaseURL.website)\(model.mainPicture)"))
-            self.title.text = model.title
-            self.discount.text = String.init(format: "%.1f折", model.discountPercent.float / 10.0)
-            self.price.text = String.init(format: "$%.1f起", model.currentPrice.float / 100.0)
-            var dateStr = ""
-            for json in model.week {
-                dateStr += (json.stringValue + "  ")
+            self.title.text = model.title.app()
+            if model.isDiscountNow {
+                self.discount.text = String.init(format: "%.1f折", model.discountPercent.float / 10.0)
+                self.discount.snp.updateConstraints({ (make) in
+                    make.width.equalTo(38.0)
+                })
+                self.price.snp.updateConstraints({ [weak self] (make) in
+                    guard let _self = self else { return }
+                    make.left.equalTo(_self.discount.snp.right).offset(10.0)
+                })
+            } else {
+                self.discount.snp.updateConstraints({ (make) in
+                    make.width.equalTo(0.0)
+                })
+                self.price.snp.updateConstraints({ [weak self] (make) in
+                    guard let _self = self else { return }
+                    make.left.equalTo(_self.discount.snp.right).offset(0.0)
+                })
             }
-            self.date.text = dateStr
+            
+            self.price.text = String.init(format: "$%.1f起", model.currentPrice.float / 100.0)
+            self.date.text = WNTourModel.convert(week: model.week)
         }
     }
     
@@ -60,9 +74,8 @@ class WNItemListTCell: UITableViewCell {
         self.contentView.addSubview(picture)
         picture.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(15.0)
-            make.top.equalToSuperview().offset(15.0)
             make.centerY.equalToSuperview()
-            make.size.equalTo(CGSize.init(width: 120.0, height: 90.0))
+            make.size.equalTo(CGSize.init(width: 80, height: 60))
         }
         self.picture = picture
         
@@ -73,7 +86,7 @@ class WNItemListTCell: UITableViewCell {
         self.contentView.addSubview(title)
         title.snp.makeConstraints { (make) in
             make.left.equalTo(picture.snp.right).offset(15.0)
-            make.top.equalTo(picture.snp.top)
+            make.top.equalToSuperview().offset(10.0)
             make.right.equalToSuperview().offset(-15.0)
         }
         self.title = title
@@ -88,11 +101,10 @@ class WNItemListTCell: UITableViewCell {
         self.contentView.addSubview(discount)
         discount.snp.makeConstraints { (make) in
             make.left.equalTo(picture.snp.right).offset(15.0)
-            make.size.equalTo(CGSize.init(width: 50.0, height: 25.0))
-            make.top.equalTo(title.snp.bottom).offset(10.0)
+            make.size.equalTo(CGSize.init(width: 38.0, height: 18.0))
+            make.top.equalTo(title.snp.bottom).offset(3.0)
         }
         self.discount = discount
-        
         
         /// Price
         let price = UILabel.init(color: .themColor, fontName: WNConfig.FontName.kaitiBold, size: 16.0, textAlignment: .left)
@@ -105,11 +117,13 @@ class WNItemListTCell: UITableViewCell {
         
         
         /// Date
-        let date = UILabel.init(color: .textColor, fontName: WNConfig.FontName.kaitiRegular, size: 13.0, textAlignment: .left)
+        let date = UILabel.init(color: .textColor, fontName: WNConfig.FontName.kaitiRegular, size: 11.0, textAlignment: .left)
         self.contentView.addSubview(date)
         date.snp.makeConstraints { (make) in
+            make.height.equalTo(13.0)
             make.left.equalTo(picture.snp.right).offset(15.0)
-            make.bottom.equalTo(picture.snp.bottom)
+            make.top.equalTo(discount.snp.bottom).offset(3.0)
+            make.bottom.equalToSuperview().offset(-10.0)
         }
         self.date = date
     }
