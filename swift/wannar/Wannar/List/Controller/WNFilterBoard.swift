@@ -11,7 +11,8 @@ import UIKit
 class WNFilterBoard: UIViewController {
 
     var toursModel: WNToursModel?
-    fileprivate var model: WNFilterModel!
+    var model: WNFilterModel!
+    var confimClick: ((_ model: WNFilterModel)->Void)?
     fileprivate var keyTableView: UITableView!
     fileprivate var valueTabelView: UITableView!
     fileprivate var selectIndex = 0
@@ -38,11 +39,8 @@ class WNFilterBoard: UIViewController {
 extension WNFilterBoard {
     
     fileprivate func fetchData() -> Void {
-        guard let tour = self.toursModel else { return }
-        guard let extend = tour.facetExtend else { return }
-        guard let detail = tour.facetDetail else { return }
-        self.model = WNFilterModel.init(facetExtend: extend, facetDetail: detail)
-        self.changekeySelect(index: selectIndex)
+        
+        self.initKeySelected()
         
         keyTableView.delegate = self
         keyTableView.dataSource = self
@@ -51,7 +49,27 @@ extension WNFilterBoard {
         reloadTableView()
     }
     
+    fileprivate func initKeySelected() -> Void {
+        // 寻找是否有选中的Key
+        var isFind = false
+        guard let x = self.model else { return }
+        for i in 0 ..< x.keyArr.count {
+            let a = x.keyArr[i]
+            if a.isSelected {
+                isFind = true
+                self.selectIndex = i
+                break
+            }
+        }
+        
+        // 如果没有选中的Key进行初始化
+        if !isFind {
+            changekeySelect(index: selectIndex)
+        }
+    }
+    
     fileprivate func changekeySelect(index: Int) -> Void {
+        
         for i in 0 ..< self.model.keyArr.count {
             self.model.keyArr[i].isSelected = false
         }
@@ -89,9 +107,30 @@ extension WNFilterBoard {
     fileprivate func buildUI() -> Void {
         
         /// Navigation View
-        self.view.addNavigation { [weak self] (leftBtn, rightBtn, titleLabel) in
+        let navView = self.view.addNavigation(height:50.0, isTop: false) { [weak self] (leftBtn, rightBtn, titleLabel, lineView) in
+            
+            // title
             titleLabel.text = "筛选"
-            leftBtn.addControlEvent(.touchUpInside, closureWithControl: { (btn) in
+            
+            // Right Btn
+            rightBtn.setTitle("确定", for: .normal)
+            rightBtn.setTitleColor(.textColor, for: .normal)
+            rightBtn.titleLabel?.font = UIFont.systemFont(ofSize: 13.0)
+            rightBtn.addControlEvent(.touchUpInside, closureWithControl: { [weak self] (btn) in
+                guard let _self = self else { return }
+                let query = _self.model.queryString()
+                if let confimClick = _self.confimClick {
+                    confimClick(_self.model)
+                }
+                _self.dismiss(animated: true, completion: nil)
+                wn_print(query)
+            })
+            
+            // Left Btn
+            leftBtn.setTitle("取消", for: .normal)
+            leftBtn.setTitleColor(.textColor, for: .normal)
+            leftBtn.titleLabel?.font = UIFont.systemFont(ofSize: 13.0)
+            leftBtn.addControlEvent(.touchUpInside, closureWithControl: { [weak self] (btn) in
                 guard let _self = self else { return }
                 _self.dismiss(animated: true, completion: nil)
             })
@@ -105,7 +144,7 @@ extension WNFilterBoard {
         self.view.addSubview(keyTableView)
         keyTableView.snp.makeConstraints { (make) in
             make.left.bottom.equalToSuperview().offset(0.0)
-            make.top.equalToSuperview().offset(64.0)
+            make.top.equalTo(navView.snp.bottom).offset(0.0)
             make.width.equalToSuperview().multipliedBy(0.3)
         }
         keyTableView.registerClassOf(WNFilterTCell.self)
@@ -119,7 +158,7 @@ extension WNFilterBoard {
         self.view.addSubview(valueTabelView)
         valueTabelView.snp.makeConstraints { (make) in
             make.right.bottom.equalToSuperview().offset(0.0)
-            make.top.equalToSuperview().offset(64.0)
+            make.top.equalTo(navView.snp.bottom).offset(0.0)
             make.width.equalToSuperview().multipliedBy(0.7)
         }
         valueTabelView.registerClassOf(WNFilterTCell.self)

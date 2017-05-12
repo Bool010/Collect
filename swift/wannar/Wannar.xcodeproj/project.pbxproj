@@ -60,6 +60,16 @@
 		E976FC4D1EB9C7FC00C20236 /* WNFilterBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E976FC4C1EB9C7FC00C20236 /* WNFilterBoard.swift */; };
 		E976FC4F1EB9C80800C20236 /* WNSortBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E976FC4E1EB9C80800C20236 /* WNSortBoard.swift */; };
 		E976FC511EB9E27A00C20236 /* WNFilterTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E976FC501EB9E27A00C20236 /* WNFilterTCell.swift */; };
+		E97789C71EC326A100CD63F0 /* WNSortTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97789C61EC326A100CD63F0 /* WNSortTCell.swift */; };
+		E97789C91EC41D4C00CD63F0 /* WNItemListConditionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97789C81EC41D4C00CD63F0 /* WNItemListConditionView.swift */; };
+		E97789CB1EC54F9800CD63F0 /* WNListCityBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97789CA1EC54F9800CD63F0 /* WNListCityBoard.swift */; };
+		E97789CD1EC5535900CD63F0 /* WNListCityTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97789CC1EC5535900CD63F0 /* WNListCityTCell.swift */; };
+		E97789D01EC5C2B700CD63F0 /* WNRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97789CF1EC5C2B700CD63F0 /* WNRange.swift */; };
+		E997A69B1EC0211200E5B4DE /* WNScanBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E997A69A1EC0211200E5B4DE /* WNScanBoard.swift */; };
+		E997A69D1EC029AB00E5B4DE /* WNPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E997A69C1EC029AB00E5B4DE /* WNPermissions.swift */; };
+		E997A6A31EC06FF800E5B4DE /* WNOrderListBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E997A6A21EC06FF800E5B4DE /* WNOrderListBoard.swift */; };
+		E997A6A51EC0700700E5B4DE /* WNOrderDetailBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E997A6A41EC0700700E5B4DE /* WNOrderDetailBoard.swift */; };
+		E997A6A71EC072FD00E5B4DE /* WNOrderListTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E997A6A61EC072FD00E5B4DE /* WNOrderListTCell.swift */; };
 		E99FDCC81EADAAA700F69D2C /* WNLoginBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99FDCC51EADAAA700F69D2C /* WNLoginBoard.swift */; };
 		E99FDCCA1EADAAF100F69D2C /* WNLoginEmailTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99FDCC91EADAAF100F69D2C /* WNLoginEmailTCell.swift */; };
 		E99FDCCC1EADCF9B00F69D2C /* WNLoginPlatformTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99FDCCB1EADCF9B00F69D2C /* WNLoginPlatformTCell.swift */; };
@@ -213,6 +223,16 @@
 		E976FC4C1EB9C7FC00C20236 /* WNFilterBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNFilterBoard.swift; sourceTree = "<group>"; };
 		E976FC4E1EB9C80800C20236 /* WNSortBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNSortBoard.swift; sourceTree = "<group>"; };
 		E976FC501EB9E27A00C20236 /* WNFilterTCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNFilterTCell.swift; sourceTree = "<group>"; };
+		E97789C61EC326A100CD63F0 /* WNSortTCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNSortTCell.swift; sourceTree = "<group>"; };
+		E97789C81EC41D4C00CD63F0 /* WNItemListConditionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNItemListConditionView.swift; sourceTree = "<group>"; };
+		E97789CA1EC54F9800CD63F0 /* WNListCityBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNListCityBoard.swift; sourceTree = "<group>"; };
+		E97789CC1EC5535900CD63F0 /* WNListCityTCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNListCityTCell.swift; sourceTree = "<group>"; };
+		E97789CF1EC5C2B700CD63F0 /* WNRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNRange.swift; sourceTree = "<group>"; };
+		E997A69A1EC0211200E5B4DE /* WNScanBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNScanBoard.swift; sourceTree = "<group>"; };
+		E997A69C1EC029AB00E5B4DE /* WNPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNPermissions.swift; sourceTree = "<group>"; };
+		E997A6A21EC06FF800E5B4DE /* WNOrderListBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNOrderListBoard.swift; sourceTree = "<group>"; };
+		E997A6A41EC0700700E5B4DE /* WNOrderDetailBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNOrderDetailBoard.swift; sourceTree = "<group>"; };
+		E997A6A61EC072FD00E5B4DE /* WNOrderListTCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNOrderListTCell.swift; sourceTree = "<group>"; };
 		E99FDCC51EADAAA700F69D2C /* WNLoginBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNLoginBoard.swift; sourceTree = "<group>"; };
 		E99FDCC91EADAAF100F69D2C /* WNLoginEmailTCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNLoginEmailTCell.swift; sourceTree = "<group>"; };
 		E99FDCCB1EADCF9B00F69D2C /* WNLoginPlatformTCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNLoginPlatformTCell.swift; sourceTree = "<group>"; };
@@ -347,6 +367,7 @@
 				E935605E1EB32D4F00F4FA2B /* WNItemListBoard.swift */,
 				E976FC4C1EB9C7FC00C20236 /* WNFilterBoard.swift */,
 				E976FC4E1EB9C80800C20236 /* WNSortBoard.swift */,
+				E97789CA1EC54F9800CD63F0 /* WNListCityBoard.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -366,6 +387,9 @@
 			children = (
 				E976FC461EB87E5800C20236 /* WNItemListTCell.swift */,
 				E976FC501EB9E27A00C20236 /* WNFilterTCell.swift */,
+				E97789C61EC326A100CD63F0 /* WNSortTCell.swift */,
+				E97789CC1EC5535900CD63F0 /* WNListCityTCell.swift */,
+				E97789C81EC41D4C00CD63F0 /* WNItemListConditionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -395,26 +419,28 @@
 		E94CB0171DE2C5800013D986 /* Wannar */ = {
 			isa = PBXGroup;
 			children = (
-				E99FDCCD1EADD35300F69D2C /* IMAGE */,
-				E94CB0181DE2C5800013D986 /* AppDelegate.swift */,
-				E94CB0221DE2C5800013D986 /* Assets.xcassets */,
 				E94CB0271DE2C5800013D986 /* Info.plist */,
 				E94CB0241DE2C5800013D986 /* LaunchScreen.storyboard */,
 				E94CB01C1DE2C5800013D986 /* Main.storyboard */,
-				E97F30191EBADAB200A39852 /* Transition */,
+				E94CB0181DE2C5800013D986 /* AppDelegate.swift */,
+				E94CB01F1DE2C5800013D986 /* Wannar.xcdatamodeld */,
+				E9FBA3521DE4270E00540913 /* WNHeader.swift */,
+				E94CB0221DE2C5800013D986 /* Assets.xcassets */,
 				E94CB0521DE2C85F0013D986 /* Base */,
-				E99FDCC11EADA22B00F69D2C /* Login */,
+				E975E8661EA4627800F65FFD /* Control */,
 				E94CB04E1DE2C8060013D986 /* Destination */,
-				E94CB04F1DE2C8060013D986 /* Me */,
+				E99FDCCD1EADD35300F69D2C /* IMAGE */,
 				E935605A1EB32CF900F4FA2B /* List */,
+				E99FDCC11EADA22B00F69D2C /* Login */,
+				E94CB04F1DE2C8060013D986 /* Me */,
+				E997A69E1EC06FA800E5B4DE /* Order */,
 				E94CB0501DE2C8060013D986 /* Plan */,
 				E94CB0511DE2C8060013D986 /* Recommend */,
 				E94CB0491DE2C5FE0013D986 /* Root */,
+				E997A6961EC020FD00E5B4DE /* Scan */,
 				E94CB0531DE2C85F0013D986 /* Tool */,
-				E975E8661EA4627800F65FFD /* Control */,
+				E97F30191EBADAB200A39852 /* Transition */,
 				E93560551EB1FF4300F4FA2B /* View */,
-				E94CB01F1DE2C5800013D986 /* Wannar.xcdatamodeld */,
-				E9FBA3521DE4270E00540913 /* WNHeader.swift */,
 			);
 			path = Wannar;
 			sourceTree = "<group>";
@@ -497,6 +523,7 @@
 		E94CB0531DE2C85F0013D986 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				E97789CE1EC5C2AA00CD63F0 /* Struct */,
 				E9C32D361E778A30008888D8 /* Macro */,
 				E9B2F1F91E1510C10027DC1B /* APIClient */,
 				E9C32CA41E7112F8008888D8 /* Common */,
@@ -623,12 +650,86 @@
 			path = Control;
 			sourceTree = "<group>";
 		};
+		E97789CE1EC5C2AA00CD63F0 /* Struct */ = {
+			isa = PBXGroup;
+			children = (
+				E97789CF1EC5C2B700CD63F0 /* WNRange.swift */,
+			);
+			path = Struct;
+			sourceTree = "<group>";
+		};
 		E97F30191EBADAB200A39852 /* Transition */ = {
 			isa = PBXGroup;
 			children = (
 				E9EBB5D31EBC1DE0000B38BC /* WNHalfwayPresentation.swift */,
 			);
 			path = Transition;
+			sourceTree = "<group>";
+		};
+		E997A6961EC020FD00E5B4DE /* Scan */ = {
+			isa = PBXGroup;
+			children = (
+				E997A6971EC020FD00E5B4DE /* Controller */,
+				E997A6981EC020FD00E5B4DE /* Model */,
+				E997A6991EC020FD00E5B4DE /* View */,
+			);
+			path = Scan;
+			sourceTree = "<group>";
+		};
+		E997A6971EC020FD00E5B4DE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E997A69A1EC0211200E5B4DE /* WNScanBoard.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E997A6981EC020FD00E5B4DE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E997A6991EC020FD00E5B4DE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E997A69E1EC06FA800E5B4DE /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				E997A69F1EC06FA800E5B4DE /* Controller */,
+				E997A6A01EC06FA800E5B4DE /* Model */,
+				E997A6A11EC06FA800E5B4DE /* View */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		E997A69F1EC06FA800E5B4DE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E997A6A21EC06FF800E5B4DE /* WNOrderListBoard.swift */,
+				E997A6A41EC0700700E5B4DE /* WNOrderDetailBoard.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E997A6A01EC06FA800E5B4DE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E997A6A11EC06FA800E5B4DE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E997A6A61EC072FD00E5B4DE /* WNOrderListTCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		E99FDCC11EADA22B00F69D2C /* Login */ = {
@@ -754,6 +855,7 @@
 				E9C32CA71E711327008888D8 /* WNUITool.swift */,
 				E9C32CB11E713C50008888D8 /* WNDebugTool.swift */,
 				E9C32CBC1E725F54008888D8 /* RACTool.swift */,
+				E997A69C1EC029AB00E5B4DE /* WNPermissions.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1067,9 +1169,11 @@
 				E9BD50FC1DE3DF6C007E4D03 /* UIColor+WN.swift in Sources */,
 				E9D5CFD21DE6CDE900315460 /* WNSetupModel.swift in Sources */,
 				E9639E311E1BA11A00FC8D1B /* String+WN.swift in Sources */,
+				E997A6A31EC06FF800E5B4DE /* WNOrderListBoard.swift in Sources */,
 				E94CB0671DE2C9C60013D986 /* WNDestinationBoard.swift in Sources */,
 				E93560611EB332B200F4FA2B /* WNItemListAPI.swift in Sources */,
 				E976FC4B1EB995A800C20236 /* WNFilterModel.swift in Sources */,
+				E997A69D1EC029AB00E5B4DE /* WNPermissions.swift in Sources */,
 				E975E88A1EA71DFA00F65FFD /* WNRecommendMinisCCell.swift in Sources */,
 				E923F60E1DE41F980027A4B5 /* WNMeNormalTCell.swift in Sources */,
 				E94CB0691DE2C9DA0013D986 /* WNMeBoard.swift in Sources */,
@@ -1086,8 +1190,10 @@
 				E976FC4D1EB9C7FC00C20236 /* WNFilterBoard.swift in Sources */,
 				E975E8921EA8956E00F65FFD /* UIFont+WN.swift in Sources */,
 				E9D5CFD41DE6D4EA00315460 /* WNSetupTCell.swift in Sources */,
+				E997A6A71EC072FD00E5B4DE /* WNOrderListTCell.swift in Sources */,
 				E9B694841E6FEDC0004144D4 /* NibLoadable.swift in Sources */,
 				E9C32CBF1E727C14008888D8 /* WNGlobalVar.swift in Sources */,
+				E97789D01EC5C2B700CD63F0 /* WNRange.swift in Sources */,
 				E93560521EB1C52E00F4FA2B /* WNAboutusBoard.swift in Sources */,
 				E9AB81FD1E8381710051E5A6 /* Collection+WN.swift in Sources */,
 				E9C32CAC1E71174F008888D8 /* UIButton+WN.swift in Sources */,
@@ -1097,6 +1203,7 @@
 				E94CB04D1DE2C6940013D986 /* WNRootBoard.swift in Sources */,
 				E9D5CFCE1DE6A76200315460 /* UIBarButtonItem+WN.swift in Sources */,
 				E975E86C1EA462DB00F65FFD /* WNButton.swift in Sources */,
+				E97789C71EC326A100CD63F0 /* WNSortTCell.swift in Sources */,
 				E9B694801E6FE93E004144D4 /* Reusable.swift in Sources */,
 				E935604D1EB06D9200F4FA2B /* WNMeHeaderView.swift in Sources */,
 				E9C32CAE1E7129E9008888D8 /* UITextField+WN.swift in Sources */,
@@ -1105,6 +1212,7 @@
 				E93560451EAEFA9500F4FA2B /* WNUserAPI.swift in Sources */,
 				E975E88E1EA7239200F65FFD /* WNRecommendCoverCCell.swift in Sources */,
 				E9D15FEB1EA0B070008E9E54 /* WNRecommendBannerCCell.swift in Sources */,
+				E97789CB1EC54F9800CD63F0 /* WNListCityBoard.swift in Sources */,
 				E9C32D3E1E78DA3A008888D8 /* UIDevice+WN.swift in Sources */,
 				E93560491EB04D0A00F4FA2B /* Dictionary+WN.swift in Sources */,
 				E99FDCE61EADE90B00F69D2C /* UIImage+WN.swift in Sources */,
@@ -1119,11 +1227,14 @@
 				E9C32CB21E713C50008888D8 /* WNDebugTool.swift in Sources */,
 				E976FC471EB87E5800C20236 /* WNItemListTCell.swift in Sources */,
 				E935605F1EB32D4F00F4FA2B /* WNItemListBoard.swift in Sources */,
+				E997A69B1EC0211200E5B4DE /* WNScanBoard.swift in Sources */,
 				E975E8901EA85CF400F65FFD /* WNRecommendHeaderView.swift in Sources */,
 				E93560471EAF433000F4FA2B /* WNUserModel.swift in Sources */,
 				E93560591EB3195A00F4FA2B /* CALayer+WN.swift in Sources */,
 				E99FDCCA1EADAAF100F69D2C /* WNLoginEmailTCell.swift in Sources */,
 				E99FDCEE1EAE02E800F69D2C /* WNSignUpTCell.swift in Sources */,
+				E97789CD1EC5535900CD63F0 /* WNListCityTCell.swift in Sources */,
+				E97789C91EC41D4C00CD63F0 /* WNItemListConditionView.swift in Sources */,
 				E9B694821E6FEC32004144D4 /* UITableView+WN.swift in Sources */,
 				E9C32CB01E712E8F008888D8 /* UIImageView+WN.swift in Sources */,
 				E976FC511EB9E27A00C20236 /* WNFilterTCell.swift in Sources */,
@@ -1143,6 +1254,7 @@
 				E94CB06B1DE2C9F50013D986 /* WNPlanListBoard.swift in Sources */,
 				E93560541EB1EBFE00F4FA2B /* WNAboutusCCell.swift in Sources */,
 				E99FDCDC1EADD48900F69D2C /* CGFloat+WN.swift in Sources */,
+				E997A6A51EC0700700E5B4DE /* WNOrderDetailBoard.swift in Sources */,
 				E975E8861EA71D9F00F65FFD /* WNRecommendScenicsCCell.swift in Sources */,
 				E9C32CB61E714D85008888D8 /* UIView+WN.swift in Sources */,
 				E9C32D351E76A31E008888D8 /* DispatchQueue+WN.swift in Sources */,

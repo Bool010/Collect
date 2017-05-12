@@ -70,6 +70,7 @@ class WNItemListTCell: UITableViewCell {
         
         /// Picture
         let picture = UIImageView.init(mode: .scaleAspectFill)
+        picture.layer.cornerRadius = 5.0
         picture.clipsToBounds = true
         self.contentView.addSubview(picture)
         picture.snp.makeConstraints { (make) in

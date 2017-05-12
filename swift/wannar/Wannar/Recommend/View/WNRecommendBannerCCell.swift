@@ -17,6 +17,8 @@ class WNRecommendBannerCCell: UICollectionViewCell {
             self.pageControl.numberOfPages = model.data.count
         }
     }
+    var didSelect: ((_ index: Int) -> Void)? = nil
+    
     private var pageView: FSPagerView!
     fileprivate var pageControl: FSPageControl!
     
@@ -75,5 +77,11 @@ extension WNRecommendBannerCCell: FSPagerViewDelegate, FSPagerViewDataSource {
     
     func pagerView(_ pagerView: FSPagerView, willDisplay cell: FSPagerViewCell, forItemAt index: Int) {
         self.pageControl.currentPage = index
+    }
+    
+    func pagerView(_ pagerView: FSPagerView, didSelectItemAt index: Int) {
+        if let didSelect = didSelect {
+            didSelect(index)
+        }
     }
 }

@@ -70,7 +70,7 @@ class WNRecommendWeekCCell: UICollectionViewCell {
     }
     
     fileprivate func buildUI() -> Void {
-        
+
         /// Container View
         let containerView = UIView.init()
         self.contentView.addSubview(containerView)

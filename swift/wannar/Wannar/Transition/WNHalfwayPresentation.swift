@@ -10,12 +10,20 @@ import UIKit
 
 class WNHalfwayPresentation: UIPresentationController {
     
-    var isPresenting = false
-    var dimmingView: UIVisualEffectView!
+    var dimmingClickHandle: (()->Void)? = nil
+    fileprivate var isPresenting = false
+    fileprivate var dimmingView: UIVisualEffectView!
+    fileprivate var heightRatio = 0.5
     
     override init(presentedViewController: UIViewController, presenting presentingViewController: UIViewController?) {
         super.init(presentedViewController: presentedViewController, presenting: presentingViewController)
         presentedViewController.modalPresentationStyle = .custom
+    }
+    
+    init(presentedViewController: UIViewController, presenting presentingViewController: UIViewController?, heightRatio: Double) {
+        super.init(presentedViewController: presentedViewController, presenting: presentingViewController)
+        presentedViewController.modalPresentationStyle = .custom
+        self.heightRatio = heightRatio
     }
     
     override func containerViewWillLayoutSubviews() {
@@ -36,7 +44,10 @@ class WNHalfwayPresentation: UIPresentationController {
     
     override var frameOfPresentedViewInContainerView: CGRect {
         let bounds = containerView!.bounds
-        return CGRect.init(x: 0, y: bounds.maxY / 2, width: bounds.width, height: bounds.maxY / 2)
+        return CGRect.init(x: 0.0,
+                           y: bounds.maxY.double * (1-heightRatio) ,
+                           width: bounds.width.double,
+                           height: bounds.maxY.double * heightRatio)
     }
     
     override func presentationTransitionWillBegin() {
@@ -44,7 +55,7 @@ class WNHalfwayPresentation: UIPresentationController {
         isPresenting = true
         dimmingView = UIVisualEffectView.init(effect: UIBlurEffect.init(style: .dark))
         dimmingView.alpha = 0.0
-        self.containerView?.insertSubview(dimmingView, aboveSubview: presentingViewController.view)
+        dimmingView.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(dimmingClick(completion:))))
     }
     
     override func presentationTransitionDidEnd(_ completed: Bool) {
@@ -68,6 +79,21 @@ class WNHalfwayPresentation: UIPresentationController {
     
     deinit {
         wn_deinitMessage("WNHalfwayPresentation")
+    }
+}
+
+
+// MARK: - Func
+extension WNHalfwayPresentation {
+    
+    @objc fileprivate func dimmingClick(completion: (() -> Void)? = nil) -> Void {
+        presentingViewController.dismiss(animated: true) { [weak self] in
+            guard let _self = self else { return }
+            if let a = _self.dimmingClickHandle {
+                a()
+            }
+        }
+        presentingViewController.dismiss(animated: true, completion: completion)
     }
 }
 
@@ -116,7 +142,15 @@ extension WNHalfwayPresentation: UIViewControllerAnimatedTransitioning {
         // From
         let fromBoard = presentingViewController
         let fromView = fromBoard.view
+        fromView?.layer.cornerRadius = 8.0
+        fromView?.clipsToBounds = true
         containerView.addSubview(fromView!)
+        
+        // Dimming View
+        containerView.addSubview(dimmingView)
+        dimmingView.snp.makeConstraints { (make) in
+            make.left.right.top.bottom.equalToSuperview().offset(0.0)
+        }
         
         // To
         let toBoard = presentedViewController
@@ -130,6 +164,13 @@ extension WNHalfwayPresentation: UIViewControllerAnimatedTransitioning {
         toView?.alpha = 0.0
         toView?.transform = CGAffineTransform.init(scaleX: 0.9, y: 0.9)
         containerView.addSubview(toView!)
+        
+        // Corner Radius
+        let bezierPath = UIBezierPath.init(roundedRect: (toView?.bounds)!, byRoundingCorners: [.topLeft, .topRight], cornerRadii: CGSize.init(width: 15.0, height: 15.0))
+        let maskLayer = CAShapeLayer.init()
+        maskLayer.frame = (toView?.bounds)!
+        maskLayer.path = bezierPath.cgPath
+        toView?.layer.mask = maskLayer
         
         fromBoard.view.isUserInteractionEnabled = false
         
@@ -168,6 +209,7 @@ extension WNHalfwayPresentation: UIViewControllerAnimatedTransitioning {
         // To
         let toBoard: UIViewController = presentingViewController
         let toView = toBoard.view
+        toView?.layer.cornerRadius = 0.0
         let toFinalFrame = CGRect.init(x: 0.0, y: 0.0, width: (self.containerView?.frame.maxX)!, height: (self.containerView?.frame.maxY)!)
         
         // Animation

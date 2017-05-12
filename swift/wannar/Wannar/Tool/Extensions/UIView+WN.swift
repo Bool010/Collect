@@ -15,7 +15,8 @@ extension UIView {
     /// 添加导航栏
     ///
     /// - Parameter closure: 返回左右Button和标题Label
-    func addNavigation(closure: ((_ leftBtn: UIButton, _ rightBtn: UIButton, _ titleLabel: UILabel) -> Void)) {
+    @discardableResult
+    func addNavigation(height: Double = 64.0, isTop: Bool = true, closure: ((_ leftBtn: UIButton, _ rightBtn: UIButton, _ titleLabel: UILabel, _ lineView: UIView) -> Void)? = nil) -> UIView {
         
         /// Navigation View
         let navigationView = UIView.init()
@@ -23,7 +24,7 @@ extension UIView {
         self.addSubview(navigationView)
         navigationView.snp.makeConstraints { (make) in
             make.left.right.top.equalToSuperview().offset(0.0)
-            make.height.equalTo(64.0)
+            make.height.equalTo(height)
         }
         
         
@@ -32,20 +33,18 @@ extension UIView {
         navigationView.addSubview(leftBtn)
         leftBtn.snp.makeConstraints { (make) in
             make.left.bottom.equalToSuperview().offset(0.0)
-            make.top.equalToSuperview().offset(20.0)
+            make.top.equalToSuperview().offset(isTop ? 20.0 : 0.0)
             make.width.equalTo(50.0)
         }
-        
         
         /// Right Btn
         let rightBtn = UIButton.init()
         navigationView.addSubview(rightBtn)
         rightBtn.snp.makeConstraints { (make) in
             make.right.bottom.equalToSuperview().offset(0.0)
-            make.top.equalToSuperview().offset(20.0)
+            make.top.equalToSuperview().offset(isTop ? 20.0 : 0.0)
             make.width.equalTo(50.0)
         }
-        
         
         /// Title Label
         let titleLabel = UILabel.init()
@@ -56,7 +55,7 @@ extension UIView {
         titleLabel.snp.makeConstraints { (make) in
             make.left.equalTo(leftBtn.snp.right).offset(0.0)
             make.right.equalTo(rightBtn.snp.left).offset(0.0)
-            make.top.equalToSuperview().offset(20.0)
+            make.top.equalToSuperview().offset(isTop ? 20.0 : 0.0)
             make.bottom.equalToSuperview().offset(0.0)
         }
         
@@ -70,7 +69,11 @@ extension UIView {
             make.height.equalTo(0.5)
         }
         
-        closure(leftBtn, rightBtn, titleLabel)
+        if let closure = closure {
+            closure(leftBtn, rightBtn, titleLabel, lineView)
+        }
+        
+        return navigationView
     }
 }
 

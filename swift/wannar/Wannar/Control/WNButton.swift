@@ -24,7 +24,7 @@ class WNButton: UIView {
     var space = 0.0
     var position: WNButtonImagePosition {
         get {
-            return .top
+            return pos
         } set {
             switch position {
             case .top:
@@ -38,19 +38,21 @@ class WNButton: UIView {
             }
         }
     }
+    var pos: WNButtonImagePosition = .top
+    
     private var containerView: UIView!
     
     // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.buildUI()
     }
     
     convenience init(imagePosition: WNButtonImagePosition, imageSize: CGSize) {
         self.init()
-        self.imageSize = imageSize
-        self.position = imagePosition
         self.buildUI()
+        self.imageSize = imageSize
+        pos = imagePosition
+        position = imagePosition
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -72,21 +74,10 @@ class WNButton: UIView {
         self.titleLabel = UILabel.init()
         self.titleLabel.textAlignment = .center
         self.containerView.addSubview(titleLabel)
-        self.titleLabel.snp.makeConstraints({ (make) in
-            make.left.right.bottom.equalToSuperview().offset(0.0)
-        })
         
         /// Image View
         self.imageView = UIImageView.init()
         self.containerView.addSubview(imageView)
-        self.imageView.snp.makeConstraints { [weak self] (make) in
-            if let strongSelf = self {
-                make.centerX.equalToSuperview()
-                make.top.equalToSuperview().offset(0.0)
-                make.size.equalTo(strongSelf.imageSize)
-                make.bottom.equalTo(strongSelf.titleLabel.snp.top).offset(strongSelf.space)
-            }
-        }
         
         self.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(buttonClick(btn:))))
     }
@@ -98,10 +89,11 @@ class WNButton: UIView {
     }
     
     fileprivate func setTop() -> Void {
-        self.titleLabel.snp.updateConstraints({ (make) in
+        self.titleLabel.snp.makeConstraints({ (make) in
+            make.left.right.bottom.equalToSuperview().offset(0.0)
             make.left.right.bottom.equalToSuperview().offset(0.0)
         })
-        self.imageView.snp.updateConstraints { [weak self] (make) in
+        self.imageView.snp.makeConstraints { [weak self] (make) in
             if let strongSelf = self {
                 make.centerX.equalToSuperview()
                 make.top.equalToSuperview().offset(0.0)
@@ -112,10 +104,10 @@ class WNButton: UIView {
     }
     
     fileprivate func setBottom() -> Void {
-        self.titleLabel.snp.updateConstraints({ (make) in
+        self.titleLabel.snp.makeConstraints({ (make) in
             make.left.right.top.equalToSuperview().offset(0.0)
         })
-        self.imageView.snp.updateConstraints { [weak self] (make) in
+        self.imageView.snp.makeConstraints { [weak self] (make) in
             if let strongSelf = self {
                 make.centerX.equalToSuperview()
                 make.bottom.equalToSuperview().offset(0.0)
@@ -126,11 +118,11 @@ class WNButton: UIView {
     }
     
     fileprivate func setRight() -> Void {
-        self.titleLabel.snp.updateConstraints({ (make) in
+        self.titleLabel.snp.makeConstraints({ (make) in
             make.left.equalToSuperview().offset(0.0)
             make.centerY.equalToSuperview()
         })
-        self.imageView.snp.updateConstraints { [weak self] (make) in
+        self.imageView.snp.makeConstraints { [weak self] (make) in
             if let strongSelf = self {
                 make.right.equalToSuperview().offset(0.0)
                 make.left.equalTo(strongSelf.titleLabel.snp.right).offset(strongSelf.space)
@@ -141,11 +133,11 @@ class WNButton: UIView {
     }
     
     fileprivate func setLeft() -> Void {
-        self.titleLabel.snp.updateConstraints({ (make) in
+        self.titleLabel.snp.makeConstraints({ (make) in
             make.right.equalToSuperview().offset(0.0)
             make.centerY.equalToSuperview()
         })
-        self.imageView.snp.updateConstraints { [weak self] (make) in
+        self.imageView.snp.makeConstraints { [weak self] (make) in
             if let strongSelf = self {
                 make.left.equalToSuperview().offset(0.0)
                 make.right.equalTo(strongSelf.titleLabel.snp.right).offset(strongSelf.space)

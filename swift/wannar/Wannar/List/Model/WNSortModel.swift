@@ -19,6 +19,7 @@ public struct WNSortRowModel {
         self.title = title
         self.image = image
         self.param = param
+        self.isSelected = isSelected
     }
 }
 
@@ -35,6 +36,12 @@ struct WNSortModel {
             self.data = WNSortScenic.data
         case "yelp":
             self.data = WNSortYelp.data
+        case "activity":
+            self.data = WNSortActivity.data
+        case "tour":
+            self.data = WNSortTour.data
+        case "onedaytour":
+            self.data = WNSortOnedayTour.data
         default:
             wn_debugMessage("未处理状况")
         }

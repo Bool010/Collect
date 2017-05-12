@@ -37,7 +37,7 @@ class WNSetupBoard: WNBaseBoard {
     private func buildUI() -> Void {
         
         self.navigationController?.isNavigationBarHidden = true
-        self.view.addNavigation { (leftBtn, rightBtn, titleLabel) in
+        self.view.addNavigation { (leftBtn, rightBtn, titleLabel, lineView) in
             titleLabel.text = "导航栏";
             leftBtn.addControlEvent(.touchUpInside) { (btn) in
                 _ = self.navigationController?.popViewController(animated: true)

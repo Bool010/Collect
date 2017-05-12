@@ -14,6 +14,24 @@ import Foundation
 #endif
 
 extension String {
+
+    
+    /// 获取字符串的第几个字符
+    ///
+    /// - Parameter index: 从0开始的索引
+    public subscript(_ index: Int) -> String? {
+        return self.substring(WNRange.init(index, 1))
+    }
+    
+    func substring(_ range: WNRange) -> String? {
+        if self.length > range.start {
+            let startIndex = self.index(self.startIndex, offsetBy: range.start)
+            let endIndex = self.index(self.startIndex, offsetBy: range.start+range.length)
+            return self[startIndex..<endIndex]
+        } else {
+            return nil
+        }
+    }
     
     /// 将字符串转换为日期
     ///
@@ -115,5 +133,31 @@ extension String {
         } catch {
             return false
         }
+    }
+    
+    
+    /// 一个字符串的第一个字符
+    ///
+    /// - Returns: 第一个字符
+    func first() -> String? {
+        if self.length > 1 {
+            return self.substring(to: self.index(self.startIndex, offsetBy: 1))
+        } else {
+            return nil
+        }
+    }
+    
+    
+    /// 将字符串转换为拼音
+    ///
+    /// - Parameter transform: 转换方式
+    /// - Returns: 转换过后的字符串
+    func toPinyin() -> String {
+        
+        let stringRef = NSMutableString(string: self) as CFMutableString
+        CFStringTransform(stringRef,nil, kCFStringTransformToLatin, false);
+        CFStringTransform(stringRef, nil, kCFStringTransformStripCombiningMarks, false);
+        let pinyin = stringRef as String;
+        return pinyin
     }
 }

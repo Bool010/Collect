@@ -23,6 +23,11 @@ class WNRecommendBoard: WNBaseBoard {
         super.viewDidLoad()
         self.buildUI()
         self.fetchData()
+        let a = "你好世界"
+        let b = a[10]
+        let c = a.substring(WNRange.init(2, 3))
+        
+        print(b)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -183,6 +188,11 @@ extension WNRecommendBoard: UICollectionViewDelegate, UICollectionViewDataSource
             let cell: WNRecommendBannerCCell = collectionView.dequeueReusableCell(forIndexPath: indexPath)
             let x: WNRecommendModel.Banners = a as! WNRecommendModel.Banners
             cell.model = x
+            cell.didSelect = { [weak self] (index) in
+                if let _self = self {
+                    
+                }
+            }
             return cell
         }
         
