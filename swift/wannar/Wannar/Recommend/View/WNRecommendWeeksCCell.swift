@@ -17,7 +17,7 @@ class WNRecommendWeekCCell: UICollectionViewCell {
             self.image.kf.setImage(with: URL.init(string: "\(WNConfig.BaseURL.website)\(model.mainPic)"))
             
             // Title
-            self.titleLabel.text = model.title.app()
+            self.titleLabel.text = model.title.app
             
             // Discount
             if model.isDiscountNow {
@@ -247,7 +247,7 @@ extension WNRecommendWeeksCCell: UICollectionViewDelegate, UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsetsMake(0, 12, 0, 12);
+        return UIEdgeInsetsMake(0, 12, 0, 12)
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {

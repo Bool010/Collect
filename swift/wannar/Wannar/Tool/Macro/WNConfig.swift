@@ -82,6 +82,8 @@ final public class WNConfig {
         public static let signIn = "login.php"
         // 列表
         public static let itemList = "tour/get-tour-list-app.php"
+        // 城市
+        public static let departure = "destination/departure.php"
         
         public static let destinationTour = "scenic/get-scenic-tour.php"
         public static let destinationPlan = "redis-scenic-plan.php"

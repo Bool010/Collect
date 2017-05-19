@@ -11,7 +11,8 @@ import UIKit
 class WNItemListConditionView: UIView {
 
     var click: ((_ btn: UIButton, _ event: String) -> Void)?
-    private var data: Array<Array<String>> = [["筛选", "", "filter"], ["排序", "", "sort"]]
+    private var data: Array<Array<String>> = [["筛选".ItemList, "", "filter"],
+                                              ["排序".ItemList, "", "sort"]]
     private var btns: Array<WNButton> = []
     
     override init(frame: CGRect) {
@@ -23,7 +24,7 @@ class WNItemListConditionView: UIView {
         
         self.init()
         if isNeedCity {
-            data.insert(["城市", "", "city"], at: 0)
+            data.insert(["城市".ItemList, "", "city"], at: 0)
         }
         buildUI()
     }
@@ -33,11 +34,11 @@ class WNItemListConditionView: UIView {
     }
     
     private func buildUI() {
+        
         self.backgroundColor = .white
         for i in 0 ..< data.count {
             let x = data[i]
             let btn = WNButton.init(imagePosition: .right, imageSize: CGSize.init(width: 18, height: 18))
-            btn.backgroundColor = UIColor.randomColor
             btn.titleLabel.text = x.first
             btn.titleLabel.font = UIFont.systemFont(ofSize: 14)
             btn.titleLabel.textColor = .textColor
@@ -59,6 +60,25 @@ class WNItemListConditionView: UIView {
                     click(btn, x[2])
                 }
             }
+            if i != 0 {
+                let line = UIView.init()
+                self.addSubview(line)
+                line.backgroundColor = UIColor.separatorColor
+                line.snp.makeConstraints({ (make) in
+                    make.right.equalTo(btn.snp.left).offset(0.0)
+                    make.centerY.equalTo(btn)
+                    make.width.equalTo(0.5)
+                    make.height.equalTo(18.0)
+                })
+            }
+        }
+        
+        let sep = UIView.init()
+        sep.backgroundColor = UIColor.separatorColor
+        self.addSubview(sep)
+        sep.snp.makeConstraints { (make) in
+            make.left.right.bottom.equalToSuperview().offset(0.0)
+            make.height.equalTo(0.5)
         }
     }
 }

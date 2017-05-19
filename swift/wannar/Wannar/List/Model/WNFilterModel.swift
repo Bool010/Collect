@@ -36,10 +36,62 @@ struct WNFilterModel {
                        query: String = "",
                        inceptionQuery: String = "") -> WNFilterModel {
         
+        var filterModel = WNFilterModel.init()
+        filterModel.inceptionQuery = inceptionQuery
+        
         let queryDic = toQueryDic(query: query)
         let inceptionQueryDic = toQueryDic(query: inceptionQuery)
         
-        var filterModel = WNFilterModel.init()
+        // MARK: Departure City
+        let departureKey = "tour_departure_en"
+        if !inceptionQueryDic.keys.contains(departureKey) {
+            
+            if let departure = facetExtend.departure {
+                
+                var array: Array<WNFilterItemModel> = []
+                for key in departure.keys {
+                    if !key.isEmpty && !(key == "|") {
+                        let a = key.components(separatedBy: "|")
+                        guard a.count == 2 else {
+                            continue
+                        }
+                        var model = WNFilterItemModel.init()
+                        model.title = a[1]
+                        model.value = a[0]
+                        model.isSelected = isShouldSelected(queryDic: queryDic,
+                                                            key: departureKey,
+                                                            value: a[0])
+                        array.append(model)
+                    }
+                }
+                
+                // Sort Group
+                array.sort(by: { (x1, x2) -> Bool in
+                    return x1.title.pinyin < x2.title.pinyin
+                })
+                var initial = ""
+                var arr: Array<WNFilterItemModel> = []
+                var result: Array<Array<WNFilterItemModel>> = []
+                
+                for a in array {
+                    if a.title.length >= 1 {
+                        let x = a.title.pinyin[0]
+                        if initial != x {
+                            if !arr.isEmpty {
+                                result.append(arr)
+                            }
+                            arr.removeAll()
+                            if let x = x {
+                                initial = x
+                            }
+                        }
+                        arr.append(a)
+                    }
+                }
+                result.append(arr)
+                filterModel.cityArr = result
+            }
+        }
         
         // MARK: Tag
         let tagKey = "tag"
@@ -84,7 +136,7 @@ struct WNFilterModel {
                 }
                 
                 var model = WNFilterItemModel.init()
-                model.title = "主题玩法"
+                model.title = "主题玩法".ItemList
                 model.value = tagKey
                 model.isSelected = false
                 filterModel.keyArr.append(model)
@@ -110,37 +162,11 @@ struct WNFilterModel {
                 }
                 
                 var model = WNFilterItemModel.init()
-                model.title = "途径景点"
+                model.title = "途径景点".ItemList
                 model.value = scenicKey
                 model.isSelected = false
                 filterModel.keyArr.append(model)
                 filterModel.valueArr.append(array)
-            }
-        }
-        
-        // MARK: Departure City
-        let departureKey = "tour_departure_en"
-        if !inceptionQueryDic.keys.contains(departureKey) {
-            
-            if let departure = facetExtend.departure {
-                
-                var array: Array<WNFilterItemModel> = []
-                for key in departure.keys {
-                    if !key.isEmpty && !(key == "|") {
-                        let a = key.components(separatedBy: "|")
-                        guard a.count == 2 else {
-                            continue
-                        }
-                        var model = WNFilterItemModel.init()
-                        model.title = a[1]
-                        model.value = a[0]
-                        model.isSelected = isShouldSelected(queryDic: queryDic,
-                                                            key: departureKey,
-                                                            value: a[0])
-                        array.append(model)
-                    }
-                }
-                filterModel.cityArr.append(array)
             }
         }
 
@@ -199,7 +225,7 @@ struct WNFilterModel {
                 }
                 
                 var model = WNFilterItemModel.init()
-                model.title = "结束城市"
+                model.title = "结束城市".ItemList
                 model.value = leaveKey
                 model.isSelected = false
                 filterModel.keyArr.append(model)
@@ -215,10 +241,10 @@ struct WNFilterModel {
                 for key in service.keys {
                     if !key.isEmpty {
                         var model = WNFilterItemModel.init()
-                        if key == "pickup"  { model.title = "本地出发" }
-                        if key == "airport" { model.title = "接机参团" }
-                        if key == "hotel"   { model.title = "加订酒店" }
-                        if key == "share"   { model.title = "配房服务" }
+                        if key == "pickup"  { model.title = "本地出发".ItemList }
+                        if key == "airport" { model.title = "接机参团".ItemList }
+                        if key == "hotel"   { model.title = "加订酒店".ItemList }
+                        if key == "share"   { model.title = "配房服务".ItemList }
                         model.value = key
                         model.isSelected = isShouldSelected(queryDic: queryDic,
                                                             key: serviceKey,
@@ -228,7 +254,7 @@ struct WNFilterModel {
                 }
                 
                 var model = WNFilterItemModel.init()
-                model.title = "服务"
+                model.title = "服务".ItemList
                 model.value = serviceKey
                 model.isSelected = false
                 filterModel.keyArr.append(model)
@@ -242,7 +268,13 @@ struct WNFilterModel {
             if let week = facetExtend.week {
                 var array: Array<WNFilterItemModel> = []
                 var sortArr = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
-                var titleArr = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"]
+                var titleArr = ["周一".ItemList,
+                                "周二".ItemList,
+                                "周三".ItemList,
+                                "周四".ItemList,
+                                "周五".ItemList,
+                                "周六".ItemList,
+                                "周日".ItemList]
                 for i in 0 ..< sortArr.count {
                     if week.keys.contains(sortArr[i]) {
                         var model = WNFilterItemModel.init()
@@ -256,7 +288,7 @@ struct WNFilterModel {
                 }
                 
                 var model = WNFilterItemModel.init()
-                model.title = "发团日期"
+                model.title = "发团日期".ItemList
                 model.value = weekKey
                 model.isSelected = false
                 filterModel.keyArr.append(model)
@@ -270,7 +302,13 @@ struct WNFilterModel {
             if let discount = facetExtend.discount {
                 var array: Array<WNFilterItemModel> = []
                 var sortArr = ["buy2get1", "buy2get2", "extradiscount", "getpoints", "usepoints", "vipdiscount", "tag3"]
-                var titleArr = ["买二送一", "买二送二", "满额返点", "积分返点", "积分兑换", "VIP特价", "App折扣"]
+                var titleArr = ["买二送一".ItemList,
+                                "买二送二".ItemList,
+                                "满额返点".ItemList,
+                                "积分返点".ItemList,
+                                "积分兑换".ItemList,
+                                "VIP特价".ItemList,
+                                "App折扣".ItemList]
                 for i in 0 ..< sortArr.count {
                     if discount.keys.contains(sortArr[i]) {
                         var model = WNFilterItemModel.init()
@@ -284,7 +322,7 @@ struct WNFilterModel {
                 }
                 
                 var model = WNFilterItemModel.init()
-                model.title = "优惠"
+                model.title = "优惠".ItemList
                 model.value = discountKey
                 model.isSelected = false
                 filterModel.keyArr.append(model)
@@ -300,6 +338,8 @@ extension WNFilterModel {
     func queryString() -> String {
         
         var x: Array<String> = []
+        
+        // Filter
         for i in 0 ..< valueArr.count {
             
             // Key
@@ -317,7 +357,26 @@ extension WNFilterModel {
                 x.append("\(key):\(arr.joined(separator: ","))")
             }
         }
-        return x.joined(separator: ";") + self.query
+        
+        // City
+        for arr in self.cityArr {
+            arr.forEach({ (model) in
+                if model.isSelected {
+                    x.append("tour_departure_en:\(model.value)")
+                }
+            })
+        }
+        
+        // Inception
+        var dic = WNFilterModel.toQueryDic(query: self.inceptionQuery)
+        if dic.keys.contains("tour_departure_en") {
+            dic.removeValue(forKey: "tour_departure_en")
+        }
+        dic.forEach({ (key, value) in
+            x.append("\(key):\(value.joined(separator: ","))")
+        })
+        
+        return x.joined(separator: ";")
     }
     
     static func toQueryDic(query: String) -> Dictionary<String, Array<String>> {

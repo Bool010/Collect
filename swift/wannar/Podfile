@@ -48,6 +48,8 @@ target 'Wannar' do
     # Image虚化效果
     pod 'SABlurImageView'
     
+    #
+    pod 'RNCryptor', '~> 5.0'
 #    pod 'ReactiveCocoa', '~> 5.0.0'
 
 end

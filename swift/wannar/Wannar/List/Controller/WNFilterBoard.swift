@@ -110,24 +110,22 @@ extension WNFilterBoard {
         let navView = self.view.addNavigation(height:50.0, isTop: false) { [weak self] (leftBtn, rightBtn, titleLabel, lineView) in
             
             // title
-            titleLabel.text = "筛选"
+            titleLabel.text = "筛选".ItemList
             
             // Right Btn
-            rightBtn.setTitle("确定", for: .normal)
+            rightBtn.setTitle("确定".ItemList, for: .normal)
             rightBtn.setTitleColor(.textColor, for: .normal)
             rightBtn.titleLabel?.font = UIFont.systemFont(ofSize: 13.0)
             rightBtn.addControlEvent(.touchUpInside, closureWithControl: { [weak self] (btn) in
                 guard let _self = self else { return }
-                let query = _self.model.queryString()
                 if let confimClick = _self.confimClick {
                     confimClick(_self.model)
                 }
                 _self.dismiss(animated: true, completion: nil)
-                wn_print(query)
             })
             
             // Left Btn
-            leftBtn.setTitle("取消", for: .normal)
+            leftBtn.setTitle("取消".ItemList, for: .normal)
             leftBtn.setTitleColor(.textColor, for: .normal)
             leftBtn.titleLabel?.font = UIFont.systemFont(ofSize: 13.0)
             leftBtn.addControlEvent(.touchUpInside, closureWithControl: { [weak self] (btn) in

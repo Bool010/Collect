@@ -15,7 +15,7 @@ class WNRecommendCoverCCell: UICollectionViewCell {
             guard let model = model else { return }
             
             self.image.kf.setImage(with: URL.init(string: (model.image)))
-            self.title.text = model.text.app()
+            self.title.text = model.text.app
         }
     }
     

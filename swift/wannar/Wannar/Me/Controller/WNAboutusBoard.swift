@@ -152,7 +152,7 @@ class WNAboutusBoard: UIViewController {
         }
         backBtn.addControlEvent(.touchUpInside) { [weak self] (btn) in
             guard let strongSelf = self else { return }
-            _ = strongSelf.navigationController?.popViewController(animated: true)
+            strongSelf.popViewController()
         }
     }
 }

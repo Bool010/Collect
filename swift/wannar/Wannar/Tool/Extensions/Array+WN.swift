@@ -23,13 +23,16 @@ extension Array {
 
 extension BidirectionalCollection where Iterator.Element == String, SubSequence.Iterator.Element == String {
     
+    // 以拼音排序
     func pinyinSort() -> Array<String> {
         let x = self.sorted { (a, b) -> Bool in
-            return a.toPinyin() < b.toPinyin()
+            return a.pinyin < b.pinyin
         }
         return x
     }
     
+    
+    // 以拼音首字母分组并排序
     func pinyinGroup() -> Array<Array<String>> {
         
         let pinyinSort = self.pinyinSort()
@@ -39,7 +42,7 @@ extension BidirectionalCollection where Iterator.Element == String, SubSequence.
         
         for a in pinyinSort {
             if a.length >= 1 {
-                let x = a.toPinyin().substring(to: a.index(a.startIndex, offsetBy: 1))
+                let x = a.pinyin.substring(to: a.index(a.startIndex, offsetBy: 1))
                 if initial != x {
                     if !arr.isEmpty {
                         result.append(arr)
@@ -51,8 +54,6 @@ extension BidirectionalCollection where Iterator.Element == String, SubSequence.
             }
         }
         result.append(arr)
-        
-        print(result)
         return result
     }
 }

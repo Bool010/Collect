@@ -29,8 +29,7 @@ func startMonitoringNetwork() -> Void {
 /// - Parameter version: 版本号
 func iOSLater(version: Double) -> Bool {
     
-    let systemVersion = UIDevice.current.systemVersion.double()
-
+    let systemVersion = UIDevice.current.systemVersion.double
     if let systemVersion = systemVersion {
         return systemVersion >= version
     } else {

@@ -17,7 +17,7 @@ class WNRecommendThemCCell: UICollectionViewCell {
             self.image.kf.setImage(with: URL.init(string: (model.image)))
             
             /// Title
-            self.title.text = model.text.app()
+            self.title.text = model.text.app
         }
     }
     

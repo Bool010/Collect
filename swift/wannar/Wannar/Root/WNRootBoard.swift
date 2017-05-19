@@ -66,7 +66,7 @@ class WNRootBoard: UITabBarController, UITabBarControllerDelegate {
     private func initChildBoard() -> Void {
         
         let boardNameArr: [String] = ["Wannar.WNRecommendBoard", "Wannar.WNDestinationBoard", "Wannar.WNPlanListBoard", "Wannar.WNMeBoard"]
-        let titleArr: [String] = ["推荐", "目的地", "规划", "我的"]
+        let titleArr: [String] = ["推荐".Root, "目的地".Root, "规划".Root, "我的".Root]
         let imageNameArr: [String] = ["", "", "", ""]
         let selectImageNameArr: [String] = ["", "", "", ""]
         

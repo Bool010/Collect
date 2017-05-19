@@ -34,13 +34,11 @@ extension WNOrderListBoard {
         
         // Navigation
         view.addNavigation { [weak self] (leftBtn, rightBtn, titleLabel, lineView) in
-            if let _self = self {
-                leftBtn.addControlEvent(.touchUpInside, closureWithControl: { [weak self] (btn) in
-                    if let _self = self {
-                       _ = _self.navigationController?.popViewController(animated: true)
-                    }
-                })
-            }
+            leftBtn.addControlEvent(.touchUpInside, closureWithControl: { [weak self] (btn) in
+                if let _self = self {
+                    _self.popViewController()
+                }
+            })
         }
         
         // Table View

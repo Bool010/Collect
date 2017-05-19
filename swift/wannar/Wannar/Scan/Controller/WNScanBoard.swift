@@ -60,7 +60,7 @@ extension WNScanBoard {
             
             leftBtn.addControlEvent(.touchUpInside, closureWithControl: { [weak self] (btn) in
                 guard let __self = self else { return }
-                _ = __self.navigationController?.popViewController(animated: true)
+                __self.popViewController()
             })
         }
         navView.backgroundColor = UIColor.black

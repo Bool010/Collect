@@ -71,7 +71,7 @@ struct WNSortModel {
 struct WNSortScenic {
     
     private static let hot =
-        WNSortRowModel.init(title: "热度从高到低",
+        WNSortRowModel.init(title: "热度从高到低".ItemList,
                             image: WNSortConfig.Hot.image,
                             param: "col_scenery_recommand,desc;col_scenery_id,asc",
                             isSelected: true)
@@ -89,7 +89,7 @@ struct WNSortScenic {
 struct WNSortYelp {
     
     private static let hot =
-        WNSortRowModel.init(title: "热度从高到低",
+        WNSortRowModel.init(title: "热度从高到低".ItemList,
                             image: WNSortConfig.Hot.image,
                             param: "review_count,desc;geodist(),asc;id,asc",
                             isSelected: true)
@@ -197,43 +197,43 @@ struct WNSortTour {
 struct WNSortConfig {
     
     struct Hot {
-        static let title = "玩哪儿推荐"
+        static let title = "玩哪儿推荐".ItemList
         static let image = "WN_sort_hot"
         static let param = "recommand,desc"
     }
     
     struct PriceAsc {
-        static let title = "价格从低到高"
+        static let title = "价格从低到高".ItemList
         static let image = "WN_sort_price_asc"
         static let param = "display_price,asc"
     }
     
     struct PriceDesc {
-        static let title = "价格从高到低"
+        static let title = "价格从高到低".ItemList
         static let image = "WN_sort_price_desc"
         static let param = "display_price,desc"
     }
     
     struct DayAsc {
-        static let title = "天数从低到高"
+        static let title = "天数从低到高".ItemList
         static let image = "WN_sort_day_asc"
         static let param = "day,asc"
     }
     
     struct DayDesc {
-        static let title = "天数从高到低"
+        static let title = "天数从高到低".ItemList
         static let image = "WN_sort_day_desc"
         static let param = "day,desc"
     }
     
     struct Distance {
-        static let title = "距离从近到远"
+        static let title = "距离从近到远".ItemList
         static let image = "WN_sort_distance"
         static let param = "distance,asc"
     }
     
     struct Evaluate {
-        static let title = "评价"
+        static let title = "评价".ItemList
         static let image = "WN_sort_evaluate"
         static let param = "rating,desc"
     }

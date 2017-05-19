@@ -19,7 +19,7 @@ class WNItemListTCell: UITableViewCell {
         didSet {
             guard let model = model else { return }
             self.picture.kf.setImage(with: URL.init(string: "\(WNConfig.BaseURL.website)\(model.mainPicture)"))
-            self.title.text = model.title.app()
+            self.title.text = model.title.app
             if model.isDiscountNow {
                 self.discount.text = String.init(format: "%.1f折", model.discountPercent.float / 10.0)
                 self.discount.snp.updateConstraints({ (make) in

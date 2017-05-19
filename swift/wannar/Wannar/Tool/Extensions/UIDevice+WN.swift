@@ -14,8 +14,10 @@ extension UIDevice {
     /// 获取UIID
     ///
     /// - Returns: uuid String
-    static func uuidString() -> String? {
-        return UIDevice.current.identifierForVendor?.uuidString
+    open class var uuid: String? {
+        get {
+            return UIDevice.current.identifierForVendor?.uuidString
+        }
     }
     
 }

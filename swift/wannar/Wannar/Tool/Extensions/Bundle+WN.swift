@@ -10,46 +10,40 @@ import Foundation
 
 extension Bundle {
     
-    class func infoDictionary() -> [String : Any]? {
-        
-        return Bundle.main.infoDictionary
-    }
-    
-    
-    class func displayName() -> String? {
-        if let dic = Bundle.infoDictionary() {
+    open class var displayName: String? {
+        if let dic = Bundle.main.infoDictionary {
             return dic["CFBundleName"] as? String
         } else {
             return nil
         }
     }
     
-    class func identifier() -> String? {
-        if let dic = Bundle.infoDictionary() {
+    open class var identifier: String? {
+        if let dic = Bundle.main.infoDictionary {
             return dic["CFBundleIdentifier"] as? String
         } else {
             return nil
         }
     }
     
-    class func shortVersion() -> String? {
-        if let dic = Bundle.infoDictionary() {
+    open class var shortVersion: String? {
+        if let dic = Bundle.main.infoDictionary {
             return dic["CFBundleShortVersionString"] as? String
         } else {
             return nil
         }
     }
 
-    class func minimumOSVersion() -> String? {
-        if let dic = Bundle.infoDictionary() {
+    open class var minimumOSVersion: String? {
+        if let dic = Bundle.main.infoDictionary {
             return dic["MinimumOSVersion"] as? String
         } else {
             return nil
         }
     }
     
-    class func platformVersion() -> String? {
-        if let dic = Bundle.infoDictionary() {
+    open class var platformVersion: String? {
+        if let dic = Bundle.main.infoDictionary {
             return dic["DTPlatformVersion"] as? String
         } else {
             return nil

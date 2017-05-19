@@ -24,7 +24,7 @@ extension String {
     }
     
     func substring(_ range: WNRange) -> String? {
-        if self.length > range.start {
+        if self.length >= range.start + range.length {
             let startIndex = self.index(self.startIndex, offsetBy: range.start)
             let endIndex = self.index(self.startIndex, offsetBy: range.start+range.length)
             return self[startIndex..<endIndex]
@@ -36,15 +36,16 @@ extension String {
     /// 将字符串转换为日期
     ///
     /// - Returns: 字符串转换过后的日期
-    @discardableResult
-    func date() -> Date? {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
-        
-        if let date = dateFormatter.date(from: self) {
-            return date
-        } else {
-            return nil
+    public var date: Date? {
+        get {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+            
+            if let date = dateFormatter.date(from: self) {
+                return date
+            } else {
+                return nil
+            }
         }
     }
     
@@ -52,39 +53,43 @@ extension String {
     /// 转换为Float类型
     ///
     /// - Returns: Float
-    @discardableResult
-    func float() -> Float? {
-        return Float(self)
+    public var float: Float? {
+        get {
+            return Float(self)
+        }
     }
     
     
     /// 转换为Double类型
     ///
     /// - Returns: Double
-    @discardableResult
-    func double() -> Double? {
-        return Double(self)
+    public var double: Double? {
+        get {
+            return Double(self)
+        }
     }
+    
     
     
     /// 获取APP标题
     ///
     /// - Returns: 去掉'【' \ '】'中间的字符串
-    @discardableResult
-    func app() -> String {
-        let string = self
-        if string.isEmpty {
-            return ""
+    public var app: String {
+        get {
+            let string = self
+            if string.isEmpty {
+                return ""
+            }
+            if string.contains("【") && string.contains("】") {
+                let range1 = string.range(of: "【")
+                let range2 = string.range(of: "】")
+                var str = string.substring(with: (range1?.upperBound)! ..< (range2?.lowerBound)!)
+                str = "【\(str)】"
+                str = string.replacingOccurrences(of: str, with: "")
+                return str
+            }
+            return string;
         }
-        if string.contains("【") && string.contains("】") {
-            let range1 = string.range(of: "【")
-            let range2 = string.range(of: "】")
-            var str = string.substring(with: (range1?.upperBound)! ..< (range2?.lowerBound)!)
-            str = "【\(str)】"
-            str = string.replacingOccurrences(of: str, with: "")
-            return str
-        }
-        return string;
     }
     
     
@@ -136,28 +141,38 @@ extension String {
     }
     
     
-    /// 一个字符串的第一个字符
-    ///
-    /// - Returns: 第一个字符
-    func first() -> String? {
-        if self.length > 1 {
-            return self.substring(to: self.index(self.startIndex, offsetBy: 1))
-        } else {
-            return nil
-        }
-    }
-    
-    
     /// 将字符串转换为拼音
     ///
     /// - Parameter transform: 转换方式
     /// - Returns: 转换过后的字符串
-    func toPinyin() -> String {
-        
-        let stringRef = NSMutableString(string: self) as CFMutableString
-        CFStringTransform(stringRef,nil, kCFStringTransformToLatin, false);
-        CFStringTransform(stringRef, nil, kCFStringTransformStripCombiningMarks, false);
-        let pinyin = stringRef as String;
-        return pinyin
+    public var pinyin: String {
+        get {
+            let stringRef = NSMutableString(string: self) as CFMutableString
+            CFStringTransform(stringRef,nil, kCFStringTransformToLatin, false);
+            CFStringTransform(stringRef, nil, kCFStringTransformStripCombiningMarks, false);
+            let pinyin = stringRef as String;
+            return pinyin
+        }
     }
+}
+
+
+// MARK: - 多语言国际化
+extension String {
+    
+    private func t(_ tableName: String) -> String {
+        return NSLocalizedString(self,
+                                 tableName: tableName,
+                                 bundle: Bundle.main,
+                                 value: "",
+                                 comment: self)
+    }
+    
+    public var Common: String       { get { return self.t("Common") } }
+    public var Root: String         { get { return self.t("Root") } }
+    public var Recomment: String    { get { return self.t("Recommend") } }
+    public var Destination: String  { get { return self.t("Destination") } }
+    public var Plan: String         { get { return self.t("Plan") } }
+    public var Me: String           { get { return self.t("Me") } }
+    public var ItemList: String     { get { return self.t("ItemList") } }
 }

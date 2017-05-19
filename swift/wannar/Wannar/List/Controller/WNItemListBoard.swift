@@ -14,7 +14,7 @@ import UIKit
 class WNItemListBoard: UIViewController {
 
     // 初始query
-    var inceptionQuery = "tag:yellowstone;tour_leave_single_en_cn:Big Island"
+    var inceptionQuery = "tag:yellowstone"
     
     var toursModel: WNToursModel?
     var filterModel: WNFilterModel?
@@ -27,7 +27,9 @@ class WNItemListBoard: UIViewController {
         
         super.viewDidLoad()
         self.buildUI()
-        self.fetchData(isResetFilter: true, inceptionQuery: inceptionQuery)
+        self.fetchData(isResetFilter: true,
+                       query: inceptionQuery,
+                       inceptionQuery: inceptionQuery)
     }
 
     override func didReceiveMemoryWarning() {
@@ -60,6 +62,8 @@ extension WNItemListBoard {
                                inceptionQuery: String = "") -> Void {
         
         WNItemListAPI.selectTour(query: query, sort: self.sortModel.getSortParam(), offset: 0, isNeedTitle: true, isCountOnly: false, success: { [weak self] (model) in
+            
+            wn_print(query)
             
             // Tours Model
             guard let _self = self else { return }
@@ -103,8 +107,9 @@ extension WNItemListBoard {
             // Left Btn
             leftBtn.addControlEvent(.touchUpInside, closureWithControl: { [weak self] (btn) in
                 guard let __self = self else { return }
-                _ = __self.navigationController?.popViewController(animated: true)
+                __self.popViewController()
             })
+            lineView.isHidden = true
         }
         
         /// Condition
@@ -120,7 +125,16 @@ extension WNItemListBoard {
             
             // City
             if event == "city" {
-                print("城市点击")
+                let board = WNListCityBoard.init()
+                board.model = _self.filterModel
+                board.confimClick = { [weak self] (model) in
+                    guard let __self = self else { return }
+                    __self.filterModel = model
+                    __self.fetchData(isResetFilter: true,
+                                     query: model.queryString(),
+                                     inceptionQuery: __self.inceptionQuery)
+                }
+                _self.present(board, animated: true, completion: nil)
             }
             
             // Filter

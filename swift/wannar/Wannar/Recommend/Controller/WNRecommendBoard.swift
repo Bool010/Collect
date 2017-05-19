@@ -11,6 +11,7 @@ import WebKit
 import Alamofire
 import Dispatch
 import SnapKit
+import Social
 
 class WNRecommendBoard: WNBaseBoard {
     
@@ -23,11 +24,9 @@ class WNRecommendBoard: WNBaseBoard {
         super.viewDidLoad()
         self.buildUI()
         self.fetchData()
-        let a = "你好世界"
-        let b = a[10]
-        let c = a.substring(WNRange.init(2, 3))
-        
-        print(b)
+        let x = "大风起兮云飞扬" >>> "大风气息云飞扬"
+        let y = "大风起兮云飞扬" >>? "大风气息云飞扬"
+        print(x)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -117,7 +116,6 @@ extension WNRecommendBoard: UICollectionViewDelegate, UICollectionViewDataSource
         } else {
             num = 1
         }
-        print(num)
         return num
     }
     
@@ -138,43 +136,43 @@ extension WNRecommendBoard: UICollectionViewDelegate, UICollectionViewDataSource
         if a is WNRecommendModel.Weeklys {
             let x: WNRecommendModel.Weeklys = a as! WNRecommendModel.Weeklys
             reusableView.icon.kf.setImage(with: URL.init(string: x.icon))
-            reusableView.title.text = x.title.app()
-            reusableView.subtitle.text = x.subtitle.app()
+            reusableView.title.text = x.title.app
+            reusableView.subtitle.text = x.subtitle.app
         }
         
         if a is WNRecommendModel.Thems {
             let x: WNRecommendModel.Thems = a as! WNRecommendModel.Thems
             reusableView.icon.kf.setImage(with: URL.init(string: x.icon))
-            reusableView.title.text = x.title.app()
-            reusableView.subtitle.text = x.subtitle.app()
+            reusableView.title.text = x.title.app
+            reusableView.subtitle.text = x.subtitle.app
         }
         
         if a is WNRecommendModel.Scenics {
             let x: WNRecommendModel.Scenics = a as! WNRecommendModel.Scenics
             reusableView.icon.kf.setImage(with: URL.init(string: x.icon))
-            reusableView.title.text = x.title.app()
-            reusableView.subtitle.text = x.subtitle.app()
+            reusableView.title.text = x.title.app
+            reusableView.subtitle.text = x.subtitle.app
         }
         
         if a is WNRecommendModel.Seasons {
             let x: WNRecommendModel.Seasons = a as! WNRecommendModel.Seasons
             reusableView.icon.kf.setImage(with: URL.init(string: x.icon))
-            reusableView.title.text = x.title.app()
-            reusableView.subtitle.text = x.subtitle.app()
+            reusableView.title.text = x.title.app
+            reusableView.subtitle.text = x.subtitle.app
         }
         
         if a is WNRecommendModel.MiniTours {
             let x: WNRecommendModel.MiniTours = a as! WNRecommendModel.MiniTours
             reusableView.icon.kf.setImage(with: URL.init(string: x.icon))
-            reusableView.title.text = x.title.app()
-            reusableView.subtitle.text = x.subtitle.app()
+            reusableView.title.text = x.title.app
+            reusableView.subtitle.text = x.subtitle.app
         }
         
         if a is WNRecommendModel.Hots {
             let x: WNRecommendModel.Hots = a as! WNRecommendModel.Hots
             reusableView.icon.kf.setImage(with: URL.init(string: x.icon))
-            reusableView.title.text = x.title.app()
-            reusableView.subtitle.text = x.subtitle.app()
+            reusableView.title.text = x.title.app
+            reusableView.subtitle.text = x.subtitle.app
         }
         return reusableView
     }
@@ -190,7 +188,12 @@ extension WNRecommendBoard: UICollectionViewDelegate, UICollectionViewDataSource
             cell.model = x
             cell.didSelect = { [weak self] (index) in
                 if let _self = self {
+//                    let items: Array<Any> = ["#www.baidu.com"]
+//                    let activity = UIActivityViewController.init(activityItems: items, applicationActivities: nil)
+//                    _self.navigationController?.present(activity, animated: true, completion: nil)
                     
+                    let board = WNCityBoard.init()
+                    _self.push(board)
                 }
             }
             return cell
@@ -210,7 +213,6 @@ extension WNRecommendBoard: UICollectionViewDelegate, UICollectionViewDataSource
                     guard let _self = self else { return }
                     let board = WNItemListBoard.init()
                     _self.navigationController?.pushViewController(board, animated: true)
-                    wn_print("按钮点击成功")
                 }
             }
             return cell

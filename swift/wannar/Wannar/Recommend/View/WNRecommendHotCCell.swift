@@ -18,7 +18,7 @@ class WNRecommendHotCCell: UICollectionViewCell {
             self.image.kf.setImage(with: URL.init(string: "\(WNConfig.BaseURL.website)\(model.mainPic)"))
             
             // Title
-            self.title.text = model.title.app()
+            self.title.text = model.title.app
             
             // City
             let chineseCity = model.departure.components(separatedBy: "|").last

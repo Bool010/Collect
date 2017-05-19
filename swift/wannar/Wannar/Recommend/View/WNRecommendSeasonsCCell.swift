@@ -14,7 +14,7 @@ class WNRecommendSeasonsCCell: UICollectionViewCell {
             guard let model = model else { return }
             
             self.image.kf.setImage(with: URL.init(string: ("\(WNConfig.BaseURL.website)\(model.mainPic)")))
-            self.title.text = model.title.app()
+            self.title.text = model.title.app
             self.price.text = String.init(format: "$%.1f/人起", (Double)(model.currentPrice) / 100.0)
         }
     }

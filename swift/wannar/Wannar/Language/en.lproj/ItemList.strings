@@ -1,0 +1,51 @@
+/* 
+  ItemList.strings
+  Wannar
+
+  Created by 付国良 on 2017/5/19.
+  Copyright © 2017年 玩哪儿. All rights reserved.
+*/
+
+"城市" = "City";
+"筛选" = "Filter";
+"排序" = "Sort";
+"出发城市" = "Departure";
+"确定" = "Confirm";
+"取消" = "Cancel";
+
+"主题玩法" = "Them";
+"途径景点" = "Way Of Attraction";
+"结束城市" = "End The City";
+"服务" = "Service";
+"发团日期" = "Departure Date";
+"优惠" = "Offer";
+
+"本地出发" = "Local Departure";
+"接机参团" = "Pick up the Senate";
+"加订酒店" = "Plus hotel";
+"配房服务" = "Room service";
+
+"买二送一" = "buy two get one free";
+"买二送二" = "Buy two to send two";
+"满额返点" = "Full rebate";
+"积分返点" = "Points back";
+"积分兑换" = "Redeem";
+"VIP特价" = "VIP special";
+"App折扣" = "App discount";
+
+"周一" = "Monday";
+"周二" = "Tuesday";
+"周三" = "Wednesday";
+"周四" = "Thursday";
+"周五" = "Friday";
+"周六" = "Saturday";
+"周日" = "Sunday";
+
+"玩哪儿推荐" = "Wannar Recommend";
+"价格从低到高" = "Price ↑";
+"价格从高到低" = "Price ↓";
+"天数从低到高" = "Days ↑";
+"天数从高到低" = "Days ↓";
+"距离从近到远" = "Distance ↑";
+"评价" = "Evaluation";
+"热度从高到低" = "Hot ↓";
