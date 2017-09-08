@@ -27,7 +27,7 @@ class WNRecommendMeauCCell: UICollectionViewCell {
         
         /// Slogan
         let slogan = UILabel.init(color: .textColor,
-                                  fontName: WNConfig.FontName.kaitiRegular,
+                                  fontName: WNConfig.FontName.normal,
                                   size: 13,
                                   textAlignment: .center)
 
@@ -52,8 +52,8 @@ class WNRecommendMeauCCell: UICollectionViewCell {
         for i in 0...4 {
             let btn: WNButton = WNButton.init(imagePosition: .top, imageSize: CGSize.init(width: 35, height: 35))
             btn.titleLabel.set(color: .textColor,
-                               fontName: WNConfig.FontName.kaitiBold,
-                               size: 15.0,
+                               fontName: WNConfig.FontName.normal,
+                               size: 13.0,
                                textAlignment: .center)
             btn.space = 5
             container.addSubview(btn)

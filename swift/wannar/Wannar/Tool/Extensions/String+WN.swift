@@ -69,7 +69,23 @@ extension String {
         }
     }
     
-    
+    /// 字符串转字典
+    public var dictionary: [String: Any]? {
+        get {
+            if !self.isEmpty {
+                guard let data = self.data(using: String.Encoding.utf8) else { return nil }
+                let dic = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+                if dic is [String : Any] {
+                    return dic as? [String : Any]
+                } else {
+                    return nil
+                }
+            } else {
+                return nil
+            }
+        }
+        
+    }
     
     /// 获取APP标题
     ///

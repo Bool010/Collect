@@ -140,6 +140,8 @@ final public class WNConfig {
     
     /// FontName
     public struct FontName {
+        // 预设字体
+        public static let normal = "AvenirNext-Regular"
         // 楷体-常规体
         public static let kaitiRegular = "STKaitiSC-Regular"
         // 楷体-粗体

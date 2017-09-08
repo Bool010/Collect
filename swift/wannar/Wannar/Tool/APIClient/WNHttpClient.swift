@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 import Alamofire
-import SwiftyJSON
+import ObjectMapper
 
 public enum WNHTTPMethod: String {
     case GET = "GET"
@@ -22,9 +22,9 @@ let SSCerKey = "MIIEJTCCAw2gAwIBAgIDAjp3MA0GCSqGSIb3DQEBCwUAMEIxCzAJBgNVBAYTAlVT
 
 // 定义一个结构体，存储认证相关信息
 struct IdentityAndTrust {
-    var identityRef:SecIdentity
-    var trust:SecTrust
-    var certArray:AnyObject
+    var identityRef: SecIdentity
+    var trust: SecTrust
+    var certArray: AnyObject
 }
 
 typealias WNRequestParam = [String : Any]
@@ -63,36 +63,17 @@ class WNHttpClient: NSObject {
     /// POST
     class func post(subURL: String,
                     param: WNRequestParam,
-                    handle: ((Any) -> JSON?)?,
-                    success: ((JSON?) -> Void)?,
-                    fail: ((Error?) -> Void)?,
-                    finish: ((Void) -> Void)?) -> Void {
+                    success: ((String) -> Void)? = nil,
+                    fail: ((Error?) -> Void)? = nil,
+                    finish: ((Void) -> Void)? = nil) -> Void {
         
-        WNHttpClient.request(method: .POST,
-                             subURL: subURL,
-                             param: param,
-                             handle: handle,
-                             success: success,
-                             fail: fail,
-                             finish: finish)
+        WNHttpClient.request(method: .POST, subURL: subURL, param: param, success: success, fail: fail, finish: finish)
         
     }
     
     /// GET
-    class func get(subURL: String,
-                   param: WNRequestParam,
-                   handle: ((Any) -> JSON?)?,
-                   success: ((JSON?) -> Void)?,
-                   fail: ((Error?) -> Void)?,
-                   finish: ((Void) -> Void)?) -> Void {
-        
-        WNHttpClient.request(method: .GET,
-                             subURL: subURL,
-                             param: param,
-                             handle: handle,
-                             success: success,
-                             fail: fail,
-                             finish: finish)
+    class func get(subURL: String, param: WNRequestParam, success: ((String) -> Void)?, fail: ((Error?) -> Void)?, finish: ((Void) -> Void)?) -> Void {
+        WNHttpClient.request(method: .GET, subURL: subURL, param: param, success: success, fail: fail, finish: finish)
     }
     
     
@@ -103,10 +84,9 @@ class WNHttpClient: NSObject {
                        param: WNRequestParam,
                        retry: Int = 5,
                        delay: TimeInterval = 30,
-                       handle: ((Any) -> JSON?)?,
-                       success: ((JSON?) -> Void)?,
-                       fail: ((Error?) -> Void)?,
-                       finish: ((Void) -> Void)?) -> Void {
+                       success: ((String) -> Void)? = nil,
+                       fail: ((Error?) -> Void)? = nil,
+                       finish: ((Void) -> Void)? = nil) -> Void {
         
         let URL: String = baseURL + subURL
         let httpMethod: HTTPMethod = WNHttpClient.convertMethod(method: method)
@@ -114,16 +94,9 @@ class WNHttpClient: NSObject {
         /// FAIL
         func doFail(error: Error?) {
             if retry > 0 {
-                request(method: method,
-                        baseURL: baseURL,
-                        subURL: subURL,
-                        param: param,
-                        retry: retry,
-                        delay: delay,
-                        handle: handle,
-                        success: success,
-                        fail: fail,
-                        finish: finish)
+                DispatchQueue.delay(delay, task: { 
+                    request(method: method, baseURL: baseURL, subURL: subURL, param: param, retry: retry, delay: delay, success: success, fail: fail, finish: finish)
+                })
             } else {
                 if let onFail = fail {
                     onFail(error)
@@ -135,40 +108,25 @@ class WNHttpClient: NSObject {
         }
         
         /// SUCCESS
-        func doSuccess(data: Data?) {
-            
-            if let datas = data {
-                let json: JSON = SwiftyJSON.JSON(data: datas)
-                if let jsonError = json.error {
-                    doFail(error: jsonError)
-                    return
-                }
-                
-                var handleResponse: JSON?
-                if let handle = handle {
-                    handleResponse = handle(json)
-                    if handleResponse == nil {
-                        let error: Error = NSError(domain: "Swift-APIClient Convert Data Error",
-                                                   code: 1,
-                                                   userInfo: [NSLocalizedFailureReasonErrorKey: "Convert Data Is Nil"])
-                        doFail(error: error)
-                        return
-                    }
-                }
+        func doSuccess(data: String?) {
+                        
+            if let json = data {
                 if let success = success {
-                    success(handleResponse)
+                    success(json)
                 }
                 if let finish = finish {
                     finish()
                 }
+            } else {
+                let error: Error = NSError(domain: "Swift-APIClient Convert Data Error", code: 1, userInfo: [NSLocalizedFailureReasonErrorKey: "Convert Data Is Nil"])
+                doFail(error: error)
             }
         }
         
-//        WNHttpClient.sessionManager()
-        Alamofire.request(URL, method: httpMethod, parameters: param, encoding: URLEncoding.default, headers: SessionManager.defaultHTTPHeaders).validate().responseJSON { (response) in
+        Alamofire.request(URL, method: httpMethod, parameters: param, encoding: URLEncoding.default, headers: SessionManager.defaultHTTPHeaders).validate().responseString { (response) in
             switch response.result {
             case .success:
-                doSuccess(data: response.data)
+                doSuccess(data: response.value)
             case .failure:
                 doFail(error: response.result.error)
             }
@@ -220,7 +178,7 @@ class WNHttpClient: NSObject {
         
         var items : CFArray?
         
-        securityError = SecPKCS12Import(PKCS12Data as! CFData, options, &items)
+        securityError = SecPKCS12Import(PKCS12Data! as CFData, options, &items)
         
         if securityError == errSecSuccess {
             let certItems:CFArray = items as CFArray!;

@@ -51,7 +51,7 @@ class WNRecommendSeasonsCCell: UICollectionViewCell {
         
         /// Title Label
         self.title = UILabel.init(color: .textColor,
-                                  fontName: WNConfig.FontName.kaitiRegular,
+                                  fontName: WNConfig.FontName.normal,
                                   size: 13,
                                   textAlignment: .left)
         self.title.numberOfLines = 2
@@ -66,7 +66,7 @@ class WNRecommendSeasonsCCell: UICollectionViewCell {
         
         /// Price Label
         self.price = UILabel.init(color: .themColor,
-                                  fontName: WNConfig.FontName.kaitiBold,
+                                  fontName: WNConfig.FontName.normal,
                                   size: 13,
                                   textAlignment: .left)
         self.contentView.addSubview(self.price)

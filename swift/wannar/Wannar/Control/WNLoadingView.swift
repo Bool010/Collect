@@ -76,7 +76,6 @@ class WNLoadingView: UIView {
     
     /// RAC
     fileprivate func addRAC() -> Void {
-        
         WNGlobalVar.shared.networkChange = { [weak self] isValid in
             if !isValid {
                 if let _self = self {
@@ -180,10 +179,7 @@ class WNLoadingView: UIView {
         hideLoading()
         DispatchQueue.delay(0.4) { [weak self] in
             if let _self = self {
-                _self.setControlContent(image: "WN_loadFail",
-                                       hintText: "加载失败",
-                                       title: "点击按钮重新加载",
-                                       btnText: "重新加载")
+                _self.setControlContent(image: "WN_loadFail", hintText: "加载失败", title: "点击按钮重新加载", btnText: "重新加载")
                 _self.button.addControlEvent(.touchUpInside) { (btn) in
                     _self.beginLoad()
                 }
@@ -196,10 +192,7 @@ class WNLoadingView: UIView {
     /// 没有网络
     fileprivate func networkNoAvailable() -> Void {
         hideLoading()
-        setControlContent(image: "WN_noNetwork",
-                          hintText: "无网络连接",
-                          title: "请检查网络设置",
-                          btnText: "重新加载")
+        setControlContent(image: "WN_noNetwork", hintText: "无网络连接", title: "请检查网络设置", btnText: "重新加载")
         self.button.addControlEvent(.touchUpInside) { (btn) in
             self.beginLoad()
         }
@@ -215,14 +208,10 @@ class WNLoadingView: UIView {
     ///   - hintText: 提示文本
     ///   - title: 标题文本
     ///   - btnText: 按钮文本
-    fileprivate func setControlContent(image: String?,
-                                       hintText: String?,
-                                       title: String?,
-                                       btnText: String?) -> Void {
+    fileprivate func setControlContent(image: String?, hintText: String?, title: String?, btnText: String?) -> Void {
         if let image = image {
             self.hintImage.image = UIImage.init(named: image)
         }
-        
         self.hintLabel.text = hintText
         self.titleLabel.text = title
         self.button.setTitle(btnText, for: .normal)

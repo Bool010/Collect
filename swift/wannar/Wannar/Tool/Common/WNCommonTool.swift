@@ -65,13 +65,13 @@ fileprivate func topBoard(root: UIViewController?) -> UIViewController? {
 }
 
 
-func toJSONString(dict: Dictionary<String, Any>) -> String {
+func wn_toJSONString(object: Any) -> String {
 
-    if (!JSONSerialization.isValidJSONObject(dict)) {
+    if (!JSONSerialization.isValidJSONObject(object)) {
         print("无法解析出JSONString")
         return ""
     }
-    let data = try? JSONSerialization.data(withJSONObject: dict, options: [])
+    let data = try? JSONSerialization.data(withJSONObject: object, options: [])
     guard data != nil else {
         return ""
     }

@@ -12,7 +12,8 @@ class WNHalfwayPresentation: UIPresentationController {
     
     var dimmingClickHandle: (()->Void)? = nil
     fileprivate var isPresenting = false
-    fileprivate var dimmingView: UIVisualEffectView!
+    fileprivate var dimmingView: UIView!
+    fileprivate var dimmingTap: UITapGestureRecognizer!
     fileprivate var heightRatio = 0.5
     
     override init(presentedViewController: UIViewController, presenting presentingViewController: UIViewController?) {
@@ -53,9 +54,12 @@ class WNHalfwayPresentation: UIPresentationController {
     override func presentationTransitionWillBegin() {
         super.presentationTransitionWillBegin()
         isPresenting = true
+        dimmingView = UIView()
         dimmingView = UIVisualEffectView.init(effect: UIBlurEffect.init(style: .dark))
         dimmingView.alpha = 0.0
-        dimmingView.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(dimmingClick(completion:))))
+        dimmingTap = UITapGestureRecognizer.init(target: self, action: #selector(dimmingClick))
+        dimmingView.addGestureRecognizer(dimmingTap)
+        
     }
     
     override func presentationTransitionDidEnd(_ completed: Bool) {
@@ -86,14 +90,15 @@ class WNHalfwayPresentation: UIPresentationController {
 // MARK: - Func
 extension WNHalfwayPresentation {
     
-    @objc fileprivate func dimmingClick(completion: (() -> Void)? = nil) -> Void {
+    @objc fileprivate func dimmingClick() {
+        dimmingView.removeGestureRecognizer(dimmingTap)
+        print(presentingViewController)
         presentingViewController.dismiss(animated: true) { [weak self] in
             guard let _self = self else { return }
             if let a = _self.dimmingClickHandle {
                 a()
             }
         }
-        presentingViewController.dismiss(animated: true, completion: completion)
     }
 }
 

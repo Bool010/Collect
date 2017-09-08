@@ -17,7 +17,7 @@ import AddressBook
 import Contacts
 import EventKit
 
-class WNPermissions: NSObject {
+struct WNPermissions {
     
     /// 相机和麦克风权限
     static func cameraPermissions() -> AVAuthorizationStatus {

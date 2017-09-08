@@ -11,15 +11,13 @@ import UIKit
 import Toast_Swift
 
 func wn_debugMessage(_ message: String) {
-    
-    UIApplication.shared.keyWindow?.makeToast(message,
-                                              duration: 3.0,
-                                              position: .top)
+    if let keyWindow = UIApplication.shared.keyWindow {
+        keyWindow.makeToast(message, duration: 3.0, position: .top)
+    }
 }
 
 
 func wn_deinitMessage(_ message: String) {
-    
     wn_debugMessage(message + "销毁")
 }
 
@@ -91,7 +89,7 @@ func cpuUsage() -> Float {
     var threadStatistic: UInt32 = 0
     
     kern = withUnsafeMutablePointer(to: &threadList) {
-        $0.withMemoryRebound(to: (thread_act_array_t?.self)!, capacity: 1) {
+        $0.withMemoryRebound(to: (thread_act_array_t?.self), capacity: 1) {
             task_threads(mach_task_self_, $0, &threadCount)
         }
     }

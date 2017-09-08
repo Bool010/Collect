@@ -26,15 +26,16 @@ class WNRootBoard: UITabBarController, UITabBarControllerDelegate {
     override func viewDidAppear(_ animated: Bool) {
         
         super.viewDidAppear(animated)
+        
         // 显示FPS
-//        wn_showFPS()
-//        let fpsLabel = WNFPSLabel.init(frame: CGRect.init(x: 15, y: UIScreen.main.bounds.size.height - 80.0, width: 60.0, height: 25.0))
-//        self.view.addSubview(fpsLabel)
-//        let tap = UITapGestureRecognizer.init()
-//        tap.addClosure("fps") { 
-//            wn_print("成功")
-//        }
-//        fpsLabel.addGestureRecognizer(tap)
+        wn_showFPS()
+        let fpsLabel = WNFPSLabel.init(frame: CGRect.init(x: 15, y: UIScreen.main.bounds.size.height - 80.0, width: 60.0, height: 25.0))
+        self.view.addSubview(fpsLabel)
+        let tap = UITapGestureRecognizer.init()
+        tap.addClosure("fps") { 
+            wn_print("成功")
+        }
+        fpsLabel.addGestureRecognizer(tap)
         
     }
     

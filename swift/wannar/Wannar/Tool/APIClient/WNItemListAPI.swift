@@ -48,19 +48,10 @@ class WNItemListAPI: WNHttpClient {
         param["offset"] = offset
         
         /// Post
-        self.post(subURL: WNConfig.Path.itemList, param: param, handle: { (data) -> JSON? in
-            
-            if !(data is JSON) {
-                return nil
-            }
-            return data as? JSON
-        }, success: { (json) in
-            
+        self.post(subURL: WNConfig.Path.itemList, param: param, success: { (json) in
             if let success = success {
                 var model: WNToursModel?
-                if let json = json {
-                    model = WNToursModel.init(json: json)
-                }
+                model = WNToursModel.init(json: json)
                 success(model)
             }
         }, fail: { (error) in

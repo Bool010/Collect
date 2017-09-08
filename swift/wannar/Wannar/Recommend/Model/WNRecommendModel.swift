@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import SwiftyJSON
+import ObjectMapper
 
-struct WNRecommendModel {
+struct WNRecommendModel: Mappable {
     
     fileprivate struct WNRecommendKey {
         /// 循环滚动
@@ -33,137 +33,125 @@ struct WNRecommendModel {
     var data: Array = [Any]()
     var version: Int = 0
     
-    init(response: JSON?) {
+    init?(map: Map) {
         
-        if let response = response {
-            let sections = response["sections"].arrayValue
-            for dic in sections {
-                let idName = dic["id"].stringValue
-                
-                if idName == WNRecommendKey.banner {
-                    let banners = Banners.init(json: dic)
+    }
+    mutating func mapping(map: Map) {
+        let sections: [[String : Any]] = map.JSON["sections"] as! [[String : Any]]
+        for dic in sections {
+            let idName = dic["id"] as! String
+            if idName == WNRecommendKey.banner {
+                if let banners = Mapper<WNRecommendModel.Banners>().map(JSONString: wn_toJSONString(object: dic)) {
                     data.append(banners)
                 }
-                if idName == WNRecommendKey.menu {
-                    let meau = Meaus.init(json: dic)
+            }
+            if idName == WNRecommendKey.menu {
+                if let meau = Mapper<WNRecommendModel.Meaus>().map(JSONString: wn_toJSONString(object: dic)) {
                     data.append(meau)
                 }
-                if idName == WNRecommendKey.weekly {
-                    let weekly = Weeklys.init(json: dic)
+            }
+            if idName == WNRecommendKey.weekly {
+                if let weekly = Mapper<WNRecommendModel.Weeklys>().map(JSONString: wn_toJSONString(object: dic)) {
                     data.append(weekly)
                 }
-                if idName == WNRecommendKey.theme {
-                    let theme = Thems.init(json: dic)
+            }
+            if idName == WNRecommendKey.theme {
+                if let theme = Mapper<WNRecommendModel.Thems>().map(JSONString: wn_toJSONString(object: dic)) {
                     data.append(theme)
                 }
-                if idName == WNRecommendKey.scenic {
-                    let scenic = Scenics.init(json: dic)
+            }
+            if idName == WNRecommendKey.scenic {
+                if let scenic = Mapper<WNRecommendModel.Scenics>().map(JSONString: wn_toJSONString(object: dic)) {
                     data.append(scenic)
                 }
-                if idName == WNRecommendKey.season {
-                    let season = Seasons.init(json: dic)
+            }
+            if idName == WNRecommendKey.season {
+                if let season = Mapper<WNRecommendModel.Seasons>().map(JSONString: wn_toJSONString(object: dic)) {
                     data.append(season)
                 }
-                if idName == WNRecommendKey.miniTour {
-                    let miniTour = MiniTours.init(json: dic)
+            }
+            if idName == WNRecommendKey.miniTour {
+                if let miniTour = Mapper<WNRecommendModel.MiniTours>().map(JSONString: wn_toJSONString(object: dic)) {
                     data.append(miniTour)
                 }
-                if idName == WNRecommendKey.hot {
-                    let hot = Hots.init(json: dic)
+            }
+            if idName == WNRecommendKey.hot {
+                if let hot = Mapper<WNRecommendModel.Hots>().map(JSONString: wn_toJSONString(object: dic)) {
                     data.append(hot)
                 }
             }
-        } else {
-            return
         }
+        version <- map["version"]
     }
     
-    
-    
-    
     ///////// 循环滚动 /////////
-    struct Banners {
+    struct Banners: Mappable {
         var id: String = ""
         var enable: Bool = true
         var data: Array = [Banner]()
-        struct Banner {
+        struct Banner: Mappable {
             var action: String = ""
             var text: String = ""
-            var param: Dictionary = [String: JSON]()
+            var param: Dictionary = [String: Any]()
             var image: String = ""
             var bigImage: String = ""
-            
-            init(json: JSON?) {
-                if let json = json {
-                    action = json["action"].stringValue
-                    text = json["text"].stringValue
-                    param = json["param"].dictionaryValue
-                    bigImage = json["big-image"].stringValue
-                    image = json["image"].stringValue
-                }
+            init?(map: Map) {
+                
+            }
+            mutating func mapping(map: Map) {
+                action    <- map["action"]
+                text      <- map["text"]
+                param     <- map["param"]
+                bigImage  <- map["big-image"]
+                image     <- map["image"]
             }
         }
         
-        
-        init(json: JSON?) {
-            if let json = json {
-                id = json["id"].stringValue
-                enable = json["enable"].boolValue
-                
-                let dataArr = json["data"].arrayValue
-                for dic in dataArr {
-                    let banner = Banner.init(json: dic)
-                    data.append(banner)
-                }
-            }
+        init?(map: Map) { }
+        mutating func mapping(map: Map) {
+            id      <- map["id"]
+            enable  <- map["enable"]
+            data    <- map["data"]
         }
     }
     
     ///////// 菜单按钮 /////////
-    struct Meaus {
+    struct Meaus: Mappable {
         var id: String = ""
         var enable: Bool = true
         var slogan: String = ""
-        var app: Array = [JSON]()
+        var app: Array = [Int]()
         var data: Array = [Meau]()
-        struct Meau {
-            var action: String = ""
-            var text: String = ""
-            var param: Dictionary = [String: JSON]()
-            var image: String = ""
-            
-            init(json: JSON?) {
-                if let json = json {
-                    action = json["action"].stringValue
-                    text = json["text"].stringValue
-                    param = json["param"].dictionaryValue
-                    image = json["image"].stringValue
-                }
-            }
+        init?(map: Map) { }
+        mutating func mapping(map: Map) {
+            id      <- map["id"]
+            enable  <- map["enable"]
+            slogan  <- map["slogan"]
+            app     <- map["app"]
+            data    <- map["data"]
+            var x: [Meau] = []
+            for i in app { x.append(data[i]) }
+            data = x
         }
         
-        
-        init(json: JSON?) {
-            if let json = json {
-                id = json["id"].stringValue
-                enable = json["enable"].boolValue
-                slogan = json["slogan"].stringValue
-                app = json["app"].arrayValue
-                
-                let dataArr = json["data"].arrayValue
-                for i in 0..<dataArr.count {
-                    if app.contains(JSON.init(integerLiteral: i)) {
-                        let dic = dataArr[i]
-                        let banner = Meau.init(json: dic)
-                        data.append(banner)
-                    }
-                }
+        struct Meau: Mappable {
+            var action: String = ""
+            var text: String = ""
+            var param: Dictionary = [String: Any]()
+            var image: String = ""
+            
+            init?(map: Map) { }
+            mutating func mapping(map: Map) {
+                action  <- map["action"]
+                text    <- map["text"]
+                param   <- map["param"]
+                image   <- map["image"]
             }
         }
     }
     
     ///////// 本周特卖 /////////
-    struct Weeklys {
+    struct Weeklys: Mappable {
         var id: String = ""
         var enable: Bool = true
         var title: String = ""
@@ -171,113 +159,89 @@ struct WNRecommendModel {
         var icon: String = ""
         var data: Array = [RecommendTour]()
         
-        init(json: JSON?) {
-            if let json = json {
-                id = json["id"].stringValue
-                enable = json["enable"].boolValue
-                title = json["title"].stringValue
-                subtitle = json["subtitle"].stringValue
-                icon = json["icon"].stringValue
-                
-                let dataArr = json["data"].arrayValue
-                for dic in dataArr {
-                    let banner = RecommendTour.init(json: dic)
-                    data.append(banner)
-                }
-            } else {
-                return
-            }
+        init?(map: Map) { }
+        mutating func mapping(map: Map) {
+            id       <- map["id"]
+            enable   <- map["enable"]
+            title    <- map["title"]
+            subtitle <- map["subtitle"]
+            icon     <- map["icon"]
+            data     <- map["data"]
         }
-        
     }
     
     ///////// 主题玩法 /////////
-    struct Thems {
+    struct Thems: Mappable {
         var id: String = ""
         var enable: Bool = true
         var title: String = ""
         var subtitle: String = ""
         var icon: String = ""
         var data: Array = [Them]()
-        struct Them {
-            var action: String = ""
-            var text: String = ""
-            var param: Dictionary = [String: JSON]()
-            var image: String = ""
-            init(json: JSON?) {
-                if let json = json {
-                    action = json["action"].stringValue
-                    text = json["text"].stringValue
-                    param = json["param"].dictionaryValue
-                    image = json["image"].stringValue
-                } else {
-                    return
-                }
-            }
+        
+        init?(map: Map) { }
+        mutating func mapping(map: Map) {
+            id       <- map["id"]
+            enable   <- map["enable"]
+            title    <- map["title"]
+            subtitle <- map["subtitle"]
+            icon     <- map["icon"]
+            data     <- map["data"]
         }
         
-        init(json: JSON?) {
-            if let json = json {
-                id = json["id"].stringValue
-                enable = json["enable"].boolValue
-                title = json["title"].stringValue
-                subtitle = json["subtitle"].stringValue
-                icon = json["icon"].stringValue
-                
-                let dataArr = json["data"].arrayValue
-                for dic in dataArr {
-                    let them = Them.init(json: dic)
-                    data.append(them)
-                }
+        struct Them: Mappable {
+            var action: String = ""
+            var text: String = ""
+            var param: Dictionary = [String: Any]()
+            var image: String = ""
+            
+            init?(map: Map) { }
+            mutating func mapping(map: Map) {
+                action <- map["action"]
+                text   <- map["text"]
+                param  <- map["param"]
+                image  <- map["image"]
             }
         }
     }
     
     ///////// 必玩景点 /////////
-    struct Scenics {
+    struct Scenics: Mappable {
         var id: String = ""
         var enable: Bool = true
         var title: String = ""
         var subtitle: String = ""
         var icon: String = ""
         var data: Array = [Scenic]()
-        struct Scenic {
-            var action: String = ""
-            var text: String = ""
-            var param: Dictionary = [String: JSON]()
-            var image: String = ""
-            init(json: JSON?) {
-                if let json = json {
-                    action = json["action"].stringValue
-                    text = json["text"].stringValue
-                    param = json["param"].dictionaryValue
-                    image = json["image"].stringValue
-                } else {
-                    return
-                }
-            }
+        
+        init?(map: Map) { }
+        mutating func mapping(map: Map) {
+            id       <- map["id"]
+            enable   <- map["enable"]
+            title    <- map["title"]
+            subtitle <- map["subtitle"]
+            icon     <- map["icon"]
+            data     <- map["data"]
         }
         
-        
-        init(json: JSON?) {
-            if let json = json {
-                id = json["id"].stringValue
-                enable = json["enable"].boolValue
-                title = json["title"].stringValue
-                subtitle = json["subtitle"].stringValue
-                icon = json["icon"].stringValue
-                
-                let dataArr = json["data"].arrayValue
-                for dic in dataArr {
-                    let them = Scenic.init(json: dic)
-                    data.append(them)
-                }
+        struct Scenic: Mappable {
+            var action: String = ""
+            var text: String = ""
+            var param: Dictionary = [String: Any]()
+            var image: String = ""
+            
+            init?(map: Map) { }
+            mutating func mapping(map: Map) {
+                action <- map["action"]
+                text   <- map["text"]
+                param  <- map["param"]
+                image  <- map["image"]
             }
         }
     }
     
     ///////// 当季热推 /////////
-    struct Seasons {
+    struct Seasons: Mappable {
         var id: String = ""
         var enable: Bool = true
         var title: String = ""
@@ -287,38 +251,32 @@ struct WNRecommendModel {
         var image: String = ""
         var action: String = ""
         var text: String = ""
-        var param: Dictionary = [String: JSON]()
+        var param: Dictionary = [String: Any]()
+        var data: Array = [RecommendTour]()
         var isHaveCover: Bool {
             get {
                 return !(self.image.isEmpty || self.image == "")
             }
         }
-        var data: Array = [RecommendTour]()
         
-        init(json: JSON?) {
-            if let json = json {
-                id = json["id"].stringValue
-                enable = json["enable"].boolValue
-                title = json["title"].stringValue
-                subtitle = json["subtitle"].stringValue
-                icon = json["icon"].stringValue
-                description = json["description"].stringValue
-                image = json["image"].stringValue
-                action = json["action"].stringValue
-                text = json["text"].stringValue
-                param = json["param"].dictionaryValue
-                
-                let dataArr = json["data"].arrayValue
-                for dic in dataArr {
-                    let tour = RecommendTour.init(json: dic)
-                    data.append(tour)
-                }
-            }
+        init?(map: Map) { }
+        mutating func mapping(map: Map) {
+            id          <- map["id"]
+            enable      <- map["enable"]
+            title       <- map["title"]
+            subtitle    <- map["subtitle"]
+            icon        <- map["icon"]
+            description <- map["description"]
+            image       <- map["image"]
+            action      <- map["action"]
+            text        <- map["text"]
+            param       <- map["param"]
+            data        <- map["data"]
         }
     }
     
     ///////// 舒适小团 /////////
-    struct MiniTours {
+    struct MiniTours: Mappable {
         var id: String = ""
         var enable: Bool = true
         var title: String = ""
@@ -326,25 +284,19 @@ struct WNRecommendModel {
         var icon: String = ""
         var data: Array = [RecommendTour]()
         
-        init(json: JSON?) {
-            if let json = json {
-                id = json["id"].stringValue
-                enable = json["enable"].boolValue
-                title = json["title"].stringValue
-                subtitle = json["subtitle"].stringValue
-                icon = json["icon"].stringValue
-                
-                let dataArr = json["data"].arrayValue
-                for dic in dataArr {
-                    let tour = RecommendTour.init(json: dic)
-                    data.append(tour)
-                }
-            }
+        init?(map: Map) { }
+        mutating func mapping(map: Map) {
+            id       <- map["id"]
+            enable   <- map["enable"]
+            title    <- map["title"]
+            subtitle <- map["subtitle"]
+            icon     <- map["icon"]
+            data     <- map["data"]
         }
     }
     
     ///////// 爆款热销 /////////
-    struct Hots {
+    struct Hots: Mappable {
         var id: String = ""
         var enable: Bool = true
         var title: String = ""
@@ -352,20 +304,19 @@ struct WNRecommendModel {
         var icon: String = ""
         var data: Array = [RecommendTour]()
         
-        init(json: JSON?) {
-            if let json = json {
-                id = json["id"].stringValue
-                enable = json["enable"].boolValue
-                title = json["title"].stringValue
-                subtitle = json["subtitle"].stringValue
-                icon = json["icon"].stringValue
-            }
+        init?(map: Map) { }
+        mutating func mapping(map: Map) {
+            id       <- map["id"]
+            enable   <- map["enable"]
+            title    <- map["title"]
+            subtitle <- map["subtitle"]
+            icon     <- map["icon"]
+            data     <- map["data"]
         }
-
     }
     
-    ///////// 共通 团模型 /////////
-    struct RecommendTour {
+    ///////// 共通 团模型 /////////
+    struct RecommendTour: Mappable {
         var id: Int = 0
         var mainPic: String = ""
         var departure: String = ""
@@ -378,24 +329,21 @@ struct WNRecommendModel {
         var discountEnd: String = ""
         var currentPrice: Int = 0
         var url: String = ""
-        init(json: JSON?) {
-            if let json = json {
-                id = json["tour_id"].intValue
-                mainPic = json["tour_main_picture"].stringValue
-                departure = json["tour_departure_en_cn"].stringValue
-                displayPrice = json["tour_display_price"].doubleValue
-                isActivity = json["tour_activity"].boolValue
-                title = json["tour_title"].stringValue
-                titleApp = json["tour_title_app"].stringValue
-                discountPercentNow = json["tour_discount_percent_now"].intValue
-                isDiscountNow = json["is_discount_now"].boolValue
-                discountEnd = json["tour_discount_end"].stringValue
-                currentPrice = json["current_price"].intValue
-                url = json[""].stringValue
-            } else {
-                return
-            }
-            
+        
+        init?(map: Map) { }
+        mutating func mapping(map: Map) {
+            id                  <- map["tour_id"]
+            mainPic             <- map["tour_main_picture"]
+            departure           <- map["tour_departure_en_cn"]
+            displayPrice        <- map["tour_display_price"]
+            isActivity          <- map["tour_activity"]
+            title               <- map["tour_title"]
+            titleApp            <- map["tour_title_app"]
+            discountPercentNow  <- map["tour_discount_percent_now"]
+            isDiscountNow       <- map["is_discount_now"]
+            discountEnd         <- map["tour_discount_end"]
+            currentPrice        <- map["current_price"]
+            url                 <- map["tour_url"]
         }
     }
 }
@@ -406,14 +354,11 @@ class WNRecommendAPI: WNHttpClient {
     class func fetch(success: ((WNRecommendModel) -> Void)?) -> Void {
         
         let param = ["ver" : ""]
-        self.post(subURL: WNConfig.Path.recommend, param: param, handle: { (data) -> JSON? in
-            if !(data is JSON) {
-                return nil
-            }
-            return data as? JSON
-        }, success: { (data) in
-            let model = WNRecommendModel.init(response: data)
-            if let success = success {
+
+        self.post(subURL: WNConfig.Path.recommend, param: param, success: { (data) in
+            let model = Mapper<WNRecommendModel>().map(JSONString: data)
+            if let model = model,
+               let success = success {
                 success(model)
             }
         }, fail: { (error) in

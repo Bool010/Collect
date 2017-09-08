@@ -107,7 +107,7 @@ class WNAboutusBoard: UIViewController {
         // slogan
         let slogan = SpringLabel.init()
         slogan.text = "最有趣的欧美自由行"
-        slogan.font = UIFont.init(name: WNConfig.FontName.kaitiBold, size: 18)
+        slogan.font = UIFont.init(name: WNConfig.FontName.normal, size: 18)
         slogan.textColor = .themColor
         topView.addSubview(slogan)
         slogan.snp.makeConstraints { (make) in

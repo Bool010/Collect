@@ -17,11 +17,18 @@ public enum WNButtonImagePosition {
 
 class WNButton: UIView {
     
-    var click: ((_ btn: UIButton) -> Void)?
+    var click: (() -> Void)?
     var titleLabel: UILabel!
     var imageView: UIImageView!
     var imageSize: CGSize = CGSize.init(width: 30.0, height: 30.0)
-    var space = 0.0
+    var space = 5.0
+    fileprivate var tap: UITapGestureRecognizer!
+    var isEnable: Bool = true {
+        didSet {
+            tap.isEnabled = isEnable
+        }
+    }
+
     var position: WNButtonImagePosition {
         get {
             return pos
@@ -79,13 +86,20 @@ class WNButton: UIView {
         self.imageView = UIImageView.init()
         self.containerView.addSubview(imageView)
         
-        self.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(buttonClick(btn:))))
+        tap = UITapGestureRecognizer.init(target: self, action: #selector(buttonClick(tap:)))
+        self.addGestureRecognizer(tap)
     }
 
-    @objc fileprivate func buttonClick(btn: UIButton) -> Void {
+    @objc fileprivate func buttonClick(tap: UITapGestureRecognizer) -> Void {
+        
         if let click = click {
-            click(btn)
+            click()
         }
+        tap.isEnabled = false
+        DispatchQueue.delay(2.5) { 
+            tap.isEnabled = true
+        }
+        print("------")
     }
     
     fileprivate func setTop() -> Void {
@@ -98,7 +112,7 @@ class WNButton: UIView {
                 make.centerX.equalToSuperview()
                 make.top.equalToSuperview().offset(0.0)
                 make.size.equalTo(strongSelf.imageSize)
-                make.bottom.equalTo(strongSelf.titleLabel.snp.top).offset(strongSelf.space)
+                make.bottom.equalTo(strongSelf.titleLabel.snp.top).offset(-strongSelf.space)
             }
         }
     }

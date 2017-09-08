@@ -47,7 +47,7 @@ class WNRecommendThemCCell: UICollectionViewCell {
         
         /// Title Label
         self.title = UILabel.init(color: UIColor.white,
-                                  fontName: WNConfig.FontName.kaitiBlack,
+                                  fontName: WNConfig.FontName.normal,
                                   size: 20,
                                   textAlignment: .center)
         self.contentView.addSubview(self.title)

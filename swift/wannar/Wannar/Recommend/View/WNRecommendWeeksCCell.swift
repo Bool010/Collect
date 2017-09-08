@@ -110,7 +110,7 @@ class WNRecommendWeekCCell: UICollectionViewCell {
         }
         
         self.titleLabel = UILabel.init(color: UIColor.white,
-                                       fontName: WNConfig.FontName.kaitiRegular,
+                                       fontName: WNConfig.FontName.normal,
                                        size: 13,
                                        textAlignment: .left)
         self.titleLabel.numberOfLines = 2
@@ -124,7 +124,7 @@ class WNRecommendWeekCCell: UICollectionViewCell {
         
         /// Discount
         self.discountLabel = UILabel.init(color: .textColor,
-                                          fontName: WNConfig.FontName.kaitiBlack,
+                                          fontName: WNConfig.FontName.normal,
                                           size: 17,
                                           textAlignment: .left)
         containerView.addSubview(self.discountLabel)
@@ -138,7 +138,7 @@ class WNRecommendWeekCCell: UICollectionViewCell {
         
         /// City
         self.cityLabel = UILabel.init(color: .textColor,
-                                      fontName: WNConfig.FontName.kaitiRegular,
+                                      fontName: WNConfig.FontName.normal,
                                       size: 10,
                                       textAlignment: .left)
         containerView.addSubview(self.cityLabel)
@@ -151,7 +151,7 @@ class WNRecommendWeekCCell: UICollectionViewCell {
         
         /// End Date
         self.endDateLabel = UILabel.init(color: .textColor,
-                                         fontName: WNConfig.FontName.kaitiRegular,
+                                         fontName: WNConfig.FontName.normal,
                                          size: 10,
                                          textAlignment: .left)
         containerView.addSubview(self.endDateLabel)
@@ -164,7 +164,7 @@ class WNRecommendWeekCCell: UICollectionViewCell {
         
         /// Price
         self.priceLabel = UILabel.init(color: .themColor,
-                                       fontName: WNConfig.FontName.kaitiBold,
+                                       fontName: WNConfig.FontName.normal,
                                        size: 16,
                                        textAlignment: .left)
         containerView.addSubview(self.priceLabel)

@@ -76,7 +76,7 @@ class WNMeHeaderView: UIView {
         }
         
         /// User Name
-        let userNameLabel = UILabel.init(color: .white, fontName: WNConfig.FontName.kaitiBlack, size: 16, textAlignment: .left)
+        let userNameLabel = UILabel.init(color: .white, fontName: WNConfig.FontName.normal, size: 16, textAlignment: .left)
         containerView.addSubview(userNameLabel)
         userNameLabel.snp.makeConstraints { (make) in
             make.left.right.top.equalToSuperview().offset(0.0)
@@ -84,7 +84,7 @@ class WNMeHeaderView: UIView {
         self.userNameLabel = userNameLabel
         
         /// Credit
-        let creditLabel = UILabel.init(color: .white, fontName: WNConfig.FontName.kaitiRegular, size: 13, textAlignment: .left)
+        let creditLabel = UILabel.init(color: .white, fontName: WNConfig.FontName.normal, size: 13, textAlignment: .left)
         containerView.addSubview(creditLabel)
         creditLabel.snp.makeConstraints { (make) in
             make.left.right.equalToSuperview().offset(0.0)
@@ -93,7 +93,7 @@ class WNMeHeaderView: UIView {
         self.creditLabel = creditLabel
         
         /// Account
-        let accountLabel = UILabel.init(color: .white, fontName: WNConfig.FontName.kaitiRegular, size: 13, textAlignment: .left)
+        let accountLabel = UILabel.init(color: .white, fontName: WNConfig.FontName.normal, size: 13, textAlignment: .left)
         containerView.addSubview(accountLabel)
         accountLabel.snp.makeConstraints { (make) in
             make.left.right.bottom.equalToSuperview().offset(0.0)

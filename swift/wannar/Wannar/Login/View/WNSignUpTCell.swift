@@ -113,7 +113,7 @@ class WNSignUpTCell: UITableViewCell {
         /// Sign Up Button
         let signUpBtn = UIButton.init()
         signUpBtn.setTitle("注册", for: .normal)
-        signUpBtn.titleLabel?.set(color: UIColor.white, fontName: WNConfig.FontName.kaitiRegular, size: 17, textAlignment: .center)
+        signUpBtn.titleLabel?.set(color: UIColor.white, fontName: WNConfig.FontName.normal, size: 17, textAlignment: .center)
         signUpBtn.backgroundColor = .themColor
         signUpBtn.layer.cornerRadius = 5.0
         self.contentView.addSubview(signUpBtn)
@@ -141,8 +141,8 @@ class WNSignUpTCell: UITableViewCell {
     
     fileprivate func set(textField: HoshiTextField, placeholder: String) -> Void {
         
-        textField.set(fontName: WNConfig.FontName.kaitiBlack, size: 17)
-        textField.placeholderLabel.set(color: .white, fontName: WNConfig.FontName.kaitiRegular, size: 13, textAlignment: .left)
+        textField.set(fontName: WNConfig.FontName.normal, size: 17)
+        textField.placeholderLabel.set(color: .white, fontName: WNConfig.FontName.normal, size: 13, textAlignment: .left)
         textField.placeholderColor = .white
         textField.textColor = .white
         textField.placeholderFontScale = 0.8

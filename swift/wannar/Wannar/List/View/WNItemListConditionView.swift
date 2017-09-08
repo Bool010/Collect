@@ -10,7 +10,7 @@ import UIKit
 
 class WNItemListConditionView: UIView {
 
-    var click: ((_ btn: UIButton, _ event: String) -> Void)?
+    var click: ((_ event: String) -> Void)?
     private var data: Array<Array<String>> = [["筛选".ItemList, "", "filter"],
                                               ["排序".ItemList, "", "sort"]]
     private var btns: Array<WNButton> = []
@@ -57,8 +57,16 @@ class WNItemListConditionView: UIView {
             btn.click = { [weak self] (btn) in
                 guard let _self = self else { return }
                 if let click = _self.click {
-                    click(btn, x[2])
+                    click(x[2])
                 }
+                for btn in _self.btns {
+                    btn.isEnable = false
+                }
+                DispatchQueue.delay(2.5, task: { 
+                    for btn in _self.btns {
+                        btn.isEnable = true
+                    }
+                })
             }
             if i != 0 {
                 let line = UIView.init()

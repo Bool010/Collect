@@ -41,7 +41,7 @@ class WNPhoneView: UIView {
         self.layer.cornerRadius = 8.0
         
         /// Title
-        let title = UILabel.init(color: .textColor, fontName: WNConfig.FontName.kaitiBlack, size: 25.0, textAlignment: .center)
+        let title = UILabel.init(color: .textColor, fontName: WNConfig.FontName.normal, size: 25.0, textAlignment: .center)
         title.text = "需要帮助？"
         self.addSubview(title)
         title.snp.makeConstraints { (make) in
@@ -55,7 +55,7 @@ class WNPhoneView: UIView {
         for i in 0 ..< self.model.count {
             
             // Text Label
-            let textLabel = UILabel.init(color: .textColor, fontName: WNConfig.FontName.kaitiRegular, size: 20.0, textAlignment: .left)
+            let textLabel = UILabel.init(color: .textColor, fontName: WNConfig.FontName.normal, size: 20.0, textAlignment: .left)
             self.addSubview(textLabel)
             textLabel.text = self.model[i][0] + ": " + self.model[i][1]
             textLabel.snp.makeConstraints({ (make) in

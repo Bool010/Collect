@@ -25,7 +25,7 @@ class WNAboutusCCell: FSPagerViewCell {
     
     fileprivate func buildUI() -> Void {
         
-        let title = UILabel.init(color: .textColor, fontName: WNConfig.FontName.kaitiBlack, size: 20, textAlignment: .center)
+        let title = UILabel.init(color: .textColor, fontName: WNConfig.FontName.normal, size: 20, textAlignment: .center)
         self.contentView.addSubview(title)
         title.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
@@ -33,7 +33,7 @@ class WNAboutusCCell: FSPagerViewCell {
         }
         self.titleLabel = title
         
-        let content = UILabel.init(color: .textColor, fontName: WNConfig.FontName.kaitiRegular, size: 13.0, textAlignment: .left)
+        let content = UILabel.init(color: .textColor, fontName: WNConfig.FontName.normal, size: 13.0, textAlignment: .left)
         content.numberOfLines = 0
         self.contentView.addSubview(content)
         content.snp.makeConstraints { (make) in

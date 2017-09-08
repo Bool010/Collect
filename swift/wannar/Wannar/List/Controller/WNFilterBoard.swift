@@ -13,6 +13,7 @@ class WNFilterBoard: UIViewController {
     var toursModel: WNToursModel?
     var model: WNFilterModel!
     var confimClick: ((_ model: WNFilterModel)->Void)?
+    var isDeinit: (()->Void)?
     fileprivate var keyTableView: UITableView!
     fileprivate var valueTabelView: UITableView!
     fileprivate var selectIndex = 0
@@ -31,6 +32,9 @@ class WNFilterBoard: UIViewController {
     }
     
     deinit {
+        if (self.isDeinit != nil) {
+            self.isDeinit!()
+        }
         wn_deinitMessage("筛选页面")
     }
 }

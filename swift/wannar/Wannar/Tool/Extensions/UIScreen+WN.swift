@@ -9,32 +9,30 @@
 import Foundation
 import UIKit
 
-enum WNScreenSize: String {
-    
-    case _3_5 = "{320.0, 480.0}"
-    case _4_0 = "{320.0, 568.0}"
-    case _4_7 = "{375.0, 667.0}"
-    case _5_5 = "{414.0, 736.0}"
-    case unknown = ""
-}
+
 
 extension UIScreen {
 
-    class func currentForm() -> WNScreenSize {
-        
-        let aWidth = UIScreen.width
-        let aHeight = UIScreen.height
-        
-        if aWidth == 320 && aHeight == 480 {
-            return ._3_5
-        } else if aWidth == 320 && aHeight == 568 {
-            return ._4_0
-        } else if aWidth == 375 && aHeight == 667 {
-            return ._4_7
-        } else if aWidth == 414 && aHeight == 736 {
-            return ._5_5
-        } else {
-            return .unknown
+    public enum WNScreenForm: String {
+        case s3_5 = "{320.0, 480.0}"
+        case s4_0 = "{320.0, 568.0}"
+        case s4_7 = "{375.0, 667.0}"
+        case s5_5 = "{414.0, 736.0}"
+        case unknown = ""
+    }
+    
+    open class var form: WNScreenForm {
+        get {
+            let w = UIScreen.width
+            let h = UIScreen.height
+            
+            switch (w, h) {
+            case (320, 480): return .s3_5
+            case (320, 568): return .s4_0
+            case (375, 667): return .s4_7
+            case (414, 736): return .s5_5
+            default: return .unknown
+            }
         }
     }
     

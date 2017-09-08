@@ -120,7 +120,7 @@ extension WNItemListBoard {
             make.height.equalTo(40.0)
             make.top.equalTo(navView.snp.bottom).offset(0.0)
         }
-        condition.click = { [weak self] (btn, event) in
+        condition.click = { [weak self] event in
             guard let _self = self else { return }
             
             // City
@@ -148,6 +148,9 @@ extension WNItemListBoard {
                     __self.fetchData(isResetFilter: false,
                                      query: model.queryString(),
                                      inceptionQuery: __self.inceptionQuery)
+                }
+                board.isDeinit = {
+                    print("=========== ||||| ===========")
                 }
                 _self.present(board, animated: true, completion: nil)
             }

@@ -12,6 +12,9 @@ target 'Wannar' do
     pod 'RxSwift',    '~> 3.0'
     pod 'RxCocoa',    '~> 3.0'
     
+    # 模型转换框架
+    pod 'ObjectMapper', '~> 2.2'
+    
     # 很炫酷的转场动画效果,视图碎片化掉落
     pod 'StarWars', '~> 2.0'
     

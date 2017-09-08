@@ -24,9 +24,6 @@ class WNRecommendBoard: WNBaseBoard {
         super.viewDidLoad()
         self.buildUI()
         self.fetchData()
-        let x = "大风起兮云飞扬" >>> "大风气息云飞扬"
-        let y = "大风起兮云飞扬" >>? "大风气息云飞扬"
-        print(x)
     }
     
     override func viewWillAppear(_ animated: Bool) {

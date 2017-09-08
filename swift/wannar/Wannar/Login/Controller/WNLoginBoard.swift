@@ -91,11 +91,10 @@ extension WNLoginBoard: UITableViewDelegate, UITableViewDataSource {
             let cell = WNLoginEmailTCell.cellWith(tableView: tableView)
             
             /// 注册点击
-            cell.signUpClick = { [weak self] (btn) in
-                if let strongSelf = self {
-                    let board = WNSignUpBoard.init()
-                    strongSelf.navigationController?.pushViewController(board, animated: true)
-                }
+            cell.signupBtn.addControlEvent(.touchUpInside) { [weak self] (btn) in
+                guard let strongSelf = self else { return }
+                let board = WNSignUpBoard.init()
+                strongSelf.navigationController?.pushViewController(board, animated: true)
             }
             
             /// 登录点击
@@ -149,6 +148,7 @@ extension WNLoginBoard: UITableViewDelegate, UITableViewDataSource {
             return cell
         } else {
             let cell = WNLoginPlatformTCell.cellWith(tableView: tableView)
+            cell.backgroundColor = UIColor.red
             return cell
         }
     }
@@ -156,9 +156,9 @@ extension WNLoginBoard: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         if indexPath.row == 0 {
-            return UIScreen.height.cgFloat / 7.0 * 5.0
+            return UIScreen.height.cgFloat / 7.0 * 5.5
         } else {
-            return UIScreen.height.cgFloat / 7.0 * 2.0
+            return UIScreen.height.cgFloat / 7.0 * 1.5
         }
         
     }

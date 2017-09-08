@@ -14,8 +14,9 @@ class WNLoginEmailTCell: UITableViewCell {
     var account: HoshiTextField!
     var password: HoshiTextField!
     var loginBtn: UIButton!
+    var signupBtn: UIButton!
     var activity: UIActivityIndicatorView!
-    public var signUpClick: (() -> Void)?
+    
     private var isShowPassword = false
     
     class func cellWith(tableView: UITableView) -> WNLoginEmailTCell {
@@ -100,7 +101,7 @@ class WNLoginEmailTCell: UITableViewCell {
         /// Login Btn
         let loginBtn = UIButton.init()
         loginBtn.setTitle("登录", for: .normal)
-        loginBtn.titleLabel?.set(color: UIColor.white, fontName: WNConfig.FontName.kaitiRegular, size: 17, textAlignment: .center)
+        loginBtn.titleLabel?.set(color: UIColor.white, fontName: WNConfig.FontName.normal, size: 17, textAlignment: .center)
         loginBtn.backgroundColor = .themColor
         loginBtn.layer.cornerRadius = 5.0
         self.contentView.addSubview(loginBtn)
@@ -125,25 +126,19 @@ class WNLoginEmailTCell: UITableViewCell {
         
         /// Sign Up
         let signUp = UIButton.init(title: "尚无账号？去注册 >", fontSize: 15, color: .white)
-        signUp.addControlEvent(.touchUpInside) { [weak self] (btn) in
-            if let strongSelf = self {
-                if let click = strongSelf.signUpClick {
-                    click()
-                }
-            }
-        }
-        UIFont.set(fontName: WNConfig.FontName.kaitiRegular, control: signUp, size: 15)
+        UIFont.set(fontName: WNConfig.FontName.normal, control: signUp, size: 15)
         self.contentView.addSubview(signUp)
         signUp.snp.makeConstraints { (make) in
             make.right.equalToSuperview().offset(-15.0)
-            make.top.equalTo(loginBtn.snp.bottom).offset(15.0)
+            make.top.equalTo(loginBtn.snp.bottom).offset(-15.0)
             make.height.equalTo(30.0)
         }
+        self.signupBtn = signUp
     }
     
     fileprivate func set(textField: HoshiTextField, placeholder: String) -> Void {
-        textField.set(fontName: WNConfig.FontName.kaitiBlack, size: 17)
-        textField.placeholderLabel.set(color: .white, fontName: WNConfig.FontName.kaitiRegular, size: 13, textAlignment: .left)
+        textField.set(fontName: WNConfig.FontName.normal, size: 17)
+        textField.placeholderLabel.set(color: .white, fontName: WNConfig.FontName.normal, size: 13, textAlignment: .left)
         textField.placeholderColor = .white
         textField.textColor = .white
         textField.placeholderFontScale = 0.8

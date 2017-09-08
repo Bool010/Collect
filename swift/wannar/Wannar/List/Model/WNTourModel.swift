@@ -17,7 +17,8 @@ struct WNToursModel {
     var facetExtend: WNTourFacetExtend?
     var facetDetail: WNTourFacetDetail?
     
-    init(json: JSON) {
+    init(json: String) {
+        let json = JSON.parse(json)
         if let data = json["data"].array {
             for json in data {
                 self.dataArr.append(WNTourModel.init(json: json))

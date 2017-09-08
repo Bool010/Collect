@@ -61,7 +61,7 @@ class WNLoginPlatformTCell: UITableViewCell {
             btn.imageView.image = UIImage.init(named: images[i])
             btn.titleLabel.text = titles[i]
             btn.titleLabel.set(color: .white,
-                               fontName: WNConfig.FontName.kaitiBold,
+                               fontName: WNConfig.FontName.normal,
                                size: 15.0,
                                textAlignment: .center)
             self.contentView.addSubview(btn)

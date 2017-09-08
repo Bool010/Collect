@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SwiftyJSON
+import ObjectMapper
 
 class WNUserAPI: WNHttpClient {
     
@@ -68,13 +68,9 @@ class WNUserAPI: WNHttpClient {
             param["head"] = head
         }
         
-        self.post(subURL: WNConfig.Path.register, param: param, handle: { (data) -> JSON? in
-            if !(data is JSON) {
-                return nil
-            }
-            return data as? JSON
-        }, success: { (json) in
-            guard let json = json else {
+        self.post(subURL: WNConfig.Path.register, param: param, success: { (json) in
+            
+            guard let dic = json.dictionary else {
                 if let fail = fail {
                     fail(WNUserAPI.getRegisterMessage(status: -1))
                     return
@@ -82,7 +78,7 @@ class WNUserAPI: WNHttpClient {
                 return
             }
             
-            let msg: Int = json["msg"].intValue
+            let msg: Int = dic["msg"] as! Int
             let message: String = WNUserAPI.getRegisterMessage(status: msg)
             if msg == 10000 {
                 if let success = success {
@@ -131,49 +127,42 @@ class WNUserAPI: WNHttpClient {
         let param = ["email": emailValue,
                      "password": passwordValue]
         
-        self.post(subURL: WNConfig.Path.signIn, param: param, handle: { (data) -> JSON? in
-            
-            if !(data is JSON) {
-                return nil
-            }
-            return data as? JSON
-            
-        }, success: { (json) in
-            
-            guard let json = json else {
-                if let fail = fail {
-                    fail("登录失败")
-                    return
-                }
-                return
-            }
-            
-            let msg: Int = json["msg"].intValue
-            let message: String = WNUserAPI.getLoginMessage(status: msg)
-            if msg == 10000 {
-                
-                // 成功之后构建模型,并且向沙盒中存储
-                let userModel = WNUserModel.init(response: json)
-                WNUserModel.writeToSandBox(dictionary: json.dictionaryObject)
-                
-                if let success = success {
-                    success(message, userModel)
-                }
-            } else {
-                if let fail = fail {
-                    fail(WNUserAPI.getLoginMessage(status: -1))
-                }
-            }
-            
-        }, fail: { (error) in
-            if let fail = fail {
-                fail(WNUserAPI.getLoginMessage(status: -1))
-            }
-        }) { () in
-            if let finish = finish {
-                finish()
-            }
-        }
+//        self.post(subURL: WNConfig.Path.signIn, param: param, success: { (json) in
+//            
+//            guard let json = json else {
+//                if let fail = fail {
+//                    fail("登录失败")
+//                    return
+//                }
+//                return
+//            }
+//            
+//            let msg: Int = json["msg"].intValue
+//            let message: String = WNUserAPI.getLoginMessage(status: msg)
+//            if msg == 10000 {
+//                
+//                // 成功之后构建模型,并且向沙盒中存储
+//                let userModel = WNUserModel.init(response: json)
+//                WNUserModel.writeToSandBox(dictionary: json.dictionaryObject)
+//                
+//                if let success = success {
+//                    success(message, userModel)
+//                }
+//            } else {
+//                if let fail = fail {
+//                    fail(WNUserAPI.getLoginMessage(status: -1))
+//                }
+//            }
+//            
+//        }, fail: { (error) in
+//            if let fail = fail {
+//                fail(WNUserAPI.getLoginMessage(status: -1))
+//            }
+//        }) { () in
+//            if let finish = finish {
+//                finish()
+//            }
+//        }
         
     }
 }

@@ -18,7 +18,6 @@ class WNDestinationBoard: WNBaseBoard {
         
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.yellow
-        WNDepartureAPI.select()
     }
     
     override func didReceiveMemoryWarning() {

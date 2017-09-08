@@ -41,7 +41,7 @@ class WNFilterTCell: UITableViewCell {
     
     fileprivate func buildUI() -> Void {
         
-        let titleLabel = UILabel.init(color: .textColor, fontName: WNConfig.FontName.kaitiRegular, size: 14.0, textAlignment: .left)
+        let titleLabel = UILabel.init(color: .textColor, fontName: WNConfig.FontName.normal, size: 14.0, textAlignment: .left)
         titleLabel.numberOfLines = 0
         self.contentView.addSubview(titleLabel)
         titleLabel.snp.makeConstraints { (make) in

@@ -12,6 +12,28 @@ import CoreText
 
 extension UIFont {
     
+    struct Style {
+        static var h1: UIFont { get { return .boldSystemFont(ofSize: 22.0) } }
+        static var h2: UIFont { get { return .boldSystemFont(ofSize: 20.0) } }
+        static var h3: UIFont { get { return .boldSystemFont(ofSize: 18.0) } }
+        static var h4: UIFont { get { return .boldSystemFont(ofSize: 16.0) } }
+        static var h5: UIFont { get { return .boldSystemFont(ofSize: 14.0) } }
+        static var h6: UIFont { get { return .boldSystemFont(ofSize: 12.0) } }
+        
+        static var p1: UIFont { get { return .systemFont(ofSize: 22.0) } }
+        static var p2: UIFont { get { return .systemFont(ofSize: 20.0) } }
+        static var p3: UIFont { get { return .systemFont(ofSize: 18.0) } }
+        static var p4: UIFont { get { return .systemFont(ofSize: 16.0) } }
+        static var p5: UIFont { get { return .systemFont(ofSize: 14.0) } }
+        static var p6: UIFont { get { return .systemFont(ofSize: 12.0) } }
+        static var p7: UIFont { get { return .systemFont(ofSize: 10.0) } }
+        static var p8: UIFont { get { return .systemFont(ofSize: 8.0)  } }
+    }
+}
+
+
+extension UIFont {
+    
     class func creatFontDescriptor(fontName: String) -> NSMutableArray {
         
         let attrs = NSMutableDictionary.init(dictionary: [kCTFontNameAttribute : fontName])

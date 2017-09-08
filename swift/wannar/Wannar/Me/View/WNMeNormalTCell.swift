@@ -51,7 +51,7 @@ class WNMeNormalTCell: UITableViewCell {
 
         /// Title Label
         let titleLabel = UILabel.init(color: .textColor,
-                                      fontName: WNConfig.FontName.kaitiRegular,
+                                      fontName: WNConfig.FontName.normal,
                                       size: 15.0,
                                       textAlignment: .left)
         self.contentView.addSubview(titleLabel)

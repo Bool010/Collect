@@ -45,7 +45,7 @@ class WNRecommendHeaderView: UICollectionReusableView {
         
         /// Title
         let title = UILabel.init(color: .textColor,
-                                 fontName: WNConfig.FontName.kaitiBlack,
+                                 fontName: WNConfig.FontName.normal,
                                  size: 18,
                                  textAlignment: .left)
         containerView.addSubview(title)
@@ -57,7 +57,7 @@ class WNRecommendHeaderView: UICollectionReusableView {
         
         /// Subtitle
         let subtitle = UILabel.init(color: .textColor,
-                                 fontName: WNConfig.FontName.kaitiRegular,
+                                 fontName: WNConfig.FontName.normal,
                                  size: 11,
                                  textAlignment: .left)
         containerView.addSubview(subtitle)

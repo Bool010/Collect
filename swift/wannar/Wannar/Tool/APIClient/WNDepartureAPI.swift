@@ -16,31 +16,23 @@ class WNDepartureAPI: WNHttpClient {
                       fail: (()-> Void)? = nil,
                       finish:(()-> Void)? = nil) {
         
-        let param: Dictionary<String, Any> = ["key" : RNCryptor.encrypt(UIDevice.uuid ?? "",
-                                                                        password: "5.01")]
+        let param: Dictionary<String, Any> = ["key" : RNCryptor.encrypt(UIDevice.uuid ?? "", password: "5.01")]
         
-        self.post(subURL: WNConfig.Path.departure, param: param, handle: { (data) -> JSON? in
-            if !(data is JSON) {
-                return nil
-            }
-            return data as? JSON
-        }, success: { (json) in
-            if let json = json {
-                let str = json["data"].stringValue
-                let data = RNCryptor.decrypt(str, password: UIDevice.uuid ?? "")
-                guard let a = data else { return }
-                do {
-                    let dic = try JSONSerialization.jsonObject(with: a, options: .mutableLeaves)
-                    let data: Array<Dictionary<String, Any>> = (dic as! Dictionary<String, Any>)["data"] as! Array<Dictionary<String, Any>>
-                    let result = WNCityGroupModel.init(array: data)
-                    if let success = success {
-                        success(result)
-                    }
-                } catch {
-                    print(error)
+        self.post(subURL: WNConfig.Path.departure, param: param, success: { (json) in
+            let json = JSON.parse(json)
+            let str = json["data"].stringValue
+            let data = RNCryptor.decrypt(str, password: UIDevice.uuid ?? "")
+            guard let a = data else { return }
+            do {
+                let dic = try JSONSerialization.jsonObject(with: a, options: .mutableLeaves)
+                let data: Array<Dictionary<String, Any>> = (dic as! Dictionary<String, Any>)["data"] as! Array<Dictionary<String, Any>>
+                let result = WNCityGroupModel.init(array: data)
+                if let success = success {
+                    success(result)
                 }
+            } catch {
+                print(error)
             }
-            
         }, fail: { (error) in
             if let fail = fail {
                 fail()

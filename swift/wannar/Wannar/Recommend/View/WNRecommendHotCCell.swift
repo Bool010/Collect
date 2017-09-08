@@ -93,7 +93,7 @@ class WNRecommendHotCCell: UICollectionViewCell {
         
         /// Departure
         self.departure = UILabel.init(color: .textColor,
-                                      fontName: WNConfig.FontName.kaitiRegular,
+                                      fontName: WNConfig.FontName.normal,
                                       size: 10,
                                       textAlignment: .left)
         self.contentView.addSubview(self.departure)
@@ -106,7 +106,7 @@ class WNRecommendHotCCell: UICollectionViewCell {
         
         /// Title Label 
         self.title = UILabel.init(color: .textColor,
-                                  fontName: WNConfig.FontName.kaitiRegular,
+                                  fontName: WNConfig.FontName.normal,
                                   size: 13,
                                   textAlignment: .left)
         self.contentView.addSubview(self.title)
@@ -119,7 +119,7 @@ class WNRecommendHotCCell: UICollectionViewCell {
         
         /// Discount
         self.discount = UILabel.init(color: .textColor,
-                                     fontName: WNConfig.FontName.kaitiBold,
+                                     fontName: WNConfig.FontName.normal,
                                      size: 13,
                                      textAlignment: .center)
         self.discount.backgroundColor = .themColor
@@ -135,7 +135,7 @@ class WNRecommendHotCCell: UICollectionViewCell {
         
         /// Price
         self.price = UILabel.init(color: .themColor,
-                                  fontName: WNConfig.FontName.kaitiBold,
+                                  fontName: WNConfig.FontName.normal,
                                   size: 15,
                                   textAlignment: .left)
         self.contentView.addSubview(self.price)

@@ -82,7 +82,7 @@ class WNItemListTCell: UITableViewCell {
         
         
         /// Title
-        let title = UILabel.init(color: .textColor, fontName: WNConfig.FontName.kaitiRegular, size: 13.0, textAlignment: .left)
+        let title = UILabel.init(color: .textColor, fontName: WNConfig.FontName.normal, size: 13.0, textAlignment: .left)
         title.numberOfLines = 2
         self.contentView.addSubview(title)
         title.snp.makeConstraints { (make) in
@@ -94,7 +94,7 @@ class WNItemListTCell: UITableViewCell {
         
         
         /// Discount
-        let discount = UILabel.init(color: .white, fontName: WNConfig.FontName.kaitiBlack, size: 16.0, textAlignment: .center)
+        let discount = UILabel.init(color: .white, fontName: WNConfig.FontName.normal, size: 16.0, textAlignment: .center)
         discount.backgroundColor = .themColor
         discount.layer.cornerRadius = 3.0
         discount.layer.shouldRasterize = true
@@ -108,7 +108,7 @@ class WNItemListTCell: UITableViewCell {
         self.discount = discount
         
         /// Price
-        let price = UILabel.init(color: .themColor, fontName: WNConfig.FontName.kaitiBold, size: 16.0, textAlignment: .left)
+        let price = UILabel.init(color: .themColor, fontName: WNConfig.FontName.normal, size: 16.0, textAlignment: .left)
         self.contentView.addSubview(price)
         price.snp.makeConstraints { (make) in
             make.left.equalTo(discount.snp.right).offset(10.0)
@@ -118,7 +118,7 @@ class WNItemListTCell: UITableViewCell {
         
         
         /// Date
-        let date = UILabel.init(color: .textColor, fontName: WNConfig.FontName.kaitiRegular, size: 11.0, textAlignment: .left)
+        let date = UILabel.init(color: .textColor, fontName: WNConfig.FontName.normal, size: 11.0, textAlignment: .left)
         self.contentView.addSubview(date)
         date.snp.makeConstraints { (make) in
             make.height.equalTo(13.0)
