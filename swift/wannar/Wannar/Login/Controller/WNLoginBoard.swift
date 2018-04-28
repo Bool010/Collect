@@ -148,7 +148,6 @@ extension WNLoginBoard: UITableViewDelegate, UITableViewDataSource {
             return cell
         } else {
             let cell = WNLoginPlatformTCell.cellWith(tableView: tableView)
-            cell.backgroundColor = UIColor.red
             return cell
         }
     }
